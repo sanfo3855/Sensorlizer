@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media.xml",
+        "source": "/home/matteo/.android/build-cache/d3ab41ce8ca7bb11144b1368c6a33aa05546bde9/output/res/layout-v11/notification_template_big_media.xml"
+    },
+    {
+        "merged": "/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_custom.xml",
+        "source": "/home/matteo/.android/build-cache/d3ab41ce8ca7bb11144b1368c6a33aa05546bde9/output/res/layout-v11/notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow.xml",
+        "source": "/home/matteo/.android/build-cache/d3ab41ce8ca7bb11144b1368c6a33aa05546bde9/output/res/layout-v11/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/res/merged/debug/layout-v11/notification_media_action.xml",
+        "source": "/home/matteo/.android/build-cache/d3ab41ce8ca7bb11144b1368c6a33aa05546bde9/output/res/layout-v11/notification_media_action.xml"
+    },
+    {
+        "merged": "/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow_custom.xml",
+        "source": "/home/matteo/.android/build-cache/d3ab41ce8ca7bb11144b1368c6a33aa05546bde9/output/res/layout-v11/notification_template_big_media_narrow_custom.xml"
+    },
+    {
+        "merged": "/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/res/merged/debug/layout-v11/notification_media_cancel_action.xml",
+        "source": "/home/matteo/.android/build-cache/d3ab41ce8ca7bb11144b1368c6a33aa05546bde9/output/res/layout-v11/notification_media_cancel_action.xml"
+    }
+]

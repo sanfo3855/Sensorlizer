@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/home/matteo/.android/build-cache/d3ab41ce8ca7bb11144b1368c6a33aa05546bde9/output/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/home/matteo/.android/build-cache/d3ab41ce8ca7bb11144b1368c6a33aa05546bde9/output/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+    }
+]

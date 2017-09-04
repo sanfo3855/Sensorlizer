@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="2bae90f75c051e5aadeabcb528e52ec23d7f6ad3">
+        <dex dex="/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_63b2f945ae5b75847e8303b0d5b2e0a8cc17b108/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_5f233f3b85c411c467e639d8ef8a84a69cccf2ee/classes.dex" />
+    </item>
+
+</items>

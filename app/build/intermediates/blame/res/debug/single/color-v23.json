@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
+        "source": "/home/matteo/.android/build-cache/d3ab41ce8ca7bb11144b1368c6a33aa05546bde9/output/res/color-v23/abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/res/merged/debug/color-v23/abc_tint_seek_thumb.xml",
+        "source": "/home/matteo/.android/build-cache/d3ab41ce8ca7bb11144b1368c6a33aa05546bde9/output/res/color-v23/abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/res/merged/debug/color-v23/abc_tint_spinner.xml",
+        "source": "/home/matteo/.android/build-cache/d3ab41ce8ca7bb11144b1368c6a33aa05546bde9/output/res/color-v23/abc_tint_spinner.xml"
+    },
+    {
+        "merged": "/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_track.xml",
+        "source": "/home/matteo/.android/build-cache/d3ab41ce8ca7bb11144b1368c6a33aa05546bde9/output/res/color-v23/abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
+        "source": "/home/matteo/.android/build-cache/d3ab41ce8ca7bb11144b1368c6a33aa05546bde9/output/res/color-v23/abc_color_highlight_material.xml"
+    },
+    {
+        "merged": "/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_thumb.xml",
+        "source": "/home/matteo/.android/build-cache/d3ab41ce8ca7bb11144b1368c6a33aa05546bde9/output/res/color-v23/abc_tint_switch_thumb.xml"
+    },
+    {
+        "merged": "/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/res/merged/debug/color-v23/abc_tint_edittext.xml",
+        "source": "/home/matteo/.android/build-cache/d3ab41ce8ca7bb11144b1368c6a33aa05546bde9/output/res/color-v23/abc_tint_edittext.xml"
+    },
+    {
+        "merged": "/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_text_material.xml",
+        "source": "/home/matteo/.android/build-cache/d3ab41ce8ca7bb11144b1368c6a33aa05546bde9/output/res/color-v23/abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml",
+        "source": "/home/matteo/.android/build-cache/d3ab41ce8ca7bb11144b1368c6a33aa05546bde9/output/res/color-v23/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/res/merged/debug/color-v23/abc_tint_default.xml",
+        "source": "/home/matteo/.android/build-cache/d3ab41ce8ca7bb11144b1368c6a33aa05546bde9/output/res/color-v23/abc_tint_default.xml"
+    },
+    {
+        "merged": "/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/res/merged/debug/color-v23/design_tint_password_toggle.xml",
+        "source": "/home/matteo/.android/build-cache/0b11ab0e0bf4719456939c5fda6e5f2ea7ae4130/output/res/color-v23/design_tint_password_toggle.xml"
+    }
+]

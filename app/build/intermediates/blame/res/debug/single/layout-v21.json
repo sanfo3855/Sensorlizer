@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/home/matteo/.android/build-cache/d3ab41ce8ca7bb11144b1368c6a33aa05546bde9/output/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
+        "source": "/home/matteo/.android/build-cache/d3ab41ce8ca7bb11144b1368c6a33aa05546bde9/output/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
+        "source": "/home/matteo/.android/build-cache/d3ab41ce8ca7bb11144b1368c6a33aa05546bde9/output/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/home/matteo/.android/build-cache/d3ab41ce8ca7bb11144b1368c6a33aa05546bde9/output/res/layout-v21/notification_action_tombstone.xml"
+    }
+]

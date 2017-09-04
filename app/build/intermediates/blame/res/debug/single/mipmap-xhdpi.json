@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/res/merged/debug/mipmap-xhdpi/sensorlizer_launcher.png",
+        "source": "/home/matteo/AndroidStudioProjects/Sensorlizer2/app/src/main/res/mipmap-xhdpi/sensorlizer_launcher.png"
+    },
+    {
+        "merged": "/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/res/merged/debug/mipmap-xhdpi/sensorlizer_launcher_round.png",
+        "source": "/home/matteo/AndroidStudioProjects/Sensorlizer2/app/src/main/res/mipmap-xhdpi/sensorlizer_launcher_round.png"
+    }
+]
