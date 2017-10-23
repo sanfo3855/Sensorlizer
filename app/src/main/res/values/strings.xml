@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Sensorlizer</string>
+    <string name="apice2">&lt;sup&gt;&lt;small&gt;2&lt;/small&gt;&lt;/sup&gt;</string>
+
 </resources>

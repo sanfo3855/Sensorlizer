@@ -1,225 +1,349 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.sanflix.sensorlizer.MainActivity">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="none"
+    android:layout_weight="1">
 
-    <TextView
-        android:id="@+id/tvAccellerometer"
+    <HorizontalScrollView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Accellerometer"
-        android:textStyle="bold"
-        android:textSize="@dimen/sensorNameSize"
-        android:textColor="@color/sensorName"
-        android:textAlignment="center"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintVertical_bias="0.017"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/tvAmbientTemperature"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ambient Temperature"
-        android:textStyle="bold"
-        android:textSize="@dimen/sensorNameSize"
-        android:textColor="@color/sensorName"
-        android:textAlignment="center"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintVertical_bias="0.139"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:isScrollContainer="true"
+            android:padding="40px">
 
-    <TextView
-        android:id="@+id/tvGravity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Gravity"
-        android:textStyle="bold"
-        android:textSize="@dimen/sensorNameSize"
-        android:textColor="@color/sensorName"
-        android:textAlignment="center"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintVertical_bias="0.255"
-        app:layout_constraintHorizontal_bias="0.0"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+            <!--
+            *****************
+            * MOTION SENSOR *
+            ***************** -->
+            <TableRow>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tvMotionSensor"
+                    android:text="Motion Sensor"
+                    android:textSize="90px"
+                    android:textColor="@color/sensorName"
+                    android:layout_margin="20px"
+                    android:onClick=""/>
+            </TableRow>
 
-    <TextView
-        android:id="@+id/tvGyroscope"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Gyroscope"
-        android:textStyle="bold"
-        android:textSize="@dimen/sensorNameSize"
-        android:textColor="@color/sensorName"
-        android:textAlignment="center"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintVertical_bias="0.372"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+            <!-- 1 - ACCELLEROMETER -->
+            <TableRow>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tvAccellerometerText"
+                    android:text="Accellerometer"
+                    android:textSize="70px"
+                    android:paddingLeft="30px"
+                    android:textColor="@color/sensorName"
+                    android:layout_margin="20px"/>
+                <CheckBox
+                    android:id="@+id/chkAccellerometer"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tvAccellerometerValueX"
+                    android:textSize="40px"
+                    android:paddingLeft="30px"
+                    android:text=""
+                    android:layout_margin="20px"/>
+                </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tvAccellerometerValueY"
+                    android:textSize="40px"
+                    android:paddingLeft="30px"
+                    android:text="Sensor not Found"
+                    android:layout_margin="20px"/>
+                </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tvAccellerometerValueZ"
+                    android:textSize="40px"
+                    android:paddingLeft="30px"
+                    android:text=""
+                    android:layout_margin="20px"/>
+            </TableRow>
+            <!-- 2 - GRAVITY -->
+            <TableRow>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tvGravityText"
+                    android:text="Gravity"
+                    android:textColor="@color/sensorName"
+                    android:textSize="70px"
+                    android:paddingLeft="30px"
+                    android:layout_margin="20px"/>
+                <CheckBox
+                    android:id="@+id/chkGravity"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tvGravityValueX"
+                    android:textSize="40px"
+                    android:paddingLeft="30px"
+                    android:text=""
+                    android:layout_margin="20px"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tvGravityValueY"
+                    android:textSize="40px"
+                    android:paddingLeft="30px"
+                    android:text="Sensor not Found"
+                    android:layout_margin="20px"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tvGravityValueZ"
+                    android:textSize="40px"
+                    android:paddingLeft="30px"
+                    android:text=""
+                    android:layout_margin="20px"/>
+            </TableRow>
+            <!-- 3 - GYROSCOPE -->
+            <TableRow>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tvGyroscopeText"
+                    android:text="Gyroscope"
+                    android:textSize="70px"
+                    android:paddingLeft="30px"
+                    android:textColor="@color/sensorName"
+                    android:layout_margin="20px"/>
+                <CheckBox
+                    android:id="@+id/chkGyroscope"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tvGyroscopeValueX"
+                    android:textSize="40px"
+                    android:paddingLeft="30px"
+                    android:text=""
+                    android:layout_margin="20px"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tvGyroscopeValueY"
+                    android:textSize="40px"
+                    android:paddingLeft="30px"
+                    android:text="Sensor not Found"
+                    android:layout_margin="20px"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tvGyroscopeValueZ"
+                    android:textSize="40px"
+                    android:paddingLeft="30px"
+                    android:text=""
+                    android:layout_margin="20px"/>
+            </TableRow>
 
-    <TextView
-        android:id="@+id/tvLigth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ligth"
-        android:textStyle="bold"
-        android:textSize="@dimen/sensorNameSize"
-        android:textColor="@color/sensorName"
-        android:textAlignment="center"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintVertical_bias="0.488"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+            <!-- 4 - LINEAR ACCELLERATION -->
+            <TableRow>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tvLinearAccellerationText"
+                    android:text="Linear Accelleration"
+                    android:paddingLeft="30px"
+                    android:textSize="70px"
+                    android:textColor="@color/sensorName"
+                    android:layout_margin="20px"/>
+                <CheckBox
+                    android:id="@+id/chkLinearAccelleration"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tvLinearAccellerationValueX"
+                    android:textSize="40px"
+                    android:paddingLeft="30px"
+                    android:text=""
+                    android:layout_margin="20px"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tvLinearAccellerationValueY"
+                    android:textSize="40px"
+                    android:paddingLeft="30px"
+                    android:text="Sensor not Found"
+                    android:layout_margin="20px"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tvLinearAccellerationValueZ"
+                    android:textSize="40px"
+                    android:paddingLeft="30px"
+                    android:text=""
+                    android:layout_margin="20px"/>
+            </TableRow>
+            <TableRow></TableRow>
+            <!-- 5 - ROTATION VECTOR -->
 
-    <TextView
-        android:id="@+id/tvLinearAccelleration"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Linear Accelleration"
-        android:textStyle="bold"
-        android:textSize="25dp"
-        android:textColor="@color/sensorName"
-        android:textAlignment="center"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintVertical_bias="0.623"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
 
-    <TextView
-        android:id="@+id/tvMagneticField"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Magnetic Field"
-        android:textStyle="bold"
-        android:textSize="@dimen/sensorNameSize"
-        android:textColor="@color/sensorName"
-        android:textAlignment="center"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintVertical_bias="0.735"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+            <!--
+            ***********************
+            * ENVIROMENTAL SENSOR *
+            ***********************-->
+            <TableRow>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tvEnviromentalSensor"
+                    android:text="Enviromental Sensor"
+                    android:textSize="90px"
+                    android:textColor="@color/sensorName"
+                    android:layout_margin="20px"
+                    android:onClick=""/>
+            </TableRow>
 
-    <TextView
-        android:id="@+id/tvAccellerometerValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="@dimen/sensorDataSize"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintVertical_bias="0.095"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+            <!-- 1 - AMBIENT TEMPERATURE -->
+            <TableRow>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tvAmbientTemperatureText"
+                    android:text="Ambient Temperature"
+                    android:textSize="70px"
+                    android:paddingLeft="30px"
+                    android:textColor="@color/sensorName"
+                    android:layout_margin="20px"/>
+                <CheckBox
+                    android:id="@+id/chkAmbientTemperature"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tvAmbientTemperatureValue"
+                    android:textSize="40px"
+                    android:paddingLeft="30px"
+                    android:text="Sensor not Found"
+                    android:layout_margin="20px"/>
+            </TableRow>
 
-    <TextView
-        android:id="@+id/tvAmbientTemperatureValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="@dimen/sensorDataSize"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintVertical_bias="0.211"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
-    <TextView
-        android:id="@+id/tvGravityValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="@dimen/sensorDataSize"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintVertical_bias="0.322"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
-    <TextView
-        android:id="@+id/tvGyroscopeValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="@dimen/sensorDataSize"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintVertical_bias="0.433"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+            <!-- 2 -LIGHT -->
+            <TableRow>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tvLigthText"
+                    android:text="Ligth"
+                    android:paddingLeft="30px"
+                    android:textColor="@color/sensorName"
+                    android:textSize="70px"
+                    android:layout_margin="20px"/>
+                <CheckBox
+                    android:id="@+id/chkLigth"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tvLigthValue"
+                    android:textSize="40px"
+                    android:paddingLeft="30px"
+                    android:text="Sensor not Found"
+                    android:layout_margin="20px"/>
+            </TableRow>
 
-</android.support.constraint.ConstraintLayout>
+            <!--
+            *******************
+            * POSITION SENSOR *
+            *******************-->
+            <TableRow>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tv"
+                    android:text="Position Sensor"
+                    android:textSize="90px"
+                    android:textColor="@color/sensorName"
+                    android:layout_margin="20px"
+                    android:onClick=""/>
+            </TableRow>
 
+            <!-- 1 - MAGNETIC FIELD -->
+            <TableRow>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tvMagneticFieldText"
+                    android:text="Magnetic Field"
+                    android:textSize="70px"
+                    android:paddingLeft="30px"
+                    android:textColor="@color/sensorName"
+                    android:layout_margin="20px"/>
+                <CheckBox
+                    android:id="@+id/chkMagneticField"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tvMagneticFieldValueX"
+                    android:textSize="40px"
+                    android:paddingLeft="30px"
+                    android:text=""
+                    android:layout_margin="20px"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tvMagneticFieldValueY"
+                    android:textSize="40px"
+                    android:paddingLeft="30px"
+                    android:text="Sensor not Found"
+                    android:layout_margin="20px"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tvMagneticFieldValueZ"
+                    android:textSize="40px"
+                    android:paddingLeft="30px"
+                    android:text=""
+                    android:layout_margin="20px"/>
+            </TableRow>
+        </TableLayout>
+
+
+
+
+
+    </HorizontalScrollView>
+</ScrollView>

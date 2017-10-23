@@ -64,12 +64,12 @@
         "source": "/home/matteo/.android/build-cache/d3ab41ce8ca7bb11144b1368c6a33aa05546bde9/output/res/drawable-xxhdpi-v4/abc_list_divider_mtrl_alpha.9.png"
     },
     {
-        "merged": "/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png",
-        "source": "/home/matteo/.android/build-cache/d3ab41ce8ca7bb11144b1368c6a33aa05546bde9/output/res/drawable-xxhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png"
-    },
-    {
         "merged": "/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_popup_background_mtrl_mult.9.png",
         "source": "/home/matteo/.android/build-cache/d3ab41ce8ca7bb11144b1368c6a33aa05546bde9/output/res/drawable-xxhdpi-v4/abc_popup_background_mtrl_mult.9.png"
+    },
+    {
+        "merged": "/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png",
+        "source": "/home/matteo/.android/build-cache/d3ab41ce8ca7bb11144b1368c6a33aa05546bde9/output/res/drawable-xxhdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png"
     },
     {
         "merged": "/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png",

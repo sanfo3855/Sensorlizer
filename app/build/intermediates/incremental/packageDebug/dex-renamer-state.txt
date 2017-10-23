@@ -1,4 +1,4 @@
-#Mon Sep 04 18:19:54 CEST 2017
+#Mon Oct 23 18:51:01 CEST 2017
 base.0=/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_63b2f945ae5b75847e8303b0d5b2e0a8cc17b108
 renamed.1=classes.dex
 renamed.0=classes2.dex
