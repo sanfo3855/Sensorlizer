@@ -1,7 +1,4 @@
-#Mon Oct 23 18:51:01 CEST 2017
-base.0=/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_63b2f945ae5b75847e8303b0d5b2e0a8cc17b108
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_5f233f3b85c411c467e639d8ef8a84a69cccf2ee/classes.dex
-base.1=/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_5f233f3b85c411c467e639d8ef8a84a69cccf2ee
-file.0=/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_63b2f945ae5b75847e8303b0d5b2e0a8cc17b108/classes.dex
+#Tue Oct 24 01:56:09 CEST 2017
+base.0=C\:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
+renamed.0=classes.dex
+file.0=C\:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex

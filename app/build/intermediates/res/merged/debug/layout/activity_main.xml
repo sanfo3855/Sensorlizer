@@ -6,15 +6,14 @@
     android:layout_weight="1">
 
     <HorizontalScrollView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <TableLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:isScrollContainer="true"
-            android:padding="4dp">
+            android:isScrollContainer="true">
 
             <!--
             *****************
@@ -22,197 +21,236 @@
             ***************** -->
             <TableRow>
                 <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:id="@+id/tvMotionSensor"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/tvMotionSensors"
                     android:text="Motion Sensor"
-                    android:textSize="9dp"
-                    android:textColor="@color/sensorName"
-                    android:layout_margin="2dp"
-                    android:onClick=""/>
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/groupSensorSize"
+                    android:layout_margin="@dimen/layoutMargin"
+                    android:drawableLeft="@drawable/arrow_down"
+                    android:onClick="showhide"/>
             </TableRow>
-
-            <!-- 1 - ACCELLEROMETER -->
-            <TableRow>
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:id="@+id/tvAccellerometerText"
-                    android:text="Accellerometer"
-                    android:textSize="7dp"
-                    android:paddingLeft="3dp"
-                    android:textColor="@color/sensorName"
-                    android:layout_margin="2dp"/>
-                <CheckBox
-                    android:id="@+id/chkAccellerometer"/>
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:id="@+id/tvAccellerometerValueX"
-                    android:textSize="4dp"
-                    android:paddingLeft="3dp"
-                    android:text=""
-                    android:layout_margin="2dp"/>
+            <TableLayout
+                android:id="@+id/motionSensorGroup">
+                <!-- 1 - ACCELLEROMETER -->
+                <TableRow>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tvAccellerometerText"
+                        android:text="Accellerometer"
+                        android:textSize="@dimen/sensorNameSize"
+                        android:paddingStart="@dimen/paddingStartSensorName"
+                        android:paddingEnd="@dimen/paddingEndSensorName"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_margin="@dimen/layoutMargin"/>
+                    <CheckBox
+                        android:id="@+id/chkAccellerometer"
+                        android:text="@string/save"
+                        android:textColor="@color/colorPrimary"/>
                 </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:id="@+id/tvAccellerometerValueY"
-                    android:textSize="4dp"
-                    android:paddingLeft="3dp"
-                    android:text="Sensor not Found"
-                    android:layout_margin="2dp"/>
+                <TableRow>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tvAccellerometerValueX"
+                        android:textSize="@dimen/sensorDataSize"
+                        android:paddingStart="@dimen/paddingStartSensorName"
+                        android:paddingEnd="@dimen/paddingEndSensorName"
+                        android:text=""
+                        android:layout_margin="@dimen/layoutMargin"
+                        android:textColor="@color/colorPrimaryDark"/>
+                    </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tvAccellerometerValueY"
+                        android:textSize="@dimen/sensorDataSize"
+                        android:paddingStart="@dimen/paddingStartSensorName"
+                        android:paddingEnd="@dimen/paddingEndSensorName"
+                        android:text="@string/not_found"
+                        android:layout_margin="@dimen/layoutMargin"
+                        android:textColor="@color/colorPrimaryDark"/>
+                    </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tvAccellerometerValueZ"
+                        android:textSize="@dimen/sensorDataSize"
+                        android:paddingStart="@dimen/paddingStartSensorName"
+                        android:paddingEnd="@dimen/paddingEndSensorName"
+                        android:text=""
+                        android:layout_margin="@dimen/layoutMargin"
+                        android:textColor="@color/colorPrimaryDark"/>
                 </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:id="@+id/tvAccellerometerValueZ"
-                    android:textSize="4dp"
-                    android:paddingLeft="3dp"
-                    android:text=""
-                    android:layout_margin="2dp"/>
-            </TableRow>
-            <!-- 2 - GRAVITY -->
-            <TableRow>
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:id="@+id/tvGravityText"
-                    android:text="Gravity"
-                    android:textColor="@color/sensorName"
-                    android:textSize="7dp"
-                    android:paddingLeft="3dp"
-                    android:layout_margin="2dp"/>
-                <CheckBox
-                    android:id="@+id/chkGravity"/>
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:id="@+id/tvGravityValueX"
-                    android:textSize="4dp"
-                    android:paddingLeft="3dp"
-                    android:text=""
-                    android:layout_margin="2dp"/>
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:id="@+id/tvGravityValueY"
-                    android:textSize="4dp"
-                    android:paddingLeft="3dp"
-                    android:text="Sensor not Found"
-                    android:layout_margin="2dp"/>
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:id="@+id/tvGravityValueZ"
-                    android:textSize="4dp"
-                    android:paddingLeft="3dp"
-                    android:text=""
-                    android:layout_margin="2dp"/>
-            </TableRow>
-            <!-- 3 - GYROSCOPE -->
-            <TableRow>
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:id="@+id/tvGyroscopeText"
-                    android:text="Gyroscope"
-                    android:textSize="7dp"
-                    android:paddingLeft="3dp"
-                    android:textColor="@color/sensorName"
-                    android:layout_margin="2dp"/>
-                <CheckBox
-                    android:id="@+id/chkGyroscope"/>
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:id="@+id/tvGyroscopeValueX"
-                    android:textSize="4dp"
-                    android:paddingLeft="3dp"
-                    android:text=""
-                    android:layout_margin="2dp"/>
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:id="@+id/tvGyroscopeValueY"
-                    android:textSize="4dp"
-                    android:paddingLeft="3dp"
-                    android:text="Sensor not Found"
-                    android:layout_margin="2dp"/>
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:id="@+id/tvGyroscopeValueZ"
-                    android:textSize="4dp"
-                    android:paddingLeft="3dp"
-                    android:text=""
-                    android:layout_margin="2dp"/>
-            </TableRow>
+                <!-- 2 - GRAVITY -->
+                <TableRow>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tvGravityText"
+                        android:text="Gravity"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/sensorNameSize"
+                        android:paddingStart="@dimen/paddingStartSensorName"
+                        android:paddingEnd="@dimen/paddingEndSensorName"
+                        android:layout_margin="@dimen/layoutMargin"
+                        />
 
-            <!-- 4 - LINEAR ACCELLERATION -->
-            <TableRow>
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:id="@+id/tvLinearAccellerationText"
-                    android:text="Linear Accelleration"
-                    android:paddingLeft="3dp"
-                    android:textSize="7dp"
-                    android:textColor="@color/sensorName"
-                    android:layout_margin="2dp"/>
-                <CheckBox
-                    android:id="@+id/chkLinearAccelleration"/>
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:id="@+id/tvLinearAccellerationValueX"
-                    android:textSize="4dp"
-                    android:paddingLeft="3dp"
-                    android:text=""
-                    android:layout_margin="2dp"/>
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:id="@+id/tvLinearAccellerationValueY"
-                    android:textSize="4dp"
-                    android:paddingLeft="3dp"
-                    android:text="Sensor not Found"
-                    android:layout_margin="2dp"/>
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:id="@+id/tvLinearAccellerationValueZ"
-                    android:textSize="4dp"
-                    android:paddingLeft="3dp"
-                    android:text=""
-                    android:layout_margin="2dp"/>
-            </TableRow>
-            <TableRow></TableRow>
-            <!-- 5 - ROTATION VECTOR -->
+                    <CheckBox
+                        android:id="@+id/chkGravity"
+                        android:text="@string/save"
+                        android:textColor="@color/colorPrimary"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tvGravityValueX"
+                        android:textSize="@dimen/sensorDataSize"
+                        android:paddingStart="@dimen/paddingStartSensorName"
+                        android:paddingEnd="@dimen/paddingEndSensorName"
+                        android:text=""
+                        android:layout_margin="@dimen/layoutMargin"
+                        android:textColor="@color/colorPrimaryDark"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tvGravityValueY"
+                        android:textSize="@dimen/sensorDataSize"
+                        android:paddingStart="@dimen/paddingStartSensorName"
+                        android:paddingEnd="@dimen/paddingEndSensorName"
+                        android:text="@string/not_found"
+                        android:layout_margin="@dimen/layoutMargin"
+                        android:textColor="@color/colorPrimaryDark"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tvGravityValueZ"
+                        android:textSize="@dimen/sensorDataSize"
+                        android:paddingStart="@dimen/paddingStartSensorName"
+                        android:paddingEnd="@dimen/paddingEndSensorName"
+                        android:text=""
+                        android:layout_margin="@dimen/layoutMargin"
+                        android:textColor="@color/colorPrimaryDark"/>
+                </TableRow>
+                <!-- 3 - GYROSCOPE -->
+                <TableRow>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tvGyroscopeText"
+                        android:text="Gyroscope"
+                        android:textSize="@dimen/sensorNameSize"
+                        android:paddingStart="@dimen/paddingStartSensorName"
+                        android:paddingEnd="@dimen/paddingEndSensorName"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_margin="@dimen/layoutMargin"/>
+                    <CheckBox
+                        android:id="@+id/chkGyroscope"
+                        android:text="@string/save"
+                        android:textColor="@color/colorPrimary"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tvGyroscopeValueX"
+                        android:textSize="@dimen/sensorDataSize"
+                        android:paddingStart="@dimen/paddingStartSensorName"
+                        android:paddingEnd="@dimen/paddingEndSensorName"
+                        android:layout_margin="@dimen/layoutMargin"
+                        android:text=""
+                        android:textColor="@color/colorPrimaryDark"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tvGyroscopeValueY"
+                        android:text="@string/not_found"
+                        android:textSize="@dimen/sensorDataSize"
+                        android:paddingStart="@dimen/paddingStartSensorName"
+                        android:paddingEnd="@dimen/paddingEndSensorName"
+                        android:layout_margin="@dimen/layoutMargin"
+                        android:textColor="@color/colorPrimaryDark"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tvGyroscopeValueZ"
+                        android:text=""
+                        android:textSize="@dimen/sensorDataSize"
+                        android:paddingStart="@dimen/paddingStartSensorName"
+                        android:paddingEnd="@dimen/paddingEndSensorName"
+                        android:layout_margin="@dimen/layoutMargin"
+                        android:textColor="@color/colorPrimaryDark"/>
+                </TableRow>
 
-
+                <!-- 4 - LINEAR ACCELLERATION -->
+                <TableRow>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tvLinearAccellerationText"
+                        android:text="Linear Accelleration"
+                        android:textSize="@dimen/sensorNameSize"
+                        android:paddingStart="@dimen/paddingStartSensorName"
+                        android:paddingEnd="@dimen/paddingEndSensorName"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_margin="@dimen/layoutMargin"/>
+                    <CheckBox
+                        android:id="@+id/chkLinearAccelleration"
+                        android:text="@string/save"
+                        android:textColor="@color/colorPrimary"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tvLinearAccellerationValueX"
+                        android:text=""
+                        android:textSize="@dimen/sensorDataSize"
+                        android:paddingStart="@dimen/paddingStartSensorName"
+                        android:paddingEnd="@dimen/paddingEndSensorName"
+                        android:layout_margin="@dimen/layoutMargin"
+                        android:textColor="@color/colorPrimaryDark"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tvLinearAccellerationValueY"
+                        android:text="@string/not_found"
+                        android:textSize="@dimen/sensorDataSize"
+                        android:paddingStart="@dimen/paddingStartSensorName"
+                        android:paddingEnd="@dimen/paddingEndSensorName"
+                        android:layout_margin="@dimen/layoutMargin"
+                        android:textColor="@color/colorPrimaryDark"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tvLinearAccellerationValueZ"
+                        android:text=""
+                        android:textSize="@dimen/sensorDataSize"
+                        android:paddingStart="@dimen/paddingStartSensorName"
+                        android:paddingEnd="@dimen/paddingEndSensorName"
+                        android:layout_margin="@dimen/layoutMargin"
+                        android:textColor="@color/colorPrimaryDark"/>
+                </TableRow>
+                <TableRow></TableRow>
+                <!-- 5 - ROTATION VECTOR -->
+            </TableLayout>
             <!--
             ***********************
             * ENVIROMENTAL SENSOR *
@@ -222,63 +260,134 @@
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:id="@+id/tvEnviromentalSensor"
-                    android:text="Enviromental Sensor"
-                    android:textSize="9dp"
-                    android:textColor="@color/sensorName"
-                    android:layout_margin="2dp"
-                    android:onClick=""/>
+                    android:text="Enviromental Sensors"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/groupSensorSize"
+                    android:layout_margin="@dimen/layoutMargin"
+                    android:drawableLeft="@drawable/arrow_down"
+                    android:onClick="showhide"/>
             </TableRow>
 
-            <!-- 1 - AMBIENT TEMPERATURE -->
-            <TableRow>
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:id="@+id/tvAmbientTemperatureText"
-                    android:text="Ambient Temperature"
-                    android:textSize="7dp"
-                    android:paddingLeft="3dp"
-                    android:textColor="@color/sensorName"
-                    android:layout_margin="2dp"/>
-                <CheckBox
-                    android:id="@+id/chkAmbientTemperature"/>
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:id="@+id/tvAmbientTemperatureValue"
-                    android:textSize="4dp"
-                    android:paddingLeft="3dp"
-                    android:text="Sensor not Found"
-                    android:layout_margin="2dp"/>
-            </TableRow>
+            <TableLayout android:id="@+id/enviromentalSensorGroup">
+                <!-- 1 - AMBIENT TEMPERATURE -->
+                <TableRow>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tvAmbientTemperatureText"
+                        android:text="Ambient Temperature"
+                        android:textSize="@dimen/sensorNameSize"
+                        android:paddingStart="@dimen/paddingStartSensorName"
+                        android:paddingEnd="@dimen/paddingEndSensorName"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_margin="@dimen/layoutMargin"/>
+                    <CheckBox
+                        android:id="@+id/chkAmbientTemperature"
+                        android:text="@string/save"
+                        android:textColor="@color/colorPrimary"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tvAmbientTemperatureValue"
+                        android:text="@string/not_found"
+                        android:textSize="@dimen/sensorDataSize"
+                        android:paddingStart="@dimen/paddingStartSensorName"
+                        android:paddingEnd="@dimen/paddingEndSensorName"
+                        android:layout_margin="@dimen/layoutMargin"
+                        android:textColor="@color/colorPrimaryDark"/>
+                </TableRow>
 
-            <!-- 2 -LIGHT -->
-            <TableRow>
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:id="@+id/tvLigthText"
-                    android:text="Ligth"
-                    android:paddingLeft="3dp"
-                    android:textColor="@color/sensorName"
-                    android:textSize="7dp"
-                    android:layout_margin="2dp"/>
-                <CheckBox
-                    android:id="@+id/chkLigth"/>
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:id="@+id/tvLigthValue"
-                    android:textSize="4dp"
-                    android:paddingLeft="3dp"
-                    android:text="Sensor not Found"
-                    android:layout_margin="2dp"/>
-            </TableRow>
-
+                <!-- 2 -LIGHT -->
+                <TableRow>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tvLigthText"
+                        android:text="Ligth"
+                        android:textSize="@dimen/sensorNameSize"
+                        android:paddingStart="@dimen/paddingStartSensorName"
+                        android:paddingEnd="@dimen/paddingEndSensorName"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_margin="@dimen/layoutMargin"/>
+                    <CheckBox
+                        android:id="@+id/chkLigth"
+                        android:text="@string/save"
+                        android:textColor="@color/colorPrimary"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tvLigthValue"
+                        android:text="@string/not_found"
+                        android:textSize="@dimen/sensorDataSize"
+                        android:paddingStart="@dimen/paddingStartSensorName"
+                        android:paddingEnd="@dimen/paddingEndSensorName"
+                        android:layout_margin="@dimen/layoutMargin"
+                        android:textColor="@color/colorPrimaryDark"/>
+                </TableRow>
+                <!-- 3 - PRESSURE -->
+                <TableRow>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tvPressureText"
+                        android:text="Pressure"
+                        android:textSize="@dimen/sensorNameSize"
+                        android:paddingStart="@dimen/paddingStartSensorName"
+                        android:paddingEnd="@dimen/paddingEndSensorName"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_margin="@dimen/layoutMargin"/>
+                    <CheckBox
+                        android:id="@+id/chkPressure"
+                        android:text="@string/save"
+                        android:textColor="@color/colorPrimary"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tvPressureValue"
+                        android:text="@string/not_found"
+                        android:textSize="@dimen/sensorDataSize"
+                        android:paddingStart="@dimen/paddingStartSensorName"
+                        android:paddingEnd="@dimen/paddingEndSensorName"
+                        android:layout_margin="@dimen/layoutMargin"
+                        android:textColor="@color/colorPrimaryDark"/>
+                </TableRow>
+                <!-- 4 - RELATIVE HUMIDITY -->
+                <TableRow>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tvRelativeHumidityText"
+                        android:text="Relative Humidity"
+                        android:textSize="@dimen/sensorNameSize"
+                        android:paddingStart="@dimen/paddingStartSensorName"
+                        android:paddingEnd="@dimen/paddingEndSensorName"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_margin="@dimen/layoutMargin"
+                        />
+                    <CheckBox
+                        android:id="@+id/chkRelativeHumidity"
+                        android:text="@string/save"
+                        android:textColor="@color/colorPrimary"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tvRelativeHumidityValue"
+                        android:text="@string/not_found"
+                        android:textSize="@dimen/sensorDataSize"
+                        android:paddingStart="@dimen/paddingStartSensorName"
+                        android:paddingEnd="@dimen/paddingEndSensorName"
+                        android:layout_margin="@dimen/layoutMargin"
+                        android:textColor="@color/colorPrimaryDark"/>
+                </TableRow>
+            </TableLayout>
             <!--
             *******************
             * POSITION SENSOR *
@@ -287,63 +396,99 @@
                 <TextView
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:id="@+id/tv"
-                    android:text="Position Sensor"
-                    android:textSize="9dp"
-                    android:textColor="@color/sensorName"
-                    android:layout_margin="2dp"
-                    android:onClick=""/>
+                    android:id="@+id/tvPositionSensor"
+                    android:text="Position Sensors"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/groupSensorSize"
+                    android:layout_margin="@dimen/layoutMargin"
+                    android:drawableLeft="@drawable/arrow_down"
+                    android:onClick="showhide"/>
             </TableRow>
-
-            <!-- 1 - MAGNETIC FIELD -->
-            <TableRow>
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:id="@+id/tvMagneticFieldText"
-                    android:text="Magnetic Field"
-                    android:textSize="7dp"
-                    android:paddingLeft="3dp"
-                    android:textColor="@color/sensorName"
-                    android:layout_margin="2dp"/>
-                <CheckBox
-                    android:id="@+id/chkMagneticField"/>
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:id="@+id/tvMagneticFieldValueX"
-                    android:textSize="4dp"
-                    android:paddingLeft="3dp"
-                    android:text=""
-                    android:layout_margin="2dp"/>
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:id="@+id/tvMagneticFieldValueY"
-                    android:textSize="4dp"
-                    android:paddingLeft="3dp"
-                    android:text="Sensor not Found"
-                    android:layout_margin="2dp"/>
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:id="@+id/tvMagneticFieldValueZ"
-                    android:textSize="4dp"
-                    android:paddingLeft="3dp"
-                    android:text=""
-                    android:layout_margin="2dp"/>
-            </TableRow>
+            <TableLayout android:id="@+id/positionSensorGroup">
+                <!-- 1 - MAGNETIC FIELD -->
+                <TableRow>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tvMagneticFieldText"
+                        android:text="Magnetic Field"
+                        android:textSize="@dimen/sensorNameSize"
+                        android:paddingStart="@dimen/paddingStartSensorName"
+                        android:paddingEnd="@dimen/paddingEndSensorName"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_margin="@dimen/layoutMargin"/>
+                    <CheckBox
+                        android:id="@+id/chkMagneticField"
+                        android:text="@string/save"
+                        android:textColor="@color/colorPrimary"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tvMagneticFieldValueX"
+                        android:text=""
+                        android:textSize="@dimen/sensorDataSize"
+                        android:paddingStart="@dimen/paddingStartSensorName"
+                        android:paddingEnd="@dimen/paddingEndSensorName"
+                        android:layout_margin="@dimen/layoutMargin"
+                        android:textColor="@color/colorPrimaryDark"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tvMagneticFieldValueY"
+                        android:text="@string/not_found"
+                        android:textSize="@dimen/sensorDataSize"
+                        android:paddingStart="@dimen/paddingStartSensorName"
+                        android:paddingEnd="@dimen/paddingEndSensorName"
+                        android:layout_margin="@dimen/layoutMargin"
+                        android:textColor="@color/colorPrimaryDark"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tvMagneticFieldValueZ"
+                        android:text=""
+                        android:textSize="@dimen/sensorDataSize"
+                        android:paddingStart="@dimen/paddingStartSensorName"
+                        android:paddingEnd="@dimen/paddingEndSensorName"
+                        android:layout_margin="@dimen/layoutMargin"
+                        android:textColor="@color/colorPrimaryDark"/>
+                </TableRow>
+                <!-- 2 - PROXIMITY -->
+                <TableRow>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tvProximityText"
+                        android:text="Proximity"
+                        android:textSize="@dimen/sensorNameSize"
+                        android:paddingStart="@dimen/paddingStartSensorName"
+                        android:paddingEnd="@dimen/paddingEndSensorName"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_margin="@dimen/layoutMargin"/>
+                    <CheckBox
+                        android:id="@+id/chkProximity"
+                        android:text="@string/save"
+                        android:textColor="@color/colorPrimary" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tvProximityValue"
+                        android:text=""
+                        android:textSize="@dimen/sensorDataSize"
+                        android:paddingStart="@dimen/paddingStartSensorName"
+                        android:paddingEnd="@dimen/paddingEndSensorName"
+                        android:layout_margin="@dimen/layoutMargin"
+                        android:textColor="@color/colorPrimaryDark"
+                        />
+                </TableRow>
+            </TableLayout>
         </TableLayout>
-
-
-
-
-
     </HorizontalScrollView>
 </ScrollView>

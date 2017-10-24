@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="sensorNameSize">25dp</dimen>
-    <dimen name="sensorDataSize">18dp</dimen>
+    <dimen name="sensorNameSize">25sp</dimen>
+    <dimen name="sensorDataSize">18sp</dimen>
+    <dimen name="groupSensorSize">33sp</dimen>
+    <dimen name="paddingStartSensorName">15dp</dimen>
+    <dimen name="paddingEndSensorName">15dp</dimen>
+    <dimen name="layoutMargin">5dp</dimen>
 </resources>

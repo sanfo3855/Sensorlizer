@@ -1,10 +1,18 @@
 [
     {
-        "merged": "/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/res/merged/debug/mipmap-xhdpi/sensorlizer_launcher.png",
-        "source": "/home/matteo/AndroidStudioProjects/Sensorlizer2/app/src/main/res/mipmap-xhdpi/sensorlizer_launcher.png"
+        "merged": "C:\\home\\matteo\\AndroidStudioProjects\\Sensorlizer2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\sensorlizer_launcher_round.png",
+        "source": "C:\\home\\matteo\\AndroidStudioProjects\\Sensorlizer2\\app\\src\\main\\res\\mipmap-xhdpi\\sensorlizer_launcher_round.png"
     },
     {
-        "merged": "/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/res/merged/debug/mipmap-xhdpi/sensorlizer_launcher_round.png",
-        "source": "/home/matteo/AndroidStudioProjects/Sensorlizer2/app/src/main/res/mipmap-xhdpi/sensorlizer_launcher_round.png"
+        "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\sensorlizer_launcher.png",
+        "source": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\src\\main\\res\\mipmap-xhdpi\\sensorlizer_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\sensorlizer_launcher_round.png",
+        "source": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\src\\main\\res\\mipmap-xhdpi\\sensorlizer_launcher_round.png"
+    },
+    {
+        "merged": "C:\\home\\matteo\\AndroidStudioProjects\\Sensorlizer2\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\sensorlizer_launcher.png",
+        "source": "C:\\home\\matteo\\AndroidStudioProjects\\Sensorlizer2\\app\\src\\main\\res\\mipmap-xhdpi\\sensorlizer_launcher.png"
     }
 ]

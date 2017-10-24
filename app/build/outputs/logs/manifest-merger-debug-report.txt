@@ -1,101 +1,93 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/matteo/AndroidStudioProjects/Sensorlizer2/app/src/main/AndroidManifest.xml:2:1-27:12
+ADDED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml:2:1-27:12
 	package
-		ADDED from /home/matteo/AndroidStudioProjects/Sensorlizer2/app/src/main/AndroidManifest.xml:3:5-38
-		INJECTED from /home/matteo/AndroidStudioProjects/Sensorlizer2/app/src/main/AndroidManifest.xml
-		INJECTED from /home/matteo/AndroidStudioProjects/Sensorlizer2/app/src/main/AndroidManifest.xml
+		ADDED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml:3:5-38
+		INJECTED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from /home/matteo/AndroidStudioProjects/Sensorlizer2/app/src/main/AndroidManifest.xml
-		INJECTED from /home/matteo/AndroidStudioProjects/Sensorlizer2/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from /home/matteo/AndroidStudioProjects/Sensorlizer2/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml:2:11-69
 	android:versionCode
-		INJECTED from /home/matteo/AndroidStudioProjects/Sensorlizer2/app/src/main/AndroidManifest.xml
-		INJECTED from /home/matteo/AndroidStudioProjects/Sensorlizer2/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml
 application
-ADDED from /home/matteo/AndroidStudioProjects/Sensorlizer2/app/src/main/AndroidManifest.xml:6:5-20:19
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/matteo/.android/build-cache/778b915cd1a2b36059a56725727c67cbba9a2990/output/AndroidManifest.xml:9:5-20
-MERGED from [com.android.support:design:26.0.0-alpha1] /home/matteo/.android/build-cache/0b11ab0e0bf4719456939c5fda6e5f2ea7ae4130/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /home/matteo/.android/build-cache/d3ab41ce8ca7bb11144b1368c6a33aa05546bde9/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /home/matteo/.android/build-cache/19c5f97fd0a267a6e47b048cba27c882b4f4208d/output/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /home/matteo/.android/build-cache/791675b408e5b657d2fbdb3e87bfd4a24605494f/output/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:transition:26.0.0-alpha1] /home/matteo/.android/build-cache/8c4678eac080c42df45904b37db4824c2da9cc36/output/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-v4:26.0.0-alpha1] /home/matteo/.android/build-cache/81ba6d1144ba0de8a7d5d34d8ab79d2377327f02/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /home/matteo/.android/build-cache/42d4f22c4cc982df63579f440093a9f1e85b0123/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /home/matteo/.android/build-cache/4e6f29d13866747c442a19eb7f44d02ecd57c81f/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /home/matteo/.android/build-cache/a60512c1e54b6776b289ae4abdfa2eae962b39e5/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /home/matteo/.android/build-cache/f45632246cc52e7f3986d7c61bef04822f8315c0/output/AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-compat:26.0.0-alpha1] /home/matteo/.android/build-cache/945c23085bbc9cde19e45a2e7eb9423d2fbf0f0b/output/AndroidManifest.xml:29:5-20
+ADDED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml:6:5-20:19
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\sanfe\.android\build-cache\2178e268ba13f5f2926310657a2908ba04c71b5e\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\sanfe\.android\build-cache\3a829b9f563f89722a770454fa5d267a5476872e\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\sanfe\.android\build-cache\d852165c2b4235d9cc35fc530625e06add43e0ae\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\sanfe\.android\build-cache\46cf71c2c7c90232507b44d021f2e96af9828146\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\sanfe\.android\build-cache\5484996f1687c892a9466c20483783835aa48ba7\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\sanfe\.android\build-cache\d54080627a556e9dd74c9fdafc0e93128be6cfe1\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\sanfe\.android\build-cache\94b7b4efdf123b661502bb8eb0f399c03ac36aae\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\sanfe\.android\build-cache\77c7772ecf910b349a94b35a094e4e5bd64f7b05\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\sanfe\.android\build-cache\717db7a6ba5f10925c3c8c0a2e90c233276699fc\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\sanfe\.android\build-cache\1970d0cf78f096821af32986d3539c34a439f756\output\AndroidManifest.xml:9:5-20
 	android:label
-		ADDED from /home/matteo/AndroidStudioProjects/Sensorlizer2/app/src/main/AndroidManifest.xml:9:9-41
+		ADDED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml:9:9-41
 	android:supportsRtl
-		ADDED from /home/matteo/AndroidStudioProjects/Sensorlizer2/app/src/main/AndroidManifest.xml:11:9-35
+		ADDED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml:11:9-35
 	android:roundIcon
-		ADDED from /home/matteo/AndroidStudioProjects/Sensorlizer2/app/src/main/AndroidManifest.xml:10:9-63
+		ADDED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml:10:9-63
 	android:allowBackup
-		ADDED from /home/matteo/AndroidStudioProjects/Sensorlizer2/app/src/main/AndroidManifest.xml:7:9-35
+		ADDED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml:7:9-35
 	android:icon
-		ADDED from /home/matteo/AndroidStudioProjects/Sensorlizer2/app/src/main/AndroidManifest.xml:8:9-52
+		ADDED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml:8:9-52
 	android:theme
-		ADDED from /home/matteo/AndroidStudioProjects/Sensorlizer2/app/src/main/AndroidManifest.xml:12:9-40
+		ADDED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml:12:9-40
 activity#com.sanflix.sensorlizer.MainActivity
-ADDED from /home/matteo/AndroidStudioProjects/Sensorlizer2/app/src/main/AndroidManifest.xml:13:9-19:20
+ADDED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml:13:9-19:20
 	android:name
-		ADDED from /home/matteo/AndroidStudioProjects/Sensorlizer2/app/src/main/AndroidManifest.xml:13:19-47
+		ADDED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml:13:19-47
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /home/matteo/AndroidStudioProjects/Sensorlizer2/app/src/main/AndroidManifest.xml:14:13-18:29
+ADDED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml:14:13-18:29
 action#android.intent.action.MAIN
-ADDED from /home/matteo/AndroidStudioProjects/Sensorlizer2/app/src/main/AndroidManifest.xml:15:17-69
+ADDED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml:15:17-69
 	android:name
-		ADDED from /home/matteo/AndroidStudioProjects/Sensorlizer2/app/src/main/AndroidManifest.xml:15:25-66
+		ADDED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml:15:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/matteo/AndroidStudioProjects/Sensorlizer2/app/src/main/AndroidManifest.xml:17:17-77
+ADDED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml:17:17-77
 	android:name
-		ADDED from /home/matteo/AndroidStudioProjects/Sensorlizer2/app/src/main/AndroidManifest.xml:17:27-74
+		ADDED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml:17:27-74
 uses-feature#android.hardware.sensor
-ADDED from /home/matteo/AndroidStudioProjects/Sensorlizer2/app/src/main/AndroidManifest.xml:22:5-25:20
+ADDED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml:22:5-25:20
 	android:required
-		ADDED from /home/matteo/AndroidStudioProjects/Sensorlizer2/app/src/main/AndroidManifest.xml:24:9-32
+		ADDED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml:24:9-32
 	android:name
-		ADDED from /home/matteo/AndroidStudioProjects/Sensorlizer2/app/src/main/AndroidManifest.xml:23:9-47
+		ADDED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml:23:9-47
 uses-sdk
-INJECTED from /home/matteo/AndroidStudioProjects/Sensorlizer2/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/matteo/.android/build-cache/778b915cd1a2b36059a56725727c67cbba9a2990/output/AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support:design:26.0.0-alpha1] /home/matteo/.android/build-cache/0b11ab0e0bf4719456939c5fda6e5f2ea7ae4130/output/AndroidManifest.xml:21:5-23:62
-MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /home/matteo/.android/build-cache/d3ab41ce8ca7bb11144b1368c6a33aa05546bde9/output/AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /home/matteo/.android/build-cache/19c5f97fd0a267a6e47b048cba27c882b4f4208d/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /home/matteo/.android/build-cache/791675b408e5b657d2fbdb3e87bfd4a24605494f/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /home/matteo/.android/build-cache/f473fe4f982eb0d71453a4f7b0b8e0dbe9f5a117/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:26.0.0-alpha1] /home/matteo/.android/build-cache/8c4678eac080c42df45904b37db4824c2da9cc36/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:26.0.0-alpha1] /home/matteo/.android/build-cache/81ba6d1144ba0de8a7d5d34d8ab79d2377327f02/output/AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /home/matteo/.android/build-cache/42d4f22c4cc982df63579f440093a9f1e85b0123/output/AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /home/matteo/.android/build-cache/4e6f29d13866747c442a19eb7f44d02ecd57c81f/output/AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /home/matteo/.android/build-cache/a60512c1e54b6776b289ae4abdfa2eae962b39e5/output/AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /home/matteo/.android/build-cache/f45632246cc52e7f3986d7c61bef04822f8315c0/output/AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-compat:26.0.0-alpha1] /home/matteo/.android/build-cache/945c23085bbc9cde19e45a2e7eb9423d2fbf0f0b/output/AndroidManifest.xml:21:5-23:58
+INJECTED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\sanfe\.android\build-cache\2178e268ba13f5f2926310657a2908ba04c71b5e\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\sanfe\.android\build-cache\3a829b9f563f89722a770454fa5d267a5476872e\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\sanfe\.android\build-cache\d852165c2b4235d9cc35fc530625e06add43e0ae\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\sanfe\.android\build-cache\46cf71c2c7c90232507b44d021f2e96af9828146\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\sanfe\.android\build-cache\5484996f1687c892a9466c20483783835aa48ba7\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\sanfe\.android\build-cache\d54080627a556e9dd74c9fdafc0e93128be6cfe1\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\sanfe\.android\build-cache\94b7b4efdf123b661502bb8eb0f399c03ac36aae\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\sanfe\.android\build-cache\77c7772ecf910b349a94b35a094e4e5bd64f7b05\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\sanfe\.android\build-cache\717db7a6ba5f10925c3c8c0a2e90c233276699fc\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\sanfe\.android\build-cache\1970d0cf78f096821af32986d3539c34a439f756\output\AndroidManifest.xml:5:5-7:41
 	tools:overrideLibrary
-		ADDED from [com.android.support:design:26.0.0-alpha1] /home/matteo/.android/build-cache/0b11ab0e0bf4719456939c5fda6e5f2ea7ae4130/output/AndroidManifest.xml:23:9-59
+		ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\sanfe\.android\build-cache\2178e268ba13f5f2926310657a2908ba04c71b5e\output\AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
-		INJECTED from /home/matteo/AndroidStudioProjects/Sensorlizer2/app/src/main/AndroidManifest.xml
-		INJECTED from /home/matteo/AndroidStudioProjects/Sensorlizer2/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /home/matteo/AndroidStudioProjects/Sensorlizer2/app/src/main/AndroidManifest.xml
-		INJECTED from /home/matteo/AndroidStudioProjects/Sensorlizer2/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml
 meta-data#android.support.VERSION
-ADDED from [com.android.support:design:26.0.0-alpha1] /home/matteo/.android/build-cache/0b11ab0e0bf4719456939c5fda6e5f2ea7ae4130/output/AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /home/matteo/.android/build-cache/d3ab41ce8ca7bb11144b1368c6a33aa05546bde9/output/AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /home/matteo/.android/build-cache/19c5f97fd0a267a6e47b048cba27c882b4f4208d/output/AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /home/matteo/.android/build-cache/791675b408e5b657d2fbdb3e87bfd4a24605494f/output/AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /home/matteo/.android/build-cache/f473fe4f982eb0d71453a4f7b0b8e0dbe9f5a117/output/AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.support:transition:26.0.0-alpha1] /home/matteo/.android/build-cache/8c4678eac080c42df45904b37db4824c2da9cc36/output/AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.support:support-v4:26.0.0-alpha1] /home/matteo/.android/build-cache/81ba6d1144ba0de8a7d5d34d8ab79d2377327f02/output/AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /home/matteo/.android/build-cache/42d4f22c4cc982df63579f440093a9f1e85b0123/output/AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /home/matteo/.android/build-cache/4e6f29d13866747c442a19eb7f44d02ecd57c81f/output/AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /home/matteo/.android/build-cache/a60512c1e54b6776b289ae4abdfa2eae962b39e5/output/AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /home/matteo/.android/build-cache/f45632246cc52e7f3986d7c61bef04822f8315c0/output/AndroidManifest.xml:25:5-27:41
-MERGED from [com.android.support:support-compat:26.0.0-alpha1] /home/matteo/.android/build-cache/945c23085bbc9cde19e45a2e7eb9423d2fbf0f0b/output/AndroidManifest.xml:25:5-27:41
+ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\sanfe\.android\build-cache\2178e268ba13f5f2926310657a2908ba04c71b5e\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\sanfe\.android\build-cache\3a829b9f563f89722a770454fa5d267a5476872e\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\sanfe\.android\build-cache\d852165c2b4235d9cc35fc530625e06add43e0ae\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\sanfe\.android\build-cache\46cf71c2c7c90232507b44d021f2e96af9828146\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\sanfe\.android\build-cache\5484996f1687c892a9466c20483783835aa48ba7\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\sanfe\.android\build-cache\d54080627a556e9dd74c9fdafc0e93128be6cfe1\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\sanfe\.android\build-cache\94b7b4efdf123b661502bb8eb0f399c03ac36aae\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\sanfe\.android\build-cache\77c7772ecf910b349a94b35a094e4e5bd64f7b05\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\sanfe\.android\build-cache\717db7a6ba5f10925c3c8c0a2e90c233276699fc\output\AndroidManifest.xml:25:5-27:34
 	android:value
-		ADDED from [com.android.support:design:26.0.0-alpha1] /home/matteo/.android/build-cache/0b11ab0e0bf4719456939c5fda6e5f2ea7ae4130/output/AndroidManifest.xml:27:9-38
+		ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\sanfe\.android\build-cache\2178e268ba13f5f2926310657a2908ba04c71b5e\output\AndroidManifest.xml:27:9-31
 	android:name
-		ADDED from [com.android.support:design:26.0.0-alpha1] /home/matteo/.android/build-cache/0b11ab0e0bf4719456939c5fda6e5f2ea7ae4130/output/AndroidManifest.xml:26:9-47
+		ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\sanfe\.android\build-cache\2178e268ba13f5f2926310657a2908ba04c71b5e\output\AndroidManifest.xml:26:9-47

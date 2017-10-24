@@ -1,6 +1,10 @@
 [
     {
-        "merged": "/home/matteo/AndroidStudioProjects/Sensorlizer2/app/build/intermediates/res/merged/debug/animator-v21/design_appbar_state_list_animator.xml",
-        "source": "/home/matteo/.android/build-cache/0b11ab0e0bf4719456939c5fda6e5f2ea7ae4130/output/res/animator-v21/design_appbar_state_list_animator.xml"
+        "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\animator-v21\\design_appbar_state_list_animator.xml",
+        "source": "C:\\Users\\sanfe\\.android\\build-cache\\7f5458a9bbbc963253a4541adf32f4cdbd95595d\\output\\res\\animator-v21\\design_appbar_state_list_animator.xml"
+    },
+    {
+        "merged": "C:\\home\\matteo\\AndroidStudioProjects\\Sensorlizer2\\app\\build\\intermediates\\res\\merged\\debug\\animator-v21\\design_appbar_state_list_animator.xml",
+        "source": "C:\\home\\matteo\\.android\\build-cache\\0b11ab0e0bf4719456939c5fda6e5f2ea7ae4130\\output\\res\\animator-v21\\design_appbar_state_list_animator.xml"
     }
 ]
