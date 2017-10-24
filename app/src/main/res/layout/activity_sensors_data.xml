@@ -47,6 +47,7 @@
                         android:textColor="@color/colorPrimary"
                         android:layout_margin="@dimen/layoutMargin"/>
                     <CheckBox
+                        android:onClick="updateSavedSensor"
                         android:id="@+id/chkAccellerometer"
                         android:text="@string/save"
                         android:textColor="@color/colorPrimary"/>
@@ -102,6 +103,7 @@
                         />
 
                     <CheckBox
+                        android:onClick="updateSavedSensor"
                         android:id="@+id/chkGravity"
                         android:text="@string/save"
                         android:textColor="@color/colorPrimary"/>
@@ -155,6 +157,7 @@
                         android:textColor="@color/colorPrimary"
                         android:layout_margin="@dimen/layoutMargin"/>
                     <CheckBox
+                        android:onClick="updateSavedSensor"
                         android:id="@+id/chkGyroscope"
                         android:text="@string/save"
                         android:textColor="@color/colorPrimary"/>
@@ -209,6 +212,7 @@
                         android:textColor="@color/colorPrimary"
                         android:layout_margin="@dimen/layoutMargin"/>
                     <CheckBox
+                        android:onClick="updateSavedSensor"
                         android:id="@+id/chkLinearAccelleration"
                         android:text="@string/save"
                         android:textColor="@color/colorPrimary"/>
@@ -251,6 +255,35 @@
                 </TableRow>
                 <TableRow></TableRow>
                 <!-- 5 - ROTATION VECTOR -->
+                <TableRow>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tvRotationVectorText"
+                        android:text="Rotation Vector"
+                        android:textSize="@dimen/sensorNameSize"
+                        android:paddingStart="@dimen/paddingStartSensorName"
+                        android:paddingEnd="@dimen/paddingEndSensorName"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_margin="@dimen/layoutMargin"/>
+                    <CheckBox
+                        android:onClick="updateSavedSensor"
+                        android:id="@+id/chkRotationVector"
+                        android:text="@string/save"
+                        android:textColor="@color/colorPrimary"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tvRotationVectorValueX"
+                        android:textSize="@dimen/sensorDataSize"
+                        android:paddingStart="@dimen/paddingStartSensorName"
+                        android:paddingEnd="@dimen/paddingEndSensorName"
+                        android:text="@string/not_found"
+                        android:layout_margin="@dimen/layoutMargin"
+                        android:textColor="@color/colorPrimaryDark"/>
+                </TableRow>
             </TableLayout>
             <!--
             ***********************
@@ -283,6 +316,7 @@
                         android:textColor="@color/colorPrimary"
                         android:layout_margin="@dimen/layoutMargin"/>
                     <CheckBox
+                        android:onClick="updateSavedSensor"
                         android:id="@+id/chkAmbientTemperature"
                         android:text="@string/save"
                         android:textColor="@color/colorPrimary"/>
@@ -313,6 +347,7 @@
                         android:textColor="@color/colorPrimary"
                         android:layout_margin="@dimen/layoutMargin"/>
                     <CheckBox
+                        android:onClick="updateSavedSensor"
                         android:id="@+id/chkLigth"
                         android:text="@string/save"
                         android:textColor="@color/colorPrimary"/>
@@ -342,6 +377,7 @@
                         android:textColor="@color/colorPrimary"
                         android:layout_margin="@dimen/layoutMargin"/>
                     <CheckBox
+                        android:onClick="updateSavedSensor"
                         android:id="@+id/chkPressure"
                         android:text="@string/save"
                         android:textColor="@color/colorPrimary"/>
@@ -372,6 +408,7 @@
                         android:layout_margin="@dimen/layoutMargin"
                         />
                     <CheckBox
+                        android:onClick="updateSavedSensor"
                         android:id="@+id/chkRelativeHumidity"
                         android:text="@string/save"
                         android:textColor="@color/colorPrimary"/>
@@ -419,6 +456,7 @@
                         android:textColor="@color/colorPrimary"
                         android:layout_margin="@dimen/layoutMargin"/>
                     <CheckBox
+                        android:onClick="updateSavedSensor"
                         android:id="@+id/chkMagneticField"
                         android:text="@string/save"
                         android:textColor="@color/colorPrimary"/>
@@ -472,6 +510,7 @@
                         android:textColor="@color/colorPrimary"
                         android:layout_margin="@dimen/layoutMargin"/>
                     <CheckBox
+                        android:onClick="updateSavedSensor"
                         android:id="@+id/chkProximity"
                         android:text="@string/save"
                         android:textColor="@color/colorPrimary" />
@@ -488,6 +527,60 @@
                         android:layout_margin="@dimen/layoutMargin"
                         android:textColor="@color/colorPrimaryDark"
                         />
+                </TableRow>
+                <!-- 3 - ORIENTATION -->
+                <TableRow>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tvOrientationText"
+                        android:text="Device Orientation"
+                        android:textSize="@dimen/sensorNameSize"
+                        android:paddingStart="@dimen/paddingStartSensorName"
+                        android:paddingEnd="@dimen/paddingEndSensorName"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_margin="@dimen/layoutMargin" />
+                    <CheckBox
+                        android:onClick="updateSavedSensor"
+                        android:id="@+id/chkOrientation"
+                        android:text="@string/save"
+                        android:textColor="@color/colorPrimary" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tvOrientationAzimuth"
+                        android:text=""
+                        android:textSize="@dimen/sensorDataSize"
+                        android:paddingStart="@dimen/paddingStartSensorName"
+                        android:paddingEnd="@dimen/paddingEndSensorName"
+                        android:layout_margin="@dimen/layoutMargin"
+                        android:textColor="@color/colorPrimaryDark"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tvOrientationPitch"
+                        android:text="@string/not_found"
+                        android:textSize="@dimen/sensorDataSize"
+                        android:paddingStart="@dimen/paddingStartSensorName"
+                        android:paddingEnd="@dimen/paddingEndSensorName"
+                        android:layout_margin="@dimen/layoutMargin"
+                        android:textColor="@color/colorPrimaryDark"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tvOrientationRoll"
+                        android:text=""
+                        android:textSize="@dimen/sensorDataSize"
+                        android:paddingStart="@dimen/paddingStartSensorName"
+                        android:paddingEnd="@dimen/paddingEndSensorName"
+                        android:layout_margin="@dimen/layoutMargin"
+                        android:textColor="@color/colorPrimaryDark"/>
                 </TableRow>
             </TableLayout>
         </TableLayout>

@@ -7,13 +7,18 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.text.Html;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.TableLayout;
 import android.widget.TextView;
 
+import java.util.Collection;
 import java.util.List;
+import java.io.*;
+import java.util.Map;
+import java.util.Set;
 
 
 public class MainActivity extends Activity implements SensorEventListener {
@@ -29,7 +34,7 @@ public class MainActivity extends Activity implements SensorEventListener {
     private Sensor mProximity;
     private Sensor mRelativeHumidity;
     private Sensor mRotationVector;
-
+    private Sensor mOrientation;
     private List<Sensor> SensorList;
 
     public TextView tvAccellerometerX;
@@ -62,8 +67,17 @@ public class MainActivity extends Activity implements SensorEventListener {
     public CheckBox chkProximity;
     public TextView tvRelativeHumidity;
     public CheckBox chkRelativeHumidity;
-    public TextView tvRotationVector;
+    public TextView tvRotationVectorX;
     public CheckBox chkRotationVector;
+    public TextView tvOrientationAzimuth;
+    public TextView tvOrientationRoll;
+    public TextView tvOrientationPitch;
+    public CheckBox chkOrientation;
+
+    private final float[] mAccelerometerReading = new float[3];
+    private final float[] mMagnetometerReading = new float[3];
+    private final float[] mRotationMatrix = new float[9];
+    private final float[] mOrientationAngles = new float[3];
 
     private String apice2 = "<sup><small>2</small></sup>";
 
@@ -115,8 +129,79 @@ public class MainActivity extends Activity implements SensorEventListener {
         chkRelativeHumidity = (CheckBox) findViewById(R.id.chkRelativeHumidity);
         tvProximity = (TextView) findViewById(R.id.tvProximityValue);
         chkProximity = (CheckBox) findViewById(R.id.chkProximity);
+        tvRotationVectorX = (TextView) findViewById(R.id.tvRotationVectorValueX);
+        chkRotationVector = (CheckBox) findViewById(R.id.chkRotationVector);
+        tvOrientationAzimuth = (TextView) findViewById(R.id.tvOrientationAzimuth);
+        tvOrientationRoll = (TextView) findViewById(R.id.tvOrientationRoll);
+        tvOrientationPitch = (TextView) findViewById(R.id.tvOrientationPitch);
+        chkOrientation = (CheckBox) findViewById(R.id.chkOrientation);
 
-        SensorList = mSensorManager.getSensorList(Sensor.TYPE_ALL);
+        File file = new File(getFilesDir(), "savedSensor.csv");
+        try {
+            BufferedReader in = new BufferedReader(new InputStreamReader(new BufferedInputStream(new FileInputStream(file))));
+            String line;
+            while( (line = in.readLine()) != null){
+                if(line.equals("Accellerometer;1;")){
+                    chkAccelerometer.setChecked(true);
+                } else if(line.equals("Gravity;1;")){
+                    chkGravity.setChecked(true);
+                } else if(line.equals("Gyroscope;1;")){
+                    chkGyroscope.setChecked(true);
+                } else if(line.equals("LinearAccelleration;1;")){
+                    chkLinearAccelleration.setChecked(true);
+                } else if(line.equals("RotationVector;1;")){
+                    chkRotationVector.setChecked(true);
+                } else if(line.equals("AmbientTemperature;1;")){
+                    chkAmbientTemperature.setChecked(true);
+                } else if(line.equals("Ligth;1;")){
+                    chkLigth.setChecked(true);
+                } else if(line.equals("Pressure;1;")){
+                    chkPressure.setChecked(true);
+                } else if(line.equals("RelativeHumidity;1;")){
+                    chkRelativeHumidity.setChecked(true);
+                } else if(line.equals("MagneticField;1;")){
+                    chkMagneticField.setChecked(true);
+                } else if(line.equals("Proximity;1;")){
+                    chkProximity.setChecked(true);
+                } else if(line.equals("Orientation;1;")){
+                    chkOrientation.setChecked(true);
+                }
+            }
+        } catch(Exception e){
+            e.printStackTrace();
+            System.out.println("LOAD DEFAULT CHECKED");
+            SensorList = mSensorManager.getSensorList(Sensor.TYPE_ALL);
+            for (Sensor sensor : SensorList) {
+                if (sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
+                    chkAccelerometer.setChecked(true);
+                } else if (sensor.getType() == Sensor.TYPE_AMBIENT_TEMPERATURE) {
+                    chkAmbientTemperature.setChecked(true);
+                } else if (sensor.getType() == Sensor.TYPE_GRAVITY) {
+                    chkGravity.setChecked(true);
+                } else if (sensor.getType() == Sensor.TYPE_GYROSCOPE) {
+                    chkGyroscope.setChecked(true);
+                } else if (sensor.getType() == Sensor.TYPE_LINEAR_ACCELERATION) {
+                    chkLinearAccelleration.setChecked(true);
+                } else if (sensor.getType() == Sensor.TYPE_LIGHT) {
+                    chkLigth.setChecked(true);
+                } else if (sensor.getType() == Sensor.TYPE_MAGNETIC_FIELD) {
+                    chkMagneticField.setChecked(true);
+                } else if (sensor.getType() == Sensor.TYPE_PRESSURE) {
+                    chkPressure.setChecked(true);
+                } else if (sensor.getType() == Sensor.TYPE_RELATIVE_HUMIDITY){
+                    chkRelativeHumidity.setChecked(true);
+                } else if (sensor.getType() == Sensor.TYPE_PROXIMITY){
+                    chkProximity.setChecked(true);
+                } else if (sensor.getType() == Sensor.TYPE_ROTATION_VECTOR){
+                    chkRotationVector.setChecked(true);
+                } else if (sensor.getType() == Sensor.TYPE_ORIENTATION){
+                    chkOrientation.setChecked(true);
+                }
+                updateSavedSensor(null);
+            }
+        }
+
+        /*SensorList = mSensorManager.getSensorList(Sensor.TYPE_ALL);
         for (Sensor sensor : SensorList) {
             if (sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
                 chkAccelerometer.setChecked(true);
@@ -138,8 +223,13 @@ public class MainActivity extends Activity implements SensorEventListener {
                 chkRelativeHumidity.setChecked(true);
             } else if (sensor.getType() == Sensor.TYPE_PROXIMITY){
                 chkProximity.setChecked(true);
+            } else if (sensor.getType() == Sensor.TYPE_ROTATION_VECTOR){
+                chkRotationVector.setChecked(true);
+            } else if (sensor.getType() == Sensor.TYPE_ORIENTATION){
+                chkOrientation.setChecked(true);
             }
-        }
+            updateSavedSensor(null);
+        }*/
     }
 
     @Override
@@ -152,6 +242,8 @@ public class MainActivity extends Activity implements SensorEventListener {
 
             Sensor sensor = event.sensor;
             if (sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
+                System.arraycopy(event.values, 0, mAccelerometerReading, 0, mAccelerometerReading.length);
+                updateOrientationAngles();
                 float accgx = event.values[0];
                 float accgy = event.values[1];
                 float accgz = event.values[2];
@@ -186,6 +278,8 @@ public class MainActivity extends Activity implements SensorEventListener {
                 float ligth = event.values[0];
                 tvLigth.setText("Value: " + ligth + " lx");
             } else if(sensor.getType() == Sensor.TYPE_MAGNETIC_FIELD){
+                System.arraycopy(event.values, 0, mMagnetometerReading, 0, mMagnetometerReading.length);
+                updateOrientationAngles();
                 float mfx = event.values[0];
                 float mfy = event.values[1];
                 float mfz = event.values[2];
@@ -201,6 +295,9 @@ public class MainActivity extends Activity implements SensorEventListener {
             } else if (sensor.getType() == Sensor.TYPE_PROXIMITY){
                 float prox = event.values[0];
                 tvProximity.setText("Value: " + prox + " cm");
+            } else if (sensor.getType() == Sensor.TYPE_ROTATION_VECTOR){
+                float rot = event.values[3];
+                tvRotationVectorX.setText("Value: " + rot);
             }
     }
 
@@ -218,6 +315,7 @@ public class MainActivity extends Activity implements SensorEventListener {
         mSensorManager.registerListener(this, mProximity, SensorManager.SENSOR_DELAY_NORMAL);
         mSensorManager.registerListener(this, mRelativeHumidity, SensorManager.SENSOR_DELAY_NORMAL);
         mSensorManager.registerListener(this, mRotationVector, SensorManager.SENSOR_DELAY_NORMAL);
+        mSensorManager.registerListener(this, mOrientation, SensorManager.SENSOR_DELAY_NORMAL);
     }
 
     @Override
@@ -246,6 +344,89 @@ public class MainActivity extends Activity implements SensorEventListener {
         } else {
             tv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.arrow_down,0,0,0);
             tbl.setVisibility(View.VISIBLE);
+        }
+    }
+
+    public void updateOrientationAngles() {
+        mSensorManager.getRotationMatrix(mRotationMatrix, null, mAccelerometerReading, mMagnetometerReading);
+        mSensorManager.getOrientation(mRotationMatrix, mOrientationAngles);
+        tvOrientationAzimuth.setText("Azimuth: " + mOrientationAngles[0] + " °");
+        tvOrientationPitch.setText("Pitch: " + mOrientationAngles[1] + " °");
+        tvOrientationRoll.setText("Roll: " + mOrientationAngles[2] + " °");
+    }
+
+    public void updateSavedSensor(View v){
+        File file = new File(getFilesDir(), "savedSensor.csv");
+        String listCheck = "";
+        if(chkAccelerometer.isChecked()){
+            listCheck += "Accellerometer;1;\n";
+        } else {
+            listCheck += "Accellerometer;0;\n";
+        }
+        if(chkGravity.isChecked()){
+            listCheck += "Gravity;1;\n";
+        } else {
+            listCheck += "Gravity;0;\n";
+        }
+        if(chkGyroscope.isChecked()){
+            listCheck += "Gyroscope;1;\n";
+        } else {
+            listCheck += "Gyroscope;0;\n";
+        }
+        if(chkLinearAccelleration.isChecked()){
+            listCheck += "LinearAccelleration;1;\n";
+        } else {
+            listCheck += "LinearAccelleration;0;\n";
+        }
+        if(chkRotationVector.isChecked()){
+            listCheck += "RotationVector;1;\n";
+        } else {
+            listCheck += "RotationVector;0;\n";
+        }
+        if(chkAmbientTemperature.isChecked()){
+            listCheck += "AmbientTemperature;1;\n";
+        } else {
+            listCheck += "AmbientTemperature;0;\n";
+        }
+        if(chkLigth.isChecked()){
+            listCheck += "Ligth;1;\n";
+        } else {
+            listCheck += "Ligth;0;\n";
+        }
+        if(chkPressure.isChecked()){
+            listCheck += "Pressure;1;\n";
+        } else {
+            listCheck += "Pressure;0;\n";
+        }
+        if(chkRelativeHumidity.isChecked()){
+            listCheck += "RelativeHumidity;1;\n";
+        } else {
+            listCheck += "RelativeHumidity;0;\n";
+        }
+        if(chkMagneticField.isChecked()){
+            listCheck += "MagneticField;1;\n";
+        } else {
+            listCheck += "MagneticField;0;\n";
+        }
+        if(chkProximity.isChecked()){
+            listCheck += "Proximity;1;\n";
+        } else {
+            listCheck += "Proximity;0;\n";
+        }
+        if(chkOrientation.isChecked()){
+            listCheck += "Orientation;1;\n";
+        } else {
+            listCheck += "Orientation;0;\n";
+        }
+
+        try{
+            file.createNewFile();
+            FileOutputStream fos = new FileOutputStream(file);
+            fos.write(listCheck.getBytes());
+            fos.flush();
+            fos.close();
+        } catch (IOException e){
+            e.printStackTrace();
         }
     }
 }

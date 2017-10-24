@@ -1,4 +1,4 @@
-#Tue Oct 24 02:21:14 CEST 2017
+#Tue Oct 24 13:54:18 CEST 2017
 base.0=C\:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
 renamed.0=classes.dex
 file.0=C\:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex
