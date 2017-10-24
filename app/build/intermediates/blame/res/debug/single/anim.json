@@ -1,7 +1,7 @@
 [
     {
         "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_out.xml",
-        "source": "C:\\Users\\sanfe\\.android\\build-cache\\7f5458a9bbbc963253a4541adf32f4cdbd95595d\\output\\res\\anim\\design_snackbar_out.xml"
+        "source": "C:\\Users\\sanfe\\.android\\build-cache\\90e2e275040af7eb35c89d995294e6e2a82e170c\\output\\res\\anim\\design_snackbar_out.xml"
     },
     {
         "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_fade_out.xml",
@@ -13,7 +13,7 @@
     },
     {
         "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_snackbar_in.xml",
-        "source": "C:\\Users\\sanfe\\.android\\build-cache\\7f5458a9bbbc963253a4541adf32f4cdbd95595d\\output\\res\\anim\\design_snackbar_in.xml"
+        "source": "C:\\Users\\sanfe\\.android\\build-cache\\90e2e275040af7eb35c89d995294e6e2a82e170c\\output\\res\\anim\\design_snackbar_in.xml"
     },
     {
         "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
@@ -34,6 +34,10 @@
     {
         "merged": "C:\\home\\matteo\\AndroidStudioProjects\\Sensorlizer2\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_in_bottom.xml",
         "source": "C:\\home\\matteo\\.android\\build-cache\\d3ab41ce8ca7bb11144b1368c6a33aa05546bde9\\output\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_out.xml",
+        "source": "C:\\Users\\sanfe\\.android\\build-cache\\90e2e275040af7eb35c89d995294e6e2a82e170c\\output\\res\\anim\\design_fab_out.xml"
     },
     {
         "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
@@ -74,6 +78,10 @@
     {
         "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_popup_exit.xml",
         "source": "C:\\Users\\sanfe\\.android\\build-cache\\2178e268ba13f5f2926310657a2908ba04c71b5e\\output\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_in.xml",
+        "source": "C:\\Users\\sanfe\\.android\\build-cache\\90e2e275040af7eb35c89d995294e6e2a82e170c\\output\\res\\anim\\design_fab_in.xml"
     },
     {
         "merged": "C:\\home\\matteo\\AndroidStudioProjects\\Sensorlizer2\\app\\build\\intermediates\\res\\merged\\debug\\anim\\design_fab_in.xml",

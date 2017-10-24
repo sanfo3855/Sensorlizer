@@ -10,8 +10,7 @@
 
     <uses-feature
         android:name="android.hardware.sensor"
-        android:required="true" >
-    </uses-feature>
+        android:required="true" />
 
     <meta-data
         android:name="android.support.VERSION"

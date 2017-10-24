@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.sanflix.sensorlizer">
 
+    <uses-feature
+        android:name="android.hardware.sensor"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -18,10 +21,5 @@
             </intent-filter>
         </activity>
     </application>
-    
-    <uses-feature
-        android:name="android.hardware.sensor"
-        android:required="true">
-    </uses-feature>
 
 </manifest>
