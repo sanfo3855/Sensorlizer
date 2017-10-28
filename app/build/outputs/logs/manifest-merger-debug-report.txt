@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml:2:1-25:12
+ADDED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml:2:1-30:12
 	package
 		ADDED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml:3:5-38
 		INJECTED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml
@@ -20,7 +20,7 @@ ADDED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifes
 	android:name
 		ADDED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml:6:9-47
 application
-ADDED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml:9:5-23:19
+ADDED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml:9:5-28:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\sanfe\.android\build-cache\1970d0cf78f096821af32986d3539c34a439f756\output\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:design:25.3.1] C:\Users\sanfe\.android\build-cache\90e2e275040af7eb35c89d995294e6e2a82e170c\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\sanfe\.android\build-cache\2178e268ba13f5f2926310657a2908ba04c71b5e\output\AndroidManifest.xml:29:5-20
@@ -59,6 +59,14 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml:20:17-77
 	android:name
 		ADDED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml:20:27-74
+service#com.sanflix.sensorlizer.SensorLogger
+ADDED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml:24:9-27:47
+	android:enabled
+		ADDED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml:26:13-35
+	android:exported
+		ADDED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml:27:13-36
+	android:name
+		ADDED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml:25:13-41
 uses-sdk
 INJECTED from C:\Users\sanfe\StudioProjects\Sensorlizer\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\sanfe\.android\build-cache\1970d0cf78f096821af32986d3539c34a439f756\output\AndroidManifest.xml:5:5-7:41

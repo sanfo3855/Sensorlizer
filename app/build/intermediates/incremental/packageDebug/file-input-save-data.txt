@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Oct 24 13:54:18 CEST 2017
+#Tue Oct 24 15:09:00 CEST 2017
 210.set=ANDROID_RESOURCE
 14.set=ANDROID_RESOURCE
 180.file=C\:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\design_navigation_item.xml

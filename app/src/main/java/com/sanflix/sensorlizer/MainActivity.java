@@ -1,24 +1,31 @@
 package com.sanflix.sensorlizer;
 
 import android.app.Activity;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Context;
+import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.text.Html;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TableLayout;
 import android.widget.TextView;
 
-import java.util.Collection;
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.List;
-import java.io.*;
-import java.util.Map;
-import java.util.Set;
 
 
 public class MainActivity extends Activity implements SensorEventListener {
@@ -85,6 +92,8 @@ public class MainActivity extends Activity implements SensorEventListener {
     public final void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sensors_data);
+
+
 
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         mAccellerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
@@ -167,9 +176,10 @@ public class MainActivity extends Activity implements SensorEventListener {
                     chkOrientation.setChecked(true);
                 }
             }
+            Log.i("savedSensorFound", "Checking Saved Sensor");
         } catch(Exception e){
-            e.printStackTrace();
-            System.out.println("LOAD DEFAULT CHECKED");
+            //e.printStackTrace();
+            Log.i("savedSensorNotFound","     Checking available Sensor");
             SensorList = mSensorManager.getSensorList(Sensor.TYPE_ALL);
             for (Sensor sensor : SensorList) {
                 if (sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
@@ -200,36 +210,6 @@ public class MainActivity extends Activity implements SensorEventListener {
                 updateSavedSensor(null);
             }
         }
-
-        /*SensorList = mSensorManager.getSensorList(Sensor.TYPE_ALL);
-        for (Sensor sensor : SensorList) {
-            if (sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
-                chkAccelerometer.setChecked(true);
-            } else if (sensor.getType() == Sensor.TYPE_AMBIENT_TEMPERATURE) {
-                chkAmbientTemperature.setChecked(true);
-            } else if (sensor.getType() == Sensor.TYPE_GRAVITY) {
-                chkGravity.setChecked(true);
-            } else if (sensor.getType() == Sensor.TYPE_GYROSCOPE) {
-                chkGyroscope.setChecked(true);
-            } else if (sensor.getType() == Sensor.TYPE_LINEAR_ACCELERATION) {
-                chkLinearAccelleration.setChecked(true);
-            } else if (sensor.getType() == Sensor.TYPE_LIGHT) {
-                chkLigth.setChecked(true);
-            } else if (sensor.getType() == Sensor.TYPE_MAGNETIC_FIELD) {
-                chkMagneticField.setChecked(true);
-            } else if (sensor.getType() == Sensor.TYPE_PRESSURE) {
-                chkPressure.setChecked(true);
-            } else if (sensor.getType() == Sensor.TYPE_RELATIVE_HUMIDITY){
-                chkRelativeHumidity.setChecked(true);
-            } else if (sensor.getType() == Sensor.TYPE_PROXIMITY){
-                chkProximity.setChecked(true);
-            } else if (sensor.getType() == Sensor.TYPE_ROTATION_VECTOR){
-                chkRotationVector.setChecked(true);
-            } else if (sensor.getType() == Sensor.TYPE_ORIENTATION){
-                chkOrientation.setChecked(true);
-            }
-            updateSavedSensor(null);
-        }*/
     }
 
     @Override
@@ -428,5 +408,31 @@ public class MainActivity extends Activity implements SensorEventListener {
         } catch (IOException e){
             e.printStackTrace();
         }
+    }
+
+    public void startService(View v){
+        Log.i("MainActivity", "com.sanflix.sensorlizer.MainActivity: starting SensorLogger...");
+        ((Button) findViewById(R.id.buttonService)).setVisibility(View.GONE);
+        ((Button) findViewById(R.id.buttonServiceStop)).setVisibility(View.VISIBLE);
+
+        AlarmManager scheduler = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+        Intent intent = new Intent(getApplicationContext(), SensorLogger.class );
+        PendingIntent scheduledIntent = PendingIntent.getService(getApplicationContext(), 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        scheduler.setInexactRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), 10*1000, scheduledIntent);
+        Log.i("MainActivity", "com.sanflix.sensorlizer.MainActivity: started and scheduled SensorLogger...");
+    }
+
+    public void stopService(View v){
+        Log.i("MainActivity", "com.sanflix.sensorlizer.MainActivity: stopping SensorLogger...");
+        ((Button) findViewById(R.id.buttonServiceStop)).setVisibility(View.GONE);
+        ((Button) findViewById(R.id.buttonService)).setVisibility(View.VISIBLE);
+
+        AlarmManager scheduler = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+        Intent intent = new Intent(this,SensorLogger.class );
+        PendingIntent scheduledIntent = PendingIntent.getService(getApplicationContext(), 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        scheduler.cancel(scheduledIntent);
+        Log.i("MainActivity", "com.sanflix.sensorlizer.MainActivity: stopped and scheduled SensorLogger...");
     }
 }
