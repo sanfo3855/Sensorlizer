@@ -10,9 +10,13 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.text.Html;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TableLayout;
@@ -28,7 +32,7 @@ import java.io.InputStreamReader;
 import java.util.List;
 
 
-public class MainActivity extends Activity implements SensorEventListener {
+public class SensorDataVisualizer extends Fragment implements SensorEventListener {
     private SensorManager mSensorManager;
     private Sensor mAccellerometer;
     private Sensor mAmbientTemperature;
@@ -41,7 +45,6 @@ public class MainActivity extends Activity implements SensorEventListener {
     private Sensor mProximity;
     private Sensor mRelativeHumidity;
     private Sensor mRotationVector;
-    private Sensor mOrientation;
     private List<Sensor> SensorList;
 
     public TextView tvAccellerometerX;
@@ -89,13 +92,11 @@ public class MainActivity extends Activity implements SensorEventListener {
     private String apice2 = "<sup><small>2</small></sup>";
 
     @Override
-    public final void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sensors_data);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        final View v = inflater.inflate(R.layout.activity_sensors_data, container, false);
+        final Activity a = this.getActivity();
 
-
-
-        mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        mSensorManager = (SensorManager) a.getSystemService(Context.SENSOR_SERVICE);
         mAccellerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         mAmbientTemperature = mSensorManager.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE);
         mGravity = mSensorManager.getDefaultSensor(Sensor.TYPE_GRAVITY);
@@ -108,44 +109,91 @@ public class MainActivity extends Activity implements SensorEventListener {
         mRelativeHumidity = mSensorManager.getDefaultSensor(Sensor.TYPE_RELATIVE_HUMIDITY);
         mRotationVector = mSensorManager.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR);
 
-        tvAccellerometerX = (TextView) findViewById(R.id.tvAccellerometerValueX);
-        tvAccellerometerY = (TextView) findViewById(R.id.tvAccellerometerValueY);
-        tvAccellerometerZ = (TextView) findViewById(R.id.tvAccellerometerValueZ);
-        chkAccelerometer = (CheckBox) findViewById(R.id.chkAccellerometer);
-        tvAmbientTemperature = (TextView) findViewById(R.id.tvAmbientTemperatureValue);
-        chkAmbientTemperature = (CheckBox) findViewById(R.id.chkAmbientTemperature);
-        tvGravityX = (TextView) findViewById(R.id.tvGravityValueX);
-        tvGravityY = (TextView) findViewById(R.id.tvGravityValueY);
-        tvGravityZ = (TextView) findViewById(R.id.tvGravityValueZ);
-        chkGravity = (CheckBox) findViewById(R.id.chkGravity);
-        tvGyroscopeX = (TextView) findViewById(R.id.tvGyroscopeValueX);
-        tvGyroscopeY = (TextView) findViewById(R.id.tvGyroscopeValueY);
-        tvGyroscopeZ = (TextView) findViewById(R.id.tvGyroscopeValueZ);
-        chkGyroscope = (CheckBox) findViewById(R.id.chkGyroscope);
-        tvLigth = (TextView) findViewById(R.id.tvLigthValue);
-        chkLigth = (CheckBox) findViewById(R.id.chkLigth);
-        tvLinearAccellerationX = (TextView) findViewById(R.id.tvLinearAccellerationValueX);
-        tvLinearAccellerationY = (TextView) findViewById(R.id.tvLinearAccellerationValueY);
-        tvLinearAccellerationZ = (TextView) findViewById(R.id.tvLinearAccellerationValueZ);
-        chkLinearAccelleration = (CheckBox) findViewById(R.id.chkLinearAccelleration);
-        tvMagneticFieldX = (TextView) findViewById(R.id.tvMagneticFieldValueX);
-        tvMagneticFieldY = (TextView) findViewById(R.id.tvMagneticFieldValueY);
-        tvMagneticFieldZ = (TextView) findViewById(R.id.tvMagneticFieldValueZ);
-        chkMagneticField = (CheckBox) findViewById(R.id.chkMagneticField);
-        tvPressure = (TextView) findViewById(R.id.tvPressureValue);
-        chkPressure = (CheckBox) findViewById(R.id.chkPressure);
-        tvRelativeHumidity = (TextView) findViewById(R.id.tvRelativeHumidityValue);
-        chkRelativeHumidity = (CheckBox) findViewById(R.id.chkRelativeHumidity);
-        tvProximity = (TextView) findViewById(R.id.tvProximityValue);
-        chkProximity = (CheckBox) findViewById(R.id.chkProximity);
-        tvRotationVectorX = (TextView) findViewById(R.id.tvRotationVectorValueX);
-        chkRotationVector = (CheckBox) findViewById(R.id.chkRotationVector);
-        tvOrientationAzimuth = (TextView) findViewById(R.id.tvOrientationAzimuth);
-        tvOrientationRoll = (TextView) findViewById(R.id.tvOrientationRoll);
-        tvOrientationPitch = (TextView) findViewById(R.id.tvOrientationPitch);
-        chkOrientation = (CheckBox) findViewById(R.id.chkOrientation);
+        tvAccellerometerX = (TextView) v.findViewById(R.id.tvAccellerometerValueX);
+        tvAccellerometerY = (TextView) v.findViewById(R.id.tvAccellerometerValueY);
+        tvAccellerometerZ = (TextView) v.findViewById(R.id.tvAccellerometerValueZ);
+        chkAccelerometer = (CheckBox) v.findViewById(R.id.chkAccellerometer);
+        tvAmbientTemperature = (TextView) v.findViewById(R.id.tvAmbientTemperatureValue);
+        chkAmbientTemperature = (CheckBox) v.findViewById(R.id.chkAmbientTemperature);
+        tvGravityX = (TextView) v.findViewById(R.id.tvGravityValueX);
+        tvGravityY = (TextView) v.findViewById(R.id.tvGravityValueY);
+        tvGravityZ = (TextView) v.findViewById(R.id.tvGravityValueZ);
+        chkGravity = (CheckBox) v.findViewById(R.id.chkGravity);
+        tvGyroscopeX = (TextView) v.findViewById(R.id.tvGyroscopeValueX);
+        tvGyroscopeY = (TextView) v.findViewById(R.id.tvGyroscopeValueY);
+        tvGyroscopeZ = (TextView) v.findViewById(R.id.tvGyroscopeValueZ);
+        chkGyroscope = (CheckBox) v.findViewById(R.id.chkGyroscope);
+        tvLigth = (TextView) v.findViewById(R.id.tvLigthValue);
+        chkLigth = (CheckBox) v.findViewById(R.id.chkLigth);
+        tvLinearAccellerationX = (TextView) v.findViewById(R.id.tvLinearAccellerationValueX);
+        tvLinearAccellerationY = (TextView) v.findViewById(R.id.tvLinearAccellerationValueY);
+        tvLinearAccellerationZ = (TextView) v.findViewById(R.id.tvLinearAccellerationValueZ);
+        chkLinearAccelleration = (CheckBox) v.findViewById(R.id.chkLinearAccelleration);
+        tvMagneticFieldX = (TextView) v.findViewById(R.id.tvMagneticFieldValueX);
+        tvMagneticFieldY = (TextView) v.findViewById(R.id.tvMagneticFieldValueY);
+        tvMagneticFieldZ = (TextView) v.findViewById(R.id.tvMagneticFieldValueZ);
+        chkMagneticField = (CheckBox) v.findViewById(R.id.chkMagneticField);
+        tvPressure = (TextView) v.findViewById(R.id.tvPressureValue);
+        chkPressure = (CheckBox) v.findViewById(R.id.chkPressure);
+        tvRelativeHumidity = (TextView) v.findViewById(R.id.tvRelativeHumidityValue);
+        chkRelativeHumidity = (CheckBox) v.findViewById(R.id.chkRelativeHumidity);
+        tvProximity = (TextView) v.findViewById(R.id.tvProximityValue);
+        chkProximity = (CheckBox) v.findViewById(R.id.chkProximity);
+        tvRotationVectorX = (TextView) v.findViewById(R.id.tvRotationVectorValueX);
+        chkRotationVector = (CheckBox) v.findViewById(R.id.chkRotationVector);
+        tvOrientationAzimuth = (TextView) v.findViewById(R.id.tvOrientationAzimuth);
+        tvOrientationRoll = (TextView) v.findViewById(R.id.tvOrientationRoll);
+        tvOrientationPitch = (TextView) v.findViewById(R.id.tvOrientationPitch);
+        chkOrientation = (CheckBox) v.findViewById(R.id.chkOrientation);
 
-        File file = new File(getFilesDir(), "savedSensor.csv");
+        ((TextView) v.findViewById(R.id.tvMotionSensors)).setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if( ((TableLayout) a.findViewById(R.id.motionSensorGroup)).getVisibility() == View.VISIBLE){
+                    ((TableLayout) a.findViewById(R.id.motionSensorGroup)).setVisibility(View.GONE);
+                    ((TextView) v.findViewById(R.id.tvMotionSensors))
+                            .setCompoundDrawablesWithIntrinsicBounds(R.drawable.arrow_right,0,0,0);
+                } else if( ((TableLayout) a.findViewById(R.id.motionSensorGroup)).getVisibility() == View.GONE){
+                    ((TableLayout) a.findViewById(R.id.motionSensorGroup)).setVisibility(View.VISIBLE);
+                    ((TextView) v.findViewById(R.id.tvMotionSensors))
+                            .setCompoundDrawablesWithIntrinsicBounds(R.drawable.arrow_down,0,0,0);
+                }
+            }
+        });
+
+        ((TextView) v.findViewById(R.id.tvEnviromentalSensor)).setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if( ((TableLayout) a.findViewById(R.id.enviromentalSensorGroup)).getVisibility() == View.VISIBLE){
+                    ((TableLayout) a.findViewById(R.id.enviromentalSensorGroup)).setVisibility(View.GONE);
+                    ((TextView) v.findViewById(R.id.tvEnviromentalSensor))
+                            .setCompoundDrawablesWithIntrinsicBounds(R.drawable.arrow_right,0,0,0);
+                } else if( ((TableLayout) a.findViewById(R.id.enviromentalSensorGroup)).getVisibility() == View.GONE){
+                    ((TableLayout) a.findViewById(R.id.enviromentalSensorGroup)).setVisibility(View.VISIBLE);
+                    ((TextView) v.findViewById(R.id.tvEnviromentalSensor))
+                            .setCompoundDrawablesWithIntrinsicBounds(R.drawable.arrow_down,0,0,0);
+                }
+            }
+        });
+
+        ((TextView) v.findViewById(R.id.tvPositionSensor)).setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if( ((TableLayout) a.findViewById(R.id.positionSensorGroup)).getVisibility() == View.VISIBLE){
+                    ((TableLayout) a.findViewById(R.id.positionSensorGroup)).setVisibility(View.GONE);
+                    ((TextView) v.findViewById(R.id.tvPositionSensor))
+                            .setCompoundDrawablesWithIntrinsicBounds(R.drawable.arrow_right,0,0,0);
+                } else if( ((TableLayout) a.findViewById(R.id.positionSensorGroup)).getVisibility() == View.GONE){
+                    ((TableLayout) a.findViewById(R.id.positionSensorGroup)).setVisibility(View.VISIBLE);
+                    ((TextView) v.findViewById(R.id.tvPositionSensor))
+                            .setCompoundDrawablesWithIntrinsicBounds(R.drawable.arrow_down,0,0,0);
+                }
+            }
+        });
+
+        File file = new File(a.getFilesDir(), "savedSensor.csv");
         try {
             BufferedReader in = new BufferedReader(new InputStreamReader(new BufferedInputStream(new FileInputStream(file))));
             String line;
@@ -210,6 +258,27 @@ public class MainActivity extends Activity implements SensorEventListener {
                 updateSavedSensor(null);
             }
         }
+
+        OnClickListener checkListener = new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                updateSavedSensor(null);
+            }
+        };
+
+        chkAccelerometer.setOnClickListener(checkListener);
+        chkAmbientTemperature.setOnClickListener(checkListener);
+        chkGravity.setOnClickListener(checkListener);
+        chkGyroscope.setOnClickListener(checkListener);
+        chkLinearAccelleration.setOnClickListener(checkListener);
+        chkLigth.setOnClickListener(checkListener);
+        chkMagneticField.setOnClickListener(checkListener);
+        chkPressure.setOnClickListener(checkListener);
+        chkRelativeHumidity.setOnClickListener(checkListener);
+        chkProximity.setOnClickListener(checkListener);
+        chkRotationVector.setOnClickListener(checkListener);
+        chkOrientation.setOnClickListener(checkListener);
+        return v;
     }
 
     @Override
@@ -282,7 +351,7 @@ public class MainActivity extends Activity implements SensorEventListener {
     }
 
     @Override
-    protected void onResume() {
+    public void onResume() {
         super.onResume();
         mSensorManager.registerListener(this, mAccellerometer, SensorManager.SENSOR_DELAY_NORMAL);
         mSensorManager.registerListener(this, mAmbientTemperature, SensorManager.SENSOR_DELAY_NORMAL);
@@ -295,36 +364,12 @@ public class MainActivity extends Activity implements SensorEventListener {
         mSensorManager.registerListener(this, mProximity, SensorManager.SENSOR_DELAY_NORMAL);
         mSensorManager.registerListener(this, mRelativeHumidity, SensorManager.SENSOR_DELAY_NORMAL);
         mSensorManager.registerListener(this, mRotationVector, SensorManager.SENSOR_DELAY_NORMAL);
-        mSensorManager.registerListener(this, mOrientation, SensorManager.SENSOR_DELAY_NORMAL);
     }
 
     @Override
-    protected void onPause() {
+    public void onPause() {
         super.onPause();
         mSensorManager.unregisterListener(this);
-    }
-
-    public void showhide(View v){
-        TableLayout tbl = null;
-        TextView tv = null;
-        if(v.getId() == R.id.tvEnviromentalSensor) {
-            tbl = (TableLayout) findViewById(R.id.enviromentalSensorGroup);
-            tv = (TextView) findViewById(R.id.tvEnviromentalSensor);
-        } else if(v.getId() == R.id.tvPositionSensor) {
-            tbl = (TableLayout) findViewById(R.id.positionSensorGroup);
-            tv = (TextView) findViewById(R.id.tvPositionSensor);
-        } else if(v.getId() == R.id.tvMotionSensors){
-            tbl = (TableLayout) findViewById(R.id.motionSensorGroup);
-            tv = (TextView) findViewById(R.id.tvMotionSensors);
-        }
-
-        if(tbl.getVisibility() == View.VISIBLE){
-            tv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.arrow_right,0,0,0);
-            tbl.setVisibility(View.GONE);
-        } else {
-            tv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.arrow_down,0,0,0);
-            tbl.setVisibility(View.VISIBLE);
-        }
     }
 
     public void updateOrientationAngles() {
@@ -336,7 +381,8 @@ public class MainActivity extends Activity implements SensorEventListener {
     }
 
     public void updateSavedSensor(View v){
-        File file = new File(getFilesDir(), "savedSensor.csv");
+        Activity a = this.getActivity();
+        File file = new File(a.getFilesDir(), "savedSensor.csv");
         String listCheck = "";
         if(chkAccelerometer.isChecked()){
             listCheck += "Accellerometer;1;\n";
@@ -411,28 +457,28 @@ public class MainActivity extends Activity implements SensorEventListener {
     }
 
     public void startService(View v){
-        Log.i("MainActivity", "com.sanflix.sensorlizer.MainActivity: starting SensorLogger...");
-        ((Button) findViewById(R.id.buttonService)).setVisibility(View.GONE);
-        ((Button) findViewById(R.id.buttonServiceStop)).setVisibility(View.VISIBLE);
-
-        AlarmManager scheduler = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-        Intent intent = new Intent(getApplicationContext(), SensorLogger.class );
-        PendingIntent scheduledIntent = PendingIntent.getService(getApplicationContext(), 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        Log.i("SensorDataVisualizer", "com.sanflix.sensorlizer.SensorDataVisualizer: starting SensorLogger...");
+        ((Button) v.findViewById(R.id.buttonService)).setVisibility(View.GONE);
+        ((Button) v.findViewById(R.id.buttonServiceStop)).setVisibility(View.VISIBLE);
+        Activity a = this.getActivity();
+        AlarmManager scheduler = (AlarmManager) a.getSystemService(Context.ALARM_SERVICE);
+        Intent intent = new Intent(a.getApplicationContext(), SensorLogger.class );
+        PendingIntent scheduledIntent = PendingIntent.getService(a.getApplicationContext(), 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
         scheduler.setInexactRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), 10*1000, scheduledIntent);
-        Log.i("MainActivity", "com.sanflix.sensorlizer.MainActivity: started and scheduled SensorLogger...");
+        Log.i("SensorDataVisualizer", "com.sanflix.sensorlizer.SensorDataVisualizer: started and scheduled SensorLogger...");
     }
 
     public void stopService(View v){
-        Log.i("MainActivity", "com.sanflix.sensorlizer.MainActivity: stopping SensorLogger...");
-        ((Button) findViewById(R.id.buttonServiceStop)).setVisibility(View.GONE);
-        ((Button) findViewById(R.id.buttonService)).setVisibility(View.VISIBLE);
-
-        AlarmManager scheduler = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-        Intent intent = new Intent(this,SensorLogger.class );
-        PendingIntent scheduledIntent = PendingIntent.getService(getApplicationContext(), 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        Log.i("SensorDataVisualizer", "com.sanflix.sensorlizer.SensorDataVisualizer: stopping SensorLogger...");
+        ((Button) v.findViewById(R.id.buttonServiceStop)).setVisibility(View.GONE);
+        ((Button) v.findViewById(R.id.buttonService)).setVisibility(View.VISIBLE);
+        Activity a = this.getActivity();
+        AlarmManager scheduler = (AlarmManager) a.getSystemService(Context.ALARM_SERVICE);
+        Intent intent = new Intent(a,SensorLogger.class );
+        PendingIntent scheduledIntent = PendingIntent.getService(a.getApplicationContext(), 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
         scheduler.cancel(scheduledIntent);
-        Log.i("MainActivity", "com.sanflix.sensorlizer.MainActivity: stopped and scheduled SensorLogger...");
+        Log.i("SensorDataVisualizer", "com.sanflix.sensorlizer.SensorDataVisualizer: stopped and scheduled SensorLogger...");
     }
 }

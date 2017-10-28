@@ -3,7 +3,8 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:scrollbars="none"
-    android:layout_weight="1">
+    android:layout_weight="1"
+    android:id="@+id/scrollSensorData">
 
     <HorizontalScrollView
         android:layout_width="match_parent"
@@ -20,7 +21,8 @@
                 android:layout_height="match_parent"
                 android:text="start Service"
                 android:onClick="startService"
-                android:id="@+id/buttonService"/>
+                android:id="@+id/buttonService"
+                android:visibility="gone"/>
 
             <Button
                 android:layout_width="match_parent"
@@ -42,8 +44,7 @@
                     android:textColor="@color/colorAccent"
                     android:textSize="@dimen/groupSensorSize"
                     android:layout_margin="@dimen/layoutMargin"
-                    android:drawableLeft="@drawable/arrow_down"
-                    android:onClick="showhide"/>
+                    android:drawableLeft="@drawable/arrow_down"/>
             </TableRow>
             <TableLayout
                 android:id="@+id/motionSensorGroup">
@@ -60,7 +61,6 @@
                         android:textColor="@color/colorPrimary"
                         android:layout_margin="@dimen/layoutMargin"/>
                     <CheckBox
-                        android:onClick="updateSavedSensor"
                         android:id="@+id/chkAccellerometer"
                         android:text="@string/save"
                         android:textColor="@color/colorPrimary"/>
@@ -116,7 +116,6 @@
                         />
 
                     <CheckBox
-                        android:onClick="updateSavedSensor"
                         android:id="@+id/chkGravity"
                         android:text="@string/save"
                         android:textColor="@color/colorPrimary"/>
@@ -170,7 +169,6 @@
                         android:textColor="@color/colorPrimary"
                         android:layout_margin="@dimen/layoutMargin"/>
                     <CheckBox
-                        android:onClick="updateSavedSensor"
                         android:id="@+id/chkGyroscope"
                         android:text="@string/save"
                         android:textColor="@color/colorPrimary"/>
@@ -225,7 +223,6 @@
                         android:textColor="@color/colorPrimary"
                         android:layout_margin="@dimen/layoutMargin"/>
                     <CheckBox
-                        android:onClick="updateSavedSensor"
                         android:id="@+id/chkLinearAccelleration"
                         android:text="@string/save"
                         android:textColor="@color/colorPrimary"/>
@@ -280,7 +277,6 @@
                         android:textColor="@color/colorPrimary"
                         android:layout_margin="@dimen/layoutMargin"/>
                     <CheckBox
-                        android:onClick="updateSavedSensor"
                         android:id="@+id/chkRotationVector"
                         android:text="@string/save"
                         android:textColor="@color/colorPrimary"/>
@@ -311,8 +307,7 @@
                     android:textColor="@color/colorAccent"
                     android:textSize="@dimen/groupSensorSize"
                     android:layout_margin="@dimen/layoutMargin"
-                    android:drawableLeft="@drawable/arrow_down"
-                    android:onClick="showhide"/>
+                    android:drawableLeft="@drawable/arrow_down"/>
             </TableRow>
 
             <TableLayout android:id="@+id/enviromentalSensorGroup">
@@ -329,7 +324,6 @@
                         android:textColor="@color/colorPrimary"
                         android:layout_margin="@dimen/layoutMargin"/>
                     <CheckBox
-                        android:onClick="updateSavedSensor"
                         android:id="@+id/chkAmbientTemperature"
                         android:text="@string/save"
                         android:textColor="@color/colorPrimary"/>
@@ -360,7 +354,6 @@
                         android:textColor="@color/colorPrimary"
                         android:layout_margin="@dimen/layoutMargin"/>
                     <CheckBox
-                        android:onClick="updateSavedSensor"
                         android:id="@+id/chkLigth"
                         android:text="@string/save"
                         android:textColor="@color/colorPrimary"/>
@@ -390,7 +383,6 @@
                         android:textColor="@color/colorPrimary"
                         android:layout_margin="@dimen/layoutMargin"/>
                     <CheckBox
-                        android:onClick="updateSavedSensor"
                         android:id="@+id/chkPressure"
                         android:text="@string/save"
                         android:textColor="@color/colorPrimary"/>
@@ -421,7 +413,6 @@
                         android:layout_margin="@dimen/layoutMargin"
                         />
                     <CheckBox
-                        android:onClick="updateSavedSensor"
                         android:id="@+id/chkRelativeHumidity"
                         android:text="@string/save"
                         android:textColor="@color/colorPrimary"/>
@@ -452,8 +443,7 @@
                     android:textColor="@color/colorAccent"
                     android:textSize="@dimen/groupSensorSize"
                     android:layout_margin="@dimen/layoutMargin"
-                    android:drawableLeft="@drawable/arrow_down"
-                    android:onClick="showhide"/>
+                    android:drawableLeft="@drawable/arrow_down"/>
             </TableRow>
             <TableLayout android:id="@+id/positionSensorGroup">
                 <!-- 1 - MAGNETIC FIELD -->
@@ -469,7 +459,6 @@
                         android:textColor="@color/colorPrimary"
                         android:layout_margin="@dimen/layoutMargin"/>
                     <CheckBox
-                        android:onClick="updateSavedSensor"
                         android:id="@+id/chkMagneticField"
                         android:text="@string/save"
                         android:textColor="@color/colorPrimary"/>
@@ -523,7 +512,6 @@
                         android:textColor="@color/colorPrimary"
                         android:layout_margin="@dimen/layoutMargin"/>
                     <CheckBox
-                        android:onClick="updateSavedSensor"
                         android:id="@+id/chkProximity"
                         android:text="@string/save"
                         android:textColor="@color/colorPrimary" />
@@ -554,7 +542,6 @@
                         android:textColor="@color/colorPrimary"
                         android:layout_margin="@dimen/layoutMargin" />
                     <CheckBox
-                        android:onClick="updateSavedSensor"
                         android:id="@+id/chkOrientation"
                         android:text="@string/save"
                         android:textColor="@color/colorPrimary" />

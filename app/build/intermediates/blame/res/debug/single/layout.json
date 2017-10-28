@@ -124,8 +124,16 @@
         "source": "C:\\Users\\sanfe\\.android\\build-cache\\2178e268ba13f5f2926310657a2908ba04c71b5e\\output\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
     },
     {
+        "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_settings.xml",
+        "source": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\src\\main\\res\\layout\\fragment_settings.xml"
+    },
+    {
         "merged": "C:\\home\\matteo\\AndroidStudioProjects\\Sensorlizer2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item.xml",
         "source": "C:\\home\\matteo\\.android\\build-cache\\0b11ab0e0bf4719456939c5fda6e5f2ea7ae4130\\output\\res\\layout\\design_navigation_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_navigation_drawer.xml",
+        "source": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\src\\main\\res\\layout\\activity_navigation_drawer.xml"
     },
     {
         "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
@@ -312,6 +320,10 @@
         "source": "C:\\Users\\sanfe\\.android\\build-cache\\2178e268ba13f5f2926310657a2908ba04c71b5e\\output\\res\\layout\\notification_template_media.xml"
     },
     {
+        "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\nav_header_navigation_drawer.xml",
+        "source": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\src\\main\\res\\layout\\nav_header_navigation_drawer.xml"
+    },
+    {
         "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_text_input_password_icon.xml",
         "source": "C:\\Users\\sanfe\\.android\\build-cache\\90e2e275040af7eb35c89d995294e6e2a82e170c\\output\\res\\layout\\design_text_input_password_icon.xml"
     },
@@ -356,6 +368,10 @@
         "source": "C:\\home\\matteo\\.android\\build-cache\\d3ab41ce8ca7bb11144b1368c6a33aa05546bde9\\output\\res\\layout\\select_dialog_multichoice_material.xml"
     },
     {
+        "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\app_bar_navigation_drawer.xml",
+        "source": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\src\\main\\res\\layout\\app_bar_navigation_drawer.xml"
+    },
+    {
         "merged": "C:\\home\\matteo\\AndroidStudioProjects\\Sensorlizer2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
         "source": "C:\\home\\matteo\\.android\\build-cache\\d3ab41ce8ca7bb11144b1368c6a33aa05546bde9\\output\\res\\layout\\select_dialog_singlechoice_material.xml"
     },
@@ -366,6 +382,10 @@
     {
         "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_separator.xml",
         "source": "C:\\Users\\sanfe\\.android\\build-cache\\90e2e275040af7eb35c89d995294e6e2a82e170c\\output\\res\\layout\\design_navigation_item_separator.xml"
+    },
+    {
+        "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\content_navigation_drawer.xml",
+        "source": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\src\\main\\res\\layout\\content_navigation_drawer.xml"
     },
     {
         "merged": "C:\\home\\matteo\\AndroidStudioProjects\\Sensorlizer2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar_include.xml",

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:title="Sensors"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:id="@+id/sensors_drawer"></item>
+        <item
+            android:title="Plots"
+            android:icon="@drawable/ic_multiline_chart_black_24dp"
+            android:id="@+id/plots_drawer"></item>
+        <item
+            android:title="Settings"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:id="@+id/settings_drawer"></item>
+    </group>
+
+</menu>

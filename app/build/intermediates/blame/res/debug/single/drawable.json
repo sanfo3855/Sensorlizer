@@ -20,24 +20,24 @@
         "source": "C:\\Users\\sanfe\\.android\\build-cache\\2178e268ba13f5f2926310657a2908ba04c71b5e\\output\\res\\drawable\\abc_text_cursor_material.xml"
     },
     {
-        "merged": "C:\\home\\matteo\\AndroidStudioProjects\\Sensorlizer2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
-        "source": "C:\\home\\matteo\\.android\\build-cache\\d3ab41ce8ca7bb11144b1368c6a33aa05546bde9\\output\\res\\drawable\\abc_spinner_textfield_background_material.xml"
-    },
-    {
         "merged": "C:\\home\\matteo\\AndroidStudioProjects\\Sensorlizer2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
         "source": "C:\\home\\matteo\\.android\\build-cache\\d3ab41ce8ca7bb11144b1368c6a33aa05546bde9\\output\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
     },
     {
-        "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml",
-        "source": "C:\\Users\\sanfe\\.android\\build-cache\\2178e268ba13f5f2926310657a2908ba04c71b5e\\output\\res\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml"
+        "merged": "C:\\home\\matteo\\AndroidStudioProjects\\Sensorlizer2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "C:\\home\\matteo\\.android\\build-cache\\d3ab41ce8ca7bb11144b1368c6a33aa05546bde9\\output\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "C:\\home\\matteo\\AndroidStudioProjects\\Sensorlizer2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_tile_bg.xml",
+        "source": "C:\\home\\matteo\\.android\\build-cache\\d3ab41ce8ca7bb11144b1368c6a33aa05546bde9\\output\\res\\drawable\\notification_tile_bg.xml"
     },
     {
         "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
         "source": "C:\\Users\\sanfe\\.android\\build-cache\\2178e268ba13f5f2926310657a2908ba04c71b5e\\output\\res\\drawable\\abc_switch_thumb_material.xml"
     },
     {
-        "merged": "C:\\home\\matteo\\AndroidStudioProjects\\Sensorlizer2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_tile_bg.xml",
-        "source": "C:\\home\\matteo\\.android\\build-cache\\d3ab41ce8ca7bb11144b1368c6a33aa05546bde9\\output\\res\\drawable\\notification_tile_bg.xml"
+        "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml",
+        "source": "C:\\Users\\sanfe\\.android\\build-cache\\2178e268ba13f5f2926310657a2908ba04c71b5e\\output\\res\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml"
     },
     {
         "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_tile_bg.xml",
@@ -86,6 +86,14 @@
     {
         "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background.xml",
         "source": "C:\\Users\\sanfe\\.android\\build-cache\\2178e268ba13f5f2926310657a2908ba04c71b5e\\output\\res\\drawable\\abc_dialog_material_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\side_nav_bar.xml",
+        "source": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\src\\main\\res\\drawable\\side_nav_bar.xml"
+    },
+    {
+        "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_home_black_24dp.xml",
+        "source": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\src\\main\\res\\drawable\\ic_home_black_24dp.xml"
     },
     {
         "merged": "C:\\home\\matteo\\AndroidStudioProjects\\Sensorlizer2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
@@ -192,6 +200,10 @@
         "source": "C:\\Users\\sanfe\\.android\\build-cache\\2178e268ba13f5f2926310657a2908ba04c71b5e\\output\\res\\drawable\\notification_bg.xml"
     },
     {
+        "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_multiline_chart_black_24dp.xml",
+        "source": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\src\\main\\res\\drawable\\ic_multiline_chart_black_24dp.xml"
+    },
+    {
         "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
         "source": "C:\\Users\\sanfe\\.android\\build-cache\\2178e268ba13f5f2926310657a2908ba04c71b5e\\output\\res\\drawable\\abc_list_selector_holo_light.xml"
     },
@@ -286,6 +298,10 @@
     {
         "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
         "source": "C:\\Users\\sanfe\\.android\\build-cache\\2178e268ba13f5f2926310657a2908ba04c71b5e\\output\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_settings_black_24dp.xml",
+        "source": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\src\\main\\res\\drawable\\ic_settings_black_24dp.xml"
     },
     {
         "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
