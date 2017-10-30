@@ -47,29 +47,19 @@ public class SensorDataVisualizer extends Fragment implements SensorEventListene
     private Sensor mRotationVector;
     private List<Sensor> SensorList;
 
-    public TextView tvAccellerometerX;
     public TextView tvAccellerometerY;
-    public TextView tvAccellerometerZ;
     public CheckBox chkAccelerometer;
     public TextView tvAmbientTemperature;
     public CheckBox chkAmbientTemperature;
-    public TextView tvGravityX;
     public TextView tvGravityY;
-    public TextView tvGravityZ;
     public CheckBox chkGravity;
-    public TextView tvGyroscopeX;
     public TextView tvGyroscopeY;
-    public TextView tvGyroscopeZ;
     public CheckBox chkGyroscope;
     public TextView tvLigth;
     public CheckBox chkLigth;
-    public TextView tvLinearAccellerationX;
     public TextView tvLinearAccellerationY;
-    public TextView tvLinearAccellerationZ;
     public CheckBox chkLinearAccelleration;
-    public TextView tvMagneticFieldX;
     public TextView tvMagneticFieldY;
-    public TextView tvMagneticFieldZ;
     public CheckBox chkMagneticField;
     public TextView tvPressure;
     public CheckBox chkPressure;
@@ -79,8 +69,6 @@ public class SensorDataVisualizer extends Fragment implements SensorEventListene
     public CheckBox chkRelativeHumidity;
     public TextView tvRotationVectorX;
     public CheckBox chkRotationVector;
-    public TextView tvOrientationAzimuth;
-    public TextView tvOrientationRoll;
     public TextView tvOrientationPitch;
     public CheckBox chkOrientation;
 
@@ -92,11 +80,11 @@ public class SensorDataVisualizer extends Fragment implements SensorEventListene
     private String apice2 = "<sup><small>2</small></sup>";
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        final View v = inflater.inflate(R.layout.activity_sensors_data, container, false);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         final Activity a = this.getActivity();
-
         mSensorManager = (SensorManager) a.getSystemService(Context.SENSOR_SERVICE);
+
         mAccellerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         mAmbientTemperature = mSensorManager.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE);
         mGravity = mSensorManager.getDefaultSensor(Sensor.TYPE_GRAVITY);
@@ -108,30 +96,27 @@ public class SensorDataVisualizer extends Fragment implements SensorEventListene
         mProximity = mSensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
         mRelativeHumidity = mSensorManager.getDefaultSensor(Sensor.TYPE_RELATIVE_HUMIDITY);
         mRotationVector = mSensorManager.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR);
+    }
 
-        tvAccellerometerX = (TextView) v.findViewById(R.id.tvAccellerometerValueX);
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        final View v = inflater.inflate(R.layout.activity_sensors_data, container, false);
+        final Activity a = this.getActivity();
+
         tvAccellerometerY = (TextView) v.findViewById(R.id.tvAccellerometerValueY);
-        tvAccellerometerZ = (TextView) v.findViewById(R.id.tvAccellerometerValueZ);
         chkAccelerometer = (CheckBox) v.findViewById(R.id.chkAccellerometer);
         tvAmbientTemperature = (TextView) v.findViewById(R.id.tvAmbientTemperatureValue);
         chkAmbientTemperature = (CheckBox) v.findViewById(R.id.chkAmbientTemperature);
-        tvGravityX = (TextView) v.findViewById(R.id.tvGravityValueX);
         tvGravityY = (TextView) v.findViewById(R.id.tvGravityValueY);
-        tvGravityZ = (TextView) v.findViewById(R.id.tvGravityValueZ);
         chkGravity = (CheckBox) v.findViewById(R.id.chkGravity);
-        tvGyroscopeX = (TextView) v.findViewById(R.id.tvGyroscopeValueX);
         tvGyroscopeY = (TextView) v.findViewById(R.id.tvGyroscopeValueY);
-        tvGyroscopeZ = (TextView) v.findViewById(R.id.tvGyroscopeValueZ);
         chkGyroscope = (CheckBox) v.findViewById(R.id.chkGyroscope);
         tvLigth = (TextView) v.findViewById(R.id.tvLigthValue);
         chkLigth = (CheckBox) v.findViewById(R.id.chkLigth);
-        tvLinearAccellerationX = (TextView) v.findViewById(R.id.tvLinearAccellerationValueX);
         tvLinearAccellerationY = (TextView) v.findViewById(R.id.tvLinearAccellerationValueY);
-        tvLinearAccellerationZ = (TextView) v.findViewById(R.id.tvLinearAccellerationValueZ);
         chkLinearAccelleration = (CheckBox) v.findViewById(R.id.chkLinearAccelleration);
-        tvMagneticFieldX = (TextView) v.findViewById(R.id.tvMagneticFieldValueX);
         tvMagneticFieldY = (TextView) v.findViewById(R.id.tvMagneticFieldValueY);
-        tvMagneticFieldZ = (TextView) v.findViewById(R.id.tvMagneticFieldValueZ);
         chkMagneticField = (CheckBox) v.findViewById(R.id.chkMagneticField);
         tvPressure = (TextView) v.findViewById(R.id.tvPressureValue);
         chkPressure = (CheckBox) v.findViewById(R.id.chkPressure);
@@ -141,8 +126,6 @@ public class SensorDataVisualizer extends Fragment implements SensorEventListene
         chkProximity = (CheckBox) v.findViewById(R.id.chkProximity);
         tvRotationVectorX = (TextView) v.findViewById(R.id.tvRotationVectorValueX);
         chkRotationVector = (CheckBox) v.findViewById(R.id.chkRotationVector);
-        tvOrientationAzimuth = (TextView) v.findViewById(R.id.tvOrientationAzimuth);
-        tvOrientationRoll = (TextView) v.findViewById(R.id.tvOrientationRoll);
         tvOrientationPitch = (TextView) v.findViewById(R.id.tvOrientationPitch);
         chkOrientation = (CheckBox) v.findViewById(R.id.chkOrientation);
 
@@ -252,9 +235,8 @@ public class SensorDataVisualizer extends Fragment implements SensorEventListene
                     chkProximity.setChecked(true);
                 } else if (sensor.getType() == Sensor.TYPE_ROTATION_VECTOR){
                     chkRotationVector.setChecked(true);
-                } else if (sensor.getType() == Sensor.TYPE_ORIENTATION){
-                    chkOrientation.setChecked(true);
                 }
+                chkOrientation.setChecked(true);
                 updateSavedSensor(null);
             }
         }
@@ -296,9 +278,7 @@ public class SensorDataVisualizer extends Fragment implements SensorEventListene
                 float accgx = event.values[0];
                 float accgy = event.values[1];
                 float accgz = event.values[2];
-                tvAccellerometerX.setText(Html.fromHtml("X: " + accgx + " m/s"+apice2));
-                tvAccellerometerY.setText(Html.fromHtml("Y: " + accgy + " m/s"+apice2));
-                tvAccellerometerZ.setText(Html.fromHtml("Z: " + accgz + " m/s"+apice2));
+                tvAccellerometerY.setText(Html.fromHtml("X: " + accgx + " m/s"+apice2 + "<br>"+"Y: " + accgy + " m/s"+apice2 + "<br>" + "Z: " + accgz + " m/s"+apice2));
             } else if (sensor.getType() == Sensor.TYPE_AMBIENT_TEMPERATURE) {
                 float temp = event.values[0];
                 tvAmbientTemperature.setText("Temp: " + temp + " °C");
@@ -306,23 +286,17 @@ public class SensorDataVisualizer extends Fragment implements SensorEventListene
                 float gragx = event.values[0];
                 float gragy = event.values[1];
                 float gragz = event.values[2];
-                tvGravityX.setText(Html.fromHtml("X: " + gragx + " m/s" + apice2));
-                tvGravityY.setText(Html.fromHtml("Y: " + gragy + " m/s" + apice2));
-                tvGravityZ.setText(Html.fromHtml("Z: " + gragz + " m/s" + apice2));
+                tvGravityY.setText(Html.fromHtml("X: " + gragx + " m/s" + apice2 + "<br>" + "Y: " + gragy + " m/s" + apice2 + "<br>" + "Z: " + gragz + " m/s" + apice2));
             } else if (sensor.getType() == Sensor.TYPE_GYROSCOPE) {
                 float gyrx = event.values[0];
                 float gyry = event.values[1];
                 float gyrz = event.values[2];
-                tvGyroscopeX.setText("X: " + gyrx + " rad/s");
-                tvGyroscopeY.setText("Y: " + gyry + " rad/s");
-                tvGyroscopeZ.setText("Z: " + gyrz + " rad/s");
+                tvGyroscopeY.setText(Html.fromHtml("X: " + gyrx + " rad/s" + "<br>" +"Y: " + gyry + " rad/s" + "<br>" + "Z: " + gyrz + " rad/s"));
             } else if(sensor.getType() == Sensor.TYPE_LINEAR_ACCELERATION){
                 float lax = event.values[0];
                 float lay = event.values[1];
                 float laz = event.values[2];
-                tvLinearAccellerationX.setText(Html.fromHtml("X: " + lax + " m/s" + apice2));
-                tvLinearAccellerationY.setText(Html.fromHtml("Y: " + lay + " m/s" + apice2));
-                tvLinearAccellerationZ.setText(Html.fromHtml("Z: " + laz + " m/s" + apice2));
+                tvLinearAccellerationY.setText(Html.fromHtml("X: " + lax + " m/s" + apice2 + "<br>" + "Y: " + lay + " m/s" + apice2 + "<br>" + "Z: " + laz + " m/s" + apice2));
             } else if(sensor.getType() == Sensor.TYPE_LIGHT){
                 float ligth = event.values[0];
                 tvLigth.setText("Value: " + ligth + " lx");
@@ -332,9 +306,7 @@ public class SensorDataVisualizer extends Fragment implements SensorEventListene
                 float mfx = event.values[0];
                 float mfy = event.values[1];
                 float mfz = event.values[2];
-                tvMagneticFieldX.setText("X: " + mfx + " μT");
-                tvMagneticFieldY.setText("Y: " + mfy + " μT");
-                tvMagneticFieldZ.setText("Z: " + mfz + " μT");
+                tvMagneticFieldY.setText(Html.fromHtml("X: " + mfx + " μT" + "<br>" + "Y: " + mfy + " μT" + "<br>" + "Z: " + mfz + " μT") );
             } else if (sensor.getType() == Sensor.TYPE_PRESSURE){
                 float pressure = event.values[0];
                 tvPressure.setText("Value:" + pressure + " hPa");
@@ -353,31 +325,70 @@ public class SensorDataVisualizer extends Fragment implements SensorEventListene
     @Override
     public void onResume() {
         super.onResume();
-        mSensorManager.registerListener(this, mAccellerometer, SensorManager.SENSOR_DELAY_NORMAL);
-        mSensorManager.registerListener(this, mAmbientTemperature, SensorManager.SENSOR_DELAY_NORMAL);
-        mSensorManager.registerListener(this, mGravity, SensorManager.SENSOR_DELAY_NORMAL);
-        mSensorManager.registerListener(this, mGyroscope, SensorManager.SENSOR_DELAY_NORMAL);
-        mSensorManager.registerListener(this, mLigth, SensorManager.SENSOR_DELAY_NORMAL);
-        mSensorManager.registerListener(this, mLinearAccelleration, SensorManager.SENSOR_DELAY_NORMAL);
-        mSensorManager.registerListener(this, mMagneticField, SensorManager.SENSOR_DELAY_NORMAL);
-        mSensorManager.registerListener(this, mPressure, SensorManager.SENSOR_DELAY_NORMAL);
-        mSensorManager.registerListener(this, mProximity, SensorManager.SENSOR_DELAY_NORMAL);
-        mSensorManager.registerListener(this, mRelativeHumidity, SensorManager.SENSOR_DELAY_NORMAL);
-        mSensorManager.registerListener(this, mRotationVector, SensorManager.SENSOR_DELAY_NORMAL);
+        SensorList = mSensorManager.getSensorList(Sensor.TYPE_ALL);
+        for (Sensor sensor : SensorList) {
+            if (sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
+                mSensorManager.registerListener(this, mAccellerometer, SensorManager.SENSOR_DELAY_NORMAL);
+            } else if (sensor.getType() == Sensor.TYPE_AMBIENT_TEMPERATURE) {
+                mSensorManager.registerListener(this, mAmbientTemperature, SensorManager.SENSOR_DELAY_NORMAL);
+            } else if (sensor.getType() == Sensor.TYPE_GRAVITY) {
+                mSensorManager.registerListener(this, mGravity, SensorManager.SENSOR_DELAY_NORMAL);
+            } else if (sensor.getType() == Sensor.TYPE_GYROSCOPE) {
+                mSensorManager.registerListener(this, mGyroscope, SensorManager.SENSOR_DELAY_NORMAL);
+            } else if (sensor.getType() == Sensor.TYPE_LINEAR_ACCELERATION) {
+                mSensorManager.registerListener(this, mLinearAccelleration, SensorManager.SENSOR_DELAY_NORMAL);
+            } else if (sensor.getType() == Sensor.TYPE_LIGHT) {
+                mSensorManager.registerListener(this, mLigth, SensorManager.SENSOR_DELAY_NORMAL);
+            } else if (sensor.getType() == Sensor.TYPE_MAGNETIC_FIELD) {
+                mSensorManager.registerListener(this, mMagneticField, SensorManager.SENSOR_DELAY_NORMAL);
+            } else if (sensor.getType() == Sensor.TYPE_PRESSURE) {
+                mSensorManager.registerListener(this, mPressure, SensorManager.SENSOR_DELAY_NORMAL);
+            } else if (sensor.getType() == Sensor.TYPE_RELATIVE_HUMIDITY){
+                mSensorManager.registerListener(this, mProximity, SensorManager.SENSOR_DELAY_NORMAL);
+            } else if (sensor.getType() == Sensor.TYPE_PROXIMITY){
+                mSensorManager.registerListener(this, mRelativeHumidity, SensorManager.SENSOR_DELAY_NORMAL);
+            } else if (sensor.getType() == Sensor.TYPE_ROTATION_VECTOR){
+                mSensorManager.registerListener(this, mRotationVector, SensorManager.SENSOR_DELAY_NORMAL);
+            }
+        }
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        mSensorManager.unregisterListener(this);
+        for (Sensor sensor : SensorList) {
+            if (sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
+                mSensorManager.unregisterListener(this, mAccellerometer);
+            } else if (sensor.getType() == Sensor.TYPE_AMBIENT_TEMPERATURE) {
+                mSensorManager.unregisterListener(this, mAmbientTemperature);
+            } else if (sensor.getType() == Sensor.TYPE_GRAVITY) {
+                mSensorManager.unregisterListener(this, mGravity);
+            } else if (sensor.getType() == Sensor.TYPE_GYROSCOPE) {
+                mSensorManager.unregisterListener(this, mGyroscope);
+            } else if (sensor.getType() == Sensor.TYPE_LINEAR_ACCELERATION) {
+                mSensorManager.unregisterListener(this, mLinearAccelleration);
+            } else if (sensor.getType() == Sensor.TYPE_LIGHT) {
+                mSensorManager.unregisterListener(this, mLigth);
+            } else if (sensor.getType() == Sensor.TYPE_MAGNETIC_FIELD) {
+                mSensorManager.unregisterListener(this, mMagneticField);
+            } else if (sensor.getType() == Sensor.TYPE_PRESSURE) {
+                mSensorManager.unregisterListener(this, mPressure);
+            } else if (sensor.getType() == Sensor.TYPE_RELATIVE_HUMIDITY){
+                mSensorManager.unregisterListener(this, mProximity);
+            } else if (sensor.getType() == Sensor.TYPE_PROXIMITY){
+                mSensorManager.unregisterListener(this, mRelativeHumidity);
+            } else if (sensor.getType() == Sensor.TYPE_ROTATION_VECTOR){
+                mSensorManager.unregisterListener(this, mRotationVector);
+            }
+        }
+
+        //mSensorManager.unregisterListener(this);
     }
 
     public void updateOrientationAngles() {
         mSensorManager.getRotationMatrix(mRotationMatrix, null, mAccelerometerReading, mMagnetometerReading);
         mSensorManager.getOrientation(mRotationMatrix, mOrientationAngles);
-        tvOrientationAzimuth.setText("Azimuth: " + mOrientationAngles[0] + " °");
-        tvOrientationPitch.setText("Pitch: " + mOrientationAngles[1] + " °");
-        tvOrientationRoll.setText("Roll: " + mOrientationAngles[2] + " °");
+        tvOrientationPitch.setText(Html.fromHtml("Azimuth: " + mOrientationAngles[0] + " °" + "<br>" + "Pitch: " + mOrientationAngles[1] + " °" + "<br>" + "Roll: " + mOrientationAngles[2] + " °"));
     }
 
     public void updateSavedSensor(View v){
@@ -439,11 +450,7 @@ public class SensorDataVisualizer extends Fragment implements SensorEventListene
         } else {
             listCheck += "Proximity;0;\n";
         }
-        if(chkOrientation.isChecked()){
-            listCheck += "Orientation;1;\n";
-        } else {
-            listCheck += "Orientation;0;\n";
-        }
+
 
         try{
             file.createNewFile();

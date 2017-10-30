@@ -26,6 +26,7 @@ public class NavigationDrawer extends AppCompatActivity
 
         Fragment fragment = null;
         Class fragmentClass = null;
+        setTitle("Sensors");
         fragmentClass = SensorDataVisualizer.class;
         try {
             fragment = (Fragment) fragmentClass.newInstance();
@@ -85,10 +86,12 @@ public class NavigationDrawer extends AppCompatActivity
         Class fragmentClass = null;
         if (id == R.id.sensors_drawer) {
             fragmentClass = SensorDataVisualizer.class;
+            setTitle("Sensors");
         } else if (id == R.id.plots_drawer) {
 
         } else if (id == R.id.settings_drawer) {
-
+            fragmentClass = Settings.class;
+            setTitle("Settings");
         }
 
         try {

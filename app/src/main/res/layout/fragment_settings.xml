@@ -3,11 +3,61 @@
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              tools:context="com.sanflix.sensorlizer.Settings">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment"/>
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
 
+                <TableRow>
+                    <TextView
+                        android:text="Log sensors in background"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="20dp"
+                        android:padding="@dimen/paddingEndSensorName"/>
+
+                    <Switch
+                        android:id="@+id/switchSensorLogger"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="20dp"
+                        android:text="Logging frequency"
+                        android:padding="@dimen/paddingEndSensorName"/>
+                    <EditText
+                        android:textColor="@color/colorPrimary"
+                        />
+                </TableRow>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/colorBackgroundDrawer"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                <TableRow>
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Reset logged data"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="20dp"
+                        android:padding="@dimen/paddingEndSensorName"/>
+                    <Button
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="reset"/>
+                </TableRow>
+            </TableLayout>
+        </HorizontalScrollView>
+    </ScrollView>
 </FrameLayout>

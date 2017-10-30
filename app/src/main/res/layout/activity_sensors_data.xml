@@ -37,8 +37,6 @@
             ***************** -->
             <TableRow>
                 <TextView
-                    android:layout_height="match_parent"
-                    android:layout_width="match_parent"
                     android:id="@+id/tvMotionSensors"
                     android:text="Motion Sensor"
                     android:textColor="@color/colorAccent"
@@ -51,8 +49,6 @@
                 <!-- 1 - ACCELLEROMETER -->
                 <TableRow>
                     <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
                         android:id="@+id/tvAccellerometerText"
                         android:text="Accellerometer"
                         android:textSize="@dimen/sensorNameSize"
@@ -67,20 +63,6 @@
                 </TableRow>
                 <TableRow>
                     <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:id="@+id/tvAccellerometerValueX"
-                        android:textSize="@dimen/sensorDataSize"
-                        android:paddingStart="@dimen/paddingStartSensorName"
-                        android:paddingEnd="@dimen/paddingEndSensorName"
-                        android:text=""
-                        android:layout_margin="@dimen/layoutMargin"
-                        android:textColor="@color/colorPrimaryDark"/>
-                    </TableRow>
-                <TableRow>
-                    <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
                         android:id="@+id/tvAccellerometerValueY"
                         android:textSize="@dimen/sensorDataSize"
                         android:paddingStart="@dimen/paddingStartSensorName"
@@ -89,23 +71,9 @@
                         android:layout_margin="@dimen/layoutMargin"
                         android:textColor="@color/colorPrimaryDark"/>
                     </TableRow>
-                <TableRow>
-                    <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:id="@+id/tvAccellerometerValueZ"
-                        android:textSize="@dimen/sensorDataSize"
-                        android:paddingStart="@dimen/paddingStartSensorName"
-                        android:paddingEnd="@dimen/paddingEndSensorName"
-                        android:text=""
-                        android:layout_margin="@dimen/layoutMargin"
-                        android:textColor="@color/colorPrimaryDark"/>
-                </TableRow>
                 <!-- 2 - GRAVITY -->
                 <TableRow>
                     <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
                         android:id="@+id/tvGravityText"
                         android:text="Gravity"
                         android:textColor="@color/colorPrimary"
@@ -120,22 +88,9 @@
                         android:text="@string/save"
                         android:textColor="@color/colorPrimary"/>
                 </TableRow>
+
                 <TableRow>
                     <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:id="@+id/tvGravityValueX"
-                        android:textSize="@dimen/sensorDataSize"
-                        android:paddingStart="@dimen/paddingStartSensorName"
-                        android:paddingEnd="@dimen/paddingEndSensorName"
-                        android:text=""
-                        android:layout_margin="@dimen/layoutMargin"
-                        android:textColor="@color/colorPrimaryDark"/>
-                </TableRow>
-                <TableRow>
-                    <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
                         android:id="@+id/tvGravityValueY"
                         android:textSize="@dimen/sensorDataSize"
                         android:paddingStart="@dimen/paddingStartSensorName"
@@ -144,23 +99,10 @@
                         android:layout_margin="@dimen/layoutMargin"
                         android:textColor="@color/colorPrimaryDark"/>
                 </TableRow>
-                <TableRow>
-                    <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:id="@+id/tvGravityValueZ"
-                        android:textSize="@dimen/sensorDataSize"
-                        android:paddingStart="@dimen/paddingStartSensorName"
-                        android:paddingEnd="@dimen/paddingEndSensorName"
-                        android:text=""
-                        android:layout_margin="@dimen/layoutMargin"
-                        android:textColor="@color/colorPrimaryDark"/>
-                </TableRow>
+
                 <!-- 3 - GYROSCOPE -->
                 <TableRow>
                     <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
                         android:id="@+id/tvGyroscopeText"
                         android:text="Gyroscope"
                         android:textSize="@dimen/sensorNameSize"
@@ -175,34 +117,8 @@
                 </TableRow>
                 <TableRow>
                     <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:id="@+id/tvGyroscopeValueX"
-                        android:textSize="@dimen/sensorDataSize"
-                        android:paddingStart="@dimen/paddingStartSensorName"
-                        android:paddingEnd="@dimen/paddingEndSensorName"
-                        android:layout_margin="@dimen/layoutMargin"
-                        android:text=""
-                        android:textColor="@color/colorPrimaryDark"/>
-                </TableRow>
-                <TableRow>
-                    <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
                         android:id="@+id/tvGyroscopeValueY"
                         android:text="@string/not_found"
-                        android:textSize="@dimen/sensorDataSize"
-                        android:paddingStart="@dimen/paddingStartSensorName"
-                        android:paddingEnd="@dimen/paddingEndSensorName"
-                        android:layout_margin="@dimen/layoutMargin"
-                        android:textColor="@color/colorPrimaryDark"/>
-                </TableRow>
-                <TableRow>
-                    <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:id="@+id/tvGyroscopeValueZ"
-                        android:text=""
                         android:textSize="@dimen/sensorDataSize"
                         android:paddingStart="@dimen/paddingStartSensorName"
                         android:paddingEnd="@dimen/paddingEndSensorName"
@@ -213,8 +129,6 @@
                 <!-- 4 - LINEAR ACCELLERATION -->
                 <TableRow>
                     <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
                         android:id="@+id/tvLinearAccellerationText"
                         android:text="Linear Accelleration"
                         android:textSize="@dimen/sensorNameSize"
@@ -229,34 +143,8 @@
                 </TableRow>
                 <TableRow>
                     <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:id="@+id/tvLinearAccellerationValueX"
-                        android:text=""
-                        android:textSize="@dimen/sensorDataSize"
-                        android:paddingStart="@dimen/paddingStartSensorName"
-                        android:paddingEnd="@dimen/paddingEndSensorName"
-                        android:layout_margin="@dimen/layoutMargin"
-                        android:textColor="@color/colorPrimaryDark"/>
-                </TableRow>
-                <TableRow>
-                    <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
                         android:id="@+id/tvLinearAccellerationValueY"
                         android:text="@string/not_found"
-                        android:textSize="@dimen/sensorDataSize"
-                        android:paddingStart="@dimen/paddingStartSensorName"
-                        android:paddingEnd="@dimen/paddingEndSensorName"
-                        android:layout_margin="@dimen/layoutMargin"
-                        android:textColor="@color/colorPrimaryDark"/>
-                </TableRow>
-                <TableRow>
-                    <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:id="@+id/tvLinearAccellerationValueZ"
-                        android:text=""
                         android:textSize="@dimen/sensorDataSize"
                         android:paddingStart="@dimen/paddingStartSensorName"
                         android:paddingEnd="@dimen/paddingEndSensorName"
@@ -267,8 +155,6 @@
                 <!-- 5 - ROTATION VECTOR -->
                 <TableRow>
                     <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
                         android:id="@+id/tvRotationVectorText"
                         android:text="Rotation Vector"
                         android:textSize="@dimen/sensorNameSize"
@@ -283,8 +169,6 @@
                 </TableRow>
                 <TableRow>
                     <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
                         android:id="@+id/tvRotationVectorValueX"
                         android:textSize="@dimen/sensorDataSize"
                         android:paddingStart="@dimen/paddingStartSensorName"
@@ -300,8 +184,6 @@
             ***********************-->
             <TableRow>
                 <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
                     android:id="@+id/tvEnviromentalSensor"
                     android:text="Enviromental Sensors"
                     android:textColor="@color/colorAccent"
@@ -314,8 +196,6 @@
                 <!-- 1 - AMBIENT TEMPERATURE -->
                 <TableRow>
                     <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
                         android:id="@+id/tvAmbientTemperatureText"
                         android:text="Ambient Temperature"
                         android:textSize="@dimen/sensorNameSize"
@@ -330,8 +210,6 @@
                 </TableRow>
                 <TableRow>
                     <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
                         android:id="@+id/tvAmbientTemperatureValue"
                         android:text="@string/not_found"
                         android:textSize="@dimen/sensorDataSize"
@@ -344,8 +222,6 @@
                 <!-- 2 -LIGHT -->
                 <TableRow>
                     <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
                         android:id="@+id/tvLigthText"
                         android:text="Ligth"
                         android:textSize="@dimen/sensorNameSize"
@@ -360,8 +236,6 @@
                 </TableRow>
                 <TableRow>
                     <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
                         android:id="@+id/tvLigthValue"
                         android:text="@string/not_found"
                         android:textSize="@dimen/sensorDataSize"
@@ -373,8 +247,6 @@
                 <!-- 3 - PRESSURE -->
                 <TableRow>
                     <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
                         android:id="@+id/tvPressureText"
                         android:text="Pressure"
                         android:textSize="@dimen/sensorNameSize"
@@ -389,8 +261,6 @@
                 </TableRow>
                 <TableRow>
                     <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
                         android:id="@+id/tvPressureValue"
                         android:text="@string/not_found"
                         android:textSize="@dimen/sensorDataSize"
@@ -402,8 +272,6 @@
                 <!-- 4 - RELATIVE HUMIDITY -->
                 <TableRow>
                     <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
                         android:id="@+id/tvRelativeHumidityText"
                         android:text="Relative Humidity"
                         android:textSize="@dimen/sensorNameSize"
@@ -419,8 +287,6 @@
                 </TableRow>
                 <TableRow>
                     <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
                         android:id="@+id/tvRelativeHumidityValue"
                         android:text="@string/not_found"
                         android:textSize="@dimen/sensorDataSize"
@@ -436,8 +302,6 @@
             *******************-->
             <TableRow>
                 <TextView
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
                     android:id="@+id/tvPositionSensor"
                     android:text="Position Sensors"
                     android:textColor="@color/colorAccent"
@@ -449,8 +313,6 @@
                 <!-- 1 - MAGNETIC FIELD -->
                 <TableRow>
                     <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
                         android:id="@+id/tvMagneticFieldText"
                         android:text="Magnetic Field"
                         android:textSize="@dimen/sensorNameSize"
@@ -465,34 +327,8 @@
                 </TableRow>
                 <TableRow>
                     <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:id="@+id/tvMagneticFieldValueX"
-                        android:text=""
-                        android:textSize="@dimen/sensorDataSize"
-                        android:paddingStart="@dimen/paddingStartSensorName"
-                        android:paddingEnd="@dimen/paddingEndSensorName"
-                        android:layout_margin="@dimen/layoutMargin"
-                        android:textColor="@color/colorPrimaryDark"/>
-                </TableRow>
-                <TableRow>
-                    <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
                         android:id="@+id/tvMagneticFieldValueY"
                         android:text="@string/not_found"
-                        android:textSize="@dimen/sensorDataSize"
-                        android:paddingStart="@dimen/paddingStartSensorName"
-                        android:paddingEnd="@dimen/paddingEndSensorName"
-                        android:layout_margin="@dimen/layoutMargin"
-                        android:textColor="@color/colorPrimaryDark"/>
-                </TableRow>
-                <TableRow>
-                    <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:id="@+id/tvMagneticFieldValueZ"
-                        android:text=""
                         android:textSize="@dimen/sensorDataSize"
                         android:paddingStart="@dimen/paddingStartSensorName"
                         android:paddingEnd="@dimen/paddingEndSensorName"
@@ -502,8 +338,6 @@
                 <!-- 2 - PROXIMITY -->
                 <TableRow>
                     <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
                         android:id="@+id/tvProximityText"
                         android:text="Proximity"
                         android:textSize="@dimen/sensorNameSize"
@@ -518,10 +352,8 @@
                 </TableRow>
                 <TableRow>
                     <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
                         android:id="@+id/tvProximityValue"
-                        android:text=""
+                        android:text="Sensor not found"
                         android:textSize="@dimen/sensorDataSize"
                         android:paddingStart="@dimen/paddingStartSensorName"
                         android:paddingEnd="@dimen/paddingEndSensorName"
@@ -532,8 +364,6 @@
                 <!-- 3 - ORIENTATION -->
                 <TableRow>
                     <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
                         android:id="@+id/tvOrientationText"
                         android:text="Device Orientation"
                         android:textSize="@dimen/sensorNameSize"
@@ -548,34 +378,8 @@
                 </TableRow>
                 <TableRow>
                     <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:id="@+id/tvOrientationAzimuth"
-                        android:text=""
-                        android:textSize="@dimen/sensorDataSize"
-                        android:paddingStart="@dimen/paddingStartSensorName"
-                        android:paddingEnd="@dimen/paddingEndSensorName"
-                        android:layout_margin="@dimen/layoutMargin"
-                        android:textColor="@color/colorPrimaryDark"/>
-                </TableRow>
-                <TableRow>
-                    <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
                         android:id="@+id/tvOrientationPitch"
                         android:text="@string/not_found"
-                        android:textSize="@dimen/sensorDataSize"
-                        android:paddingStart="@dimen/paddingStartSensorName"
-                        android:paddingEnd="@dimen/paddingEndSensorName"
-                        android:layout_margin="@dimen/layoutMargin"
-                        android:textColor="@color/colorPrimaryDark"/>
-                </TableRow>
-                <TableRow>
-                    <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:id="@+id/tvOrientationRoll"
-                        android:text=""
                         android:textSize="@dimen/sensorDataSize"
                         android:paddingStart="@dimen/paddingStartSensorName"
                         android:paddingEnd="@dimen/paddingEndSensorName"

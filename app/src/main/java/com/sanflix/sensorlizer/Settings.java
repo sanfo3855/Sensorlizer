@@ -1,108 +1,118 @@
 package com.sanflix.sensorlizer;
 
+import android.app.Activity;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Context;
-import android.net.Uri;
+import android.content.Intent;
 import android.os.Bundle;
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.Switch;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.InputStreamReader;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link Settings.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link Settings#newInstance} factory method to
- * create an instance of this fragment.
- */
+import static android.content.ContentValues.TAG;
+
 public class Settings extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private Switch switchSensorLogger;
 
-    private OnFragmentInteractionListener mListener;
-
-    public Settings() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Settings.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static Settings newInstance(String param1, String param2) {
-        Settings fragment = new Settings();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
+    public Settings() {}
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
+
+
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_settings, container, false);
-    }
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
+        final View v = inflater.inflate(R.layout.fragment_settings, container, false);
+        switchSensorLogger = (Switch) v.findViewById(R.id.switchSensorLogger);
+
+        final Activity a = getActivity();
+        File fileConfig = new File(a.getFilesDir(), "config");
+        try{
+            BufferedReader in = new BufferedReader(new InputStreamReader(new BufferedInputStream(new FileInputStream(fileConfig))));
+            String line = null;
+            while((line = in.readLine()) != null){
+                if(line.startsWith("service")){
+                    if(line.substring(8).equals("off")){
+                        Log.i(TAG, "onCreate: service needs to be off");
+                        switchSensorLogger.setChecked(false);
+                    } else if(line.substring(8).equals("on")){
+                        Log.i(TAG, "onCreate: service needs to be on");
+                        switchSensorLogger.setChecked(true);
+                    }
+                }
+            }
+        } catch (Exception e){
+            Log.i(TAG, "onCreate: fileConfig not found. Creating a default one");
+            try{
+                String defaultConfig = "service:off\n";
+                fileConfig.createNewFile();
+                FileOutputStream fos = new FileOutputStream(fileConfig);
+                fos.write(defaultConfig.getBytes());
+                fos.flush();
+                fos.close();
+                switchSensorLogger.setChecked(false);
+            } catch (Exception ex){
+                ex.printStackTrace();
+            }
         }
+
+        switchSensorLogger.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(switchSensorLogger.isChecked()){
+                    Log.i(TAG, "onClick: enable service");
+                    Log.i("SensorDataVisualizer", "com.sanflix.sensorlizer.SensorDataVisualizer: starting SensorLogger...");
+                    AlarmManager scheduler = (AlarmManager) a.getSystemService(Context.ALARM_SERVICE);
+                    Intent intent = new Intent(a.getApplicationContext(), SensorLogger.class );
+                    PendingIntent scheduledIntent = PendingIntent.getService(a.getApplicationContext(), 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+                    scheduler.setInexactRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), 10*1000, scheduledIntent);
+                    Log.i("SensorDataVisualizer", "com.sanflix.sensorlizer.SensorDataVisualizer: started and scheduled SensorLogger");
+                    updateConfig("service:on");
+                } else {
+                    Log.i(TAG, "onClick: disable service");
+                    Log.i("SensorDataVisualizer", "com.sanflix.sensorlizer.SensorDataVisualizer: stopping SensorLogger...");
+                    AlarmManager scheduler = (AlarmManager) a.getSystemService(Context.ALARM_SERVICE);
+                    Intent intent = new Intent(a,SensorLogger.class );
+                    PendingIntent scheduledIntent = PendingIntent.getService(a.getApplicationContext(), 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+                    scheduler.cancel(scheduledIntent);
+                    Log.i("SensorDataVisualizer", "com.sanflix.sensorlizer.SensorDataVisualizer: stopped and scheduled SensorLogger");
+                    updateConfig("service:off");
+                }
+            }
+        });
+        
+        return v;
     }
 
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        if (context instanceof OnFragmentInteractionListener) {
-            mListener = (OnFragmentInteractionListener) context;
-        } else {
-            throw new RuntimeException(context.toString()
-                    + " must implement OnFragmentInteractionListener");
+    protected void updateConfig(String updated){
+        File fileConfig = new File(getActivity().getFilesDir(), "config");
+        try{
+            fileConfig.createNewFile();
+            FileOutputStream fos = new FileOutputStream(fileConfig);
+            fos.write(updated.getBytes());
+            fos.flush();
+            fos.close();
+        } catch(Exception e) {
+            e.printStackTrace();
         }
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
-    }
-
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
-    public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        void onFragmentInteraction(Uri uri);
     }
 }
