@@ -1,10 +1,7 @@
 package com.sanflix.sensorlizer;
 
 import android.app.Activity;
-import android.app.AlarmManager;
-import android.app.PendingIntent;
 import android.content.Context;
-import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -17,7 +14,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TableLayout;
 import android.widget.TextView;
@@ -461,31 +457,5 @@ public class SensorDataVisualizer extends Fragment implements SensorEventListene
         } catch (IOException e){
             e.printStackTrace();
         }
-    }
-
-    public void startService(View v){
-        Log.i("SensorDataVisualizer", "com.sanflix.sensorlizer.SensorDataVisualizer: starting SensorLogger...");
-        ((Button) v.findViewById(R.id.buttonService)).setVisibility(View.GONE);
-        ((Button) v.findViewById(R.id.buttonServiceStop)).setVisibility(View.VISIBLE);
-        Activity a = this.getActivity();
-        AlarmManager scheduler = (AlarmManager) a.getSystemService(Context.ALARM_SERVICE);
-        Intent intent = new Intent(a.getApplicationContext(), SensorLogger.class );
-        PendingIntent scheduledIntent = PendingIntent.getService(a.getApplicationContext(), 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-
-        scheduler.setInexactRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), 10*1000, scheduledIntent);
-        Log.i("SensorDataVisualizer", "com.sanflix.sensorlizer.SensorDataVisualizer: started and scheduled SensorLogger...");
-    }
-
-    public void stopService(View v){
-        Log.i("SensorDataVisualizer", "com.sanflix.sensorlizer.SensorDataVisualizer: stopping SensorLogger...");
-        ((Button) v.findViewById(R.id.buttonServiceStop)).setVisibility(View.GONE);
-        ((Button) v.findViewById(R.id.buttonService)).setVisibility(View.VISIBLE);
-        Activity a = this.getActivity();
-        AlarmManager scheduler = (AlarmManager) a.getSystemService(Context.ALARM_SERVICE);
-        Intent intent = new Intent(a,SensorLogger.class );
-        PendingIntent scheduledIntent = PendingIntent.getService(a.getApplicationContext(), 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-
-        scheduler.cancel(scheduledIntent);
-        Log.i("SensorDataVisualizer", "com.sanflix.sensorlizer.SensorDataVisualizer: stopped and scheduled SensorLogger...");
     }
 }

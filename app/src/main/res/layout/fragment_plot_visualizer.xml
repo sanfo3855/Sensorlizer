@@ -1,0 +1,262 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
+             tools:context="com.sanflix.sensorlizer.PlotVisualizer">
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Accellerometer"
+                android:drawableLeft="@drawable/arrow_right"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/groupSensorSize"
+                android:id="@+id/accellerometerTv"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/graphAccellerometerCnt"
+                android:visibility="gone">
+
+                <com.jjoe64.graphview.GraphView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dip"
+                    android:id="@+id/graphAccellerometer"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gravity"
+                android:drawableLeft="@drawable/arrow_right"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/groupSensorSize"
+                android:id="@+id/gravityTv"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/graphGravityCnt"
+                android:visibility="gone">
+
+                <com.jjoe64.graphview.GraphView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dip"
+                    android:id="@+id/graphGravity"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gyroscope"
+                android:drawableLeft="@drawable/arrow_right"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/groupSensorSize"
+                android:id="@+id/gyroscopeTv"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/graphGyroscopeCnt"
+                android:visibility="gone">
+
+                <com.jjoe64.graphview.GraphView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dip"
+                    android:id="@+id/graphGyroscope"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Linear Accelleration"
+                android:drawableLeft="@drawable/arrow_right"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/groupSensorSize"
+                android:id="@+id/linearAccellerationTv"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/graphLinearAccellerationCnt"
+                android:visibility="gone">
+
+                <com.jjoe64.graphview.GraphView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dip"
+                    android:id="@+id/graphLinearAccelleration"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rotation Vector"
+                android:drawableLeft="@drawable/arrow_right"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/groupSensorSize"
+                android:id="@+id/rotationVectorTv"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/graphRotationVectorCnt"
+                android:visibility="gone">
+
+                <com.jjoe64.graphview.GraphView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dip"
+                    android:id="@+id/graphRotationVector"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/colorBackgroundDrawer"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ambient Temperature"
+                android:drawableLeft="@drawable/arrow_right"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/groupSensorSize"
+                android:id="@+id/AmbientTemperatureTv"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/graphAmbientTemperatureCnt"
+                android:visibility="gone">
+
+                <com.jjoe64.graphview.GraphView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dip"
+                    android:id="@+id/graphAmbientTemperature"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Light"
+                android:drawableLeft="@drawable/arrow_right"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/groupSensorSize"
+                android:id="@+id/lightTv"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/graphLightCnt"
+                android:visibility="gone">
+
+                <com.jjoe64.graphview.GraphView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dip"
+                    android:id="@+id/graphLight"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pressure"
+                android:drawableLeft="@drawable/arrow_right"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/groupSensorSize"
+                android:id="@+id/pressureTv"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/graphPressureCnt"
+                android:visibility="gone">
+
+                <com.jjoe64.graphview.GraphView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dip"
+                    android:id="@+id/graphPressure"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Relative Humidity"
+                android:drawableLeft="@drawable/arrow_right"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/groupSensorSize"
+                android:id="@+id/relativeHumidityTv"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/graphRelativeHumidityCnt"
+                android:visibility="gone">
+
+                <com.jjoe64.graphview.GraphView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dip"
+                    android:id="@+id/graphRelativeHumidity"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/colorBackgroundDrawer"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Magnetic Field"
+                android:drawableLeft="@drawable/arrow_right"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/groupSensorSize"
+                android:id="@+id/magneticFieldTv"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/graphMagneticFieldCnt"
+                android:visibility="gone">
+
+                <com.jjoe64.graphview.GraphView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dip"
+                    android:id="@+id/graphMagneticField"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Proximity"
+                android:drawableLeft="@drawable/arrow_right"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/groupSensorSize"
+                android:id="@+id/proximityTv"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/graphProximityCnt"
+                android:visibility="gone">
+
+                <com.jjoe64.graphview.GraphView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dip"
+                    android:id="@+id/graphProximity"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

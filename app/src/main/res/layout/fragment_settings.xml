@@ -1,63 +1,97 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent"
              tools:context="com.sanflix.sensorlizer.Settings">
+
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
-        <HorizontalScrollView
+
+        <TableLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-            <TableLayout
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent">
+            <TextView
+                android:padding="@dimen/paddingEndSensorName"
+                android:text="Background Sensor Logging"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20dp"/>
 
-                <TableRow>
-                    <TextView
-                        android:text="Log sensors in background"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="20dp"
-                        android:padding="@dimen/paddingEndSensorName"/>
-
-                    <Switch
-                        android:id="@+id/switchSensorLogger"/>
-                </TableRow>
-                <TableRow>
-                    <TextView
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="20dp"
-                        android:text="Logging frequency"
-                        android:padding="@dimen/paddingEndSensorName"/>
-                    <EditText
-                        android:textColor="@color/colorPrimary"
-                        />
-                </TableRow>
+            <TableRow
+                android:paddingLeft="@dimen/paddingEndSensorName"
+                android:paddingRight="100dp">
 
                 <TextView
-                    android:layout_width="fill_parent"
-                    android:layout_height="2dp"
-                    android:background="@color/colorBackgroundDrawer"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="15dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"/>
+                    android:layout_width="0px"
+                    android:layout_weight="0.5"
+                    android:padding="@dimen/paddingEndSensorName"
+                    android:text="On/Off"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="17dp"/>
 
-                <TableRow>
-                    <TextView
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:text="Reset logged data"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="20dp"
-                        android:padding="@dimen/paddingEndSensorName"/>
-                    <Button
-                        android:layout_height="wrap_content"
-                        android:layout_width="wrap_content"
-                        android:text="reset"/>
-                </TableRow>
-            </TableLayout>
-        </HorizontalScrollView>
+                <Switch
+                    android:id="@+id/switchSensorLogger"
+                    android:layout_width="0px"
+                    android:layout_weight="0.2"
+                    android:switchMinWidth="50dp"/>
+            </TableRow>
+
+            <TableRow
+                android:paddingLeft="@dimen/paddingEndSensorName"
+                android:paddingRight="0dp">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_weight="1.8"
+                    android:padding="@dimen/paddingEndSensorName"
+                    android:text="Log data every"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="17dp"/>
+
+                <EditText
+                    android:id="@+id/frequency"
+                    android:layout_width="0px"
+                    android:layout_weight="0.6"
+                    android:textColor="@color/colorPrimary"
+                    android:inputType="number"/>
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_weight="0.7"
+                    android:padding="@dimen/paddingEndSensorName"
+                    android:text="sec"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="17dp"/>
+
+                <Button
+                    android:id="@+id/updateButton"
+                    android:layout_width="0px"
+                    android:layout_weight="1.1"
+                    android:text="update"
+                    android:textSize="17dp"/>
+            </TableRow>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/colorBackgroundDrawer"/>
+
+            <TableRow>
+
+                <TextView
+                    android:padding="@dimen/paddingEndSensorName"
+                    android:text="Reset logged data"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20dp"/>
+
+                <Button
+                    android:text="reset"/>
+            </TableRow>
+        </TableLayout>
     </ScrollView>
 </FrameLayout>

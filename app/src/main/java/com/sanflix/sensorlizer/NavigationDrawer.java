@@ -68,11 +68,20 @@ public class NavigationDrawer extends AppCompatActivity
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
+        Fragment fragment = null;
+        Class fragmentClass = null;
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            fragmentClass = Settings.class;
+            setTitle("Settings");
         }
+        try {
+            fragment = (Fragment) fragmentClass.newInstance();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.base_frame, fragment).commit();
 
         return super.onOptionsItemSelected(item);
     }
@@ -88,8 +97,9 @@ public class NavigationDrawer extends AppCompatActivity
             fragmentClass = SensorDataVisualizer.class;
             setTitle("Sensors");
         } else if (id == R.id.plots_drawer) {
-
-        } else if (id == R.id.settings_drawer) {
+            fragmentClass = PlotVisualizer.class;
+            setTitle("Plots");
+        } else if (id == R.id.settings_drawer || id == R.id.action_settings) {
             fragmentClass = Settings.class;
             setTitle("Settings");
         }

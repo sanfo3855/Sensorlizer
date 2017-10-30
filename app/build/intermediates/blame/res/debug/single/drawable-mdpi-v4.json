@@ -48,20 +48,20 @@
         "source": "C:\\Users\\sanfe\\.android\\build-cache\\2178e268ba13f5f2926310657a2908ba04c71b5e\\output\\res\\drawable-mdpi-v4\\notify_panel_notification_icon_bg.png"
     },
     {
-        "merged": "C:\\home\\matteo\\AndroidStudioProjects\\Sensorlizer2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png",
-        "source": "C:\\home\\matteo\\.android\\build-cache\\d3ab41ce8ca7bb11144b1368c6a33aa05546bde9\\output\\res\\drawable-mdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
-    },
-    {
         "merged": "C:\\home\\matteo\\AndroidStudioProjects\\Sensorlizer2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_spinner_mtrl_am_alpha.9.png",
         "source": "C:\\home\\matteo\\.android\\build-cache\\d3ab41ce8ca7bb11144b1368c6a33aa05546bde9\\output\\res\\drawable-mdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
-        "merged": "C:\\home\\matteo\\AndroidStudioProjects\\Sensorlizer2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_switch_track_mtrl_alpha.9.png",
-        "source": "C:\\home\\matteo\\.android\\build-cache\\d3ab41ce8ca7bb11144b1368c6a33aa05546bde9\\output\\res\\drawable-mdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
+        "merged": "C:\\home\\matteo\\AndroidStudioProjects\\Sensorlizer2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png",
+        "source": "C:\\home\\matteo\\.android\\build-cache\\d3ab41ce8ca7bb11144b1368c6a33aa05546bde9\\output\\res\\drawable-mdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png",
         "source": "C:\\Users\\sanfe\\.android\\build-cache\\2178e268ba13f5f2926310657a2908ba04c71b5e\\output\\res\\drawable-mdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png"
+    },
+    {
+        "merged": "C:\\home\\matteo\\AndroidStudioProjects\\Sensorlizer2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_switch_track_mtrl_alpha.9.png",
+        "source": "C:\\home\\matteo\\.android\\build-cache\\d3ab41ce8ca7bb11144b1368c6a33aa05546bde9\\output\\res\\drawable-mdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png",
@@ -136,12 +136,12 @@
         "source": "C:\\home\\matteo\\.android\\build-cache\\d3ab41ce8ca7bb11144b1368c6a33aa05546bde9\\output\\res\\drawable-mdpi-v4\\abc_ic_star_black_36dp.png"
     },
     {
-        "merged": "C:\\home\\matteo\\AndroidStudioProjects\\Sensorlizer2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_dark.9.png",
-        "source": "C:\\home\\matteo\\.android\\build-cache\\d3ab41ce8ca7bb11144b1368c6a33aa05546bde9\\output\\res\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
-    },
-    {
         "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_light.9.png",
         "source": "C:\\Users\\sanfe\\.android\\build-cache\\2178e268ba13f5f2926310657a2908ba04c71b5e\\output\\res\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
+    },
+    {
+        "merged": "C:\\home\\matteo\\AndroidStudioProjects\\Sensorlizer2\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_dark.9.png",
+        "source": "C:\\home\\matteo\\.android\\build-cache\\d3ab41ce8ca7bb11144b1368c6a33aa05546bde9\\output\\res\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
     },
     {
         "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png",

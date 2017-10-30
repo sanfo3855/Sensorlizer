@@ -111,6 +111,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\sanfe\.android\build-cache\f081249bae677c99cf3f343f60ec43ce8ce39cbb\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="987adec819c9a98faf215814f41195da48fc724e">
+        <dex dex="C:\Users\sanfe\StudioProjects\Sensorlizer\app\build\intermediates\pre-dexed\debug\classes_13503e592b4bd0feecd34e715dbd216186ab450d.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\sanfe\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
         jumboMode="false"
         optimize="true"

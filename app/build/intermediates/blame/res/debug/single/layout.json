@@ -420,6 +420,10 @@
         "source": "C:\\Users\\sanfe\\.android\\build-cache\\90e2e275040af7eb35c89d995294e6e2a82e170c\\output\\res\\layout\\design_navigation_item_subheader.xml"
     },
     {
+        "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_plot_visualizer.xml",
+        "source": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\src\\main\\res\\layout\\fragment_plot_visualizer.xml"
+    },
+    {
         "merged": "C:\\home\\matteo\\AndroidStudioProjects\\Sensorlizer2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
         "source": "C:\\home\\matteo\\.android\\build-cache\\d3ab41ce8ca7bb11144b1368c6a33aa05546bde9\\output\\res\\layout\\abc_expanded_menu_layout.xml"
     },

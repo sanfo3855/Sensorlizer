@@ -27,6 +27,7 @@ MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\sanfe\.android\bu
 MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\sanfe\.android\build-cache\94b7b4efdf123b661502bb8eb0f399c03ac36aae\output\AndroidManifest.xml:26:5-20
 MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\sanfe\.android\build-cache\77c7772ecf910b349a94b35a094e4e5bd64f7b05\output\AndroidManifest.xml:26:5-20
 MERGED from [com.android.support:transition:25.3.1] C:\Users\sanfe\.android\build-cache\607bd0a1bf939cfdcedb4c192afb4bc4d85e128b\output\AndroidManifest.xml:26:5-20
+MERGED from [com.jjoe64:graphview:4.2.1] C:\Users\sanfe\.android\build-cache\f081249bae677c99cf3f343f60ec43ce8ce39cbb\output\AndroidManifest.xml:11:5-12:19
 MERGED from [com.android.support:support-v4:25.3.1] C:\Users\sanfe\.android\build-cache\3a829b9f563f89722a770454fa5d267a5476872e\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\sanfe\.android\build-cache\d852165c2b4235d9cc35fc530625e06add43e0ae\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\sanfe\.android\build-cache\46cf71c2c7c90232507b44d021f2e96af9828146\output\AndroidManifest.xml:29:5-20
@@ -82,6 +83,7 @@ MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\sanfe
 MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\sanfe\.android\build-cache\77c7772ecf910b349a94b35a094e4e5bd64f7b05\output\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\sanfe\.android\build-cache\908ea4a2a48a4487d6a3cf19d9671ff529dad66c\output\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:transition:25.3.1] C:\Users\sanfe\.android\build-cache\607bd0a1bf939cfdcedb4c192afb4bc4d85e128b\output\AndroidManifest.xml:20:5-44
+MERGED from [com.jjoe64:graphview:4.2.1] C:\Users\sanfe\.android\build-cache\f081249bae677c99cf3f343f60ec43ce8ce39cbb\output\AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:support-v4:25.3.1] C:\Users\sanfe\.android\build-cache\3a829b9f563f89722a770454fa5d267a5476872e\output\AndroidManifest.xml:21:5-23:54
 MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\sanfe\.android\build-cache\d852165c2b4235d9cc35fc530625e06add43e0ae\output\AndroidManifest.xml:21:5-23:60
 MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\sanfe\.android\build-cache\46cf71c2c7c90232507b44d021f2e96af9828146\output\AndroidManifest.xml:21:5-23:63
