@@ -15,22 +15,32 @@
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:isScrollContainer="true">
+            <!--
+            ************
+            * LOCATION *
+            ************ -->
+            <!--<TableRow>
+                <TextView
+                    android:id="@+id/tvLocation"
+                    android:text="Location"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/groupSensorSize"
+                    android:layout_margin="@dimen/layoutMargin"
+                    android:drawableLeft="@drawable/arrow_right"/>
+            </TableRow>
+            <TableLayout
+                android:id="@+id/locationGroup"
+                android:visibility="visible">
+                <TextView
+                    android:id="@+id/tvLocationValue"
+                    android:textSize="@dimen/sensorDataSize"
+                    android:paddingStart="@dimen/paddingStartSensorName"
+                    android:paddingEnd="@dimen/paddingEndSensorName"
+                    android:text="@string/not_found"
+                    android:layout_margin="@dimen/layoutMargin"
+                    android:textColor="@color/colorPrimaryDark"/>
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="start Service"
-                android:onClick="startService"
-                android:id="@+id/buttonService"
-                android:visibility="gone"/>
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Stop Service"
-                android:onClick="stopService"
-                android:id="@+id/buttonServiceStop"
-                android:visibility="gone"/>
+            </TableLayout>-->
             <!--
             *****************
             * MOTION SENSOR *
@@ -42,10 +52,11 @@
                     android:textColor="@color/colorAccent"
                     android:textSize="@dimen/groupSensorSize"
                     android:layout_margin="@dimen/layoutMargin"
-                    android:drawableLeft="@drawable/arrow_down"/>
+                    android:drawableLeft="@drawable/arrow_right"/>
             </TableRow>
             <TableLayout
-                android:id="@+id/motionSensorGroup">
+                android:id="@+id/motionSensorGroup"
+                android:visibility="gone">
                 <!-- 1 - ACCELLEROMETER -->
                 <TableRow>
                     <TextView
@@ -189,10 +200,11 @@
                     android:textColor="@color/colorAccent"
                     android:textSize="@dimen/groupSensorSize"
                     android:layout_margin="@dimen/layoutMargin"
-                    android:drawableLeft="@drawable/arrow_down"/>
+                    android:drawableLeft="@drawable/arrow_right"/>
             </TableRow>
 
-            <TableLayout android:id="@+id/enviromentalSensorGroup">
+            <TableLayout android:id="@+id/enviromentalSensorGroup"
+                android:visibility="gone">
                 <!-- 1 - AMBIENT TEMPERATURE -->
                 <TableRow>
                     <TextView
@@ -307,9 +319,10 @@
                     android:textColor="@color/colorAccent"
                     android:textSize="@dimen/groupSensorSize"
                     android:layout_margin="@dimen/layoutMargin"
-                    android:drawableLeft="@drawable/arrow_down"/>
+                    android:drawableLeft="@drawable/arrow_right"/>
             </TableRow>
-            <TableLayout android:id="@+id/positionSensorGroup">
+            <TableLayout android:id="@+id/positionSensorGroup"
+                android:visibility="gone">
                 <!-- 1 - MAGNETIC FIELD -->
                 <TableRow>
                     <TextView

@@ -1,5 +1,333 @@
 [
     {
+        "outputFile": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-gl\\values-gl.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 105,
+                    "endColumn": 107,
+                    "endOffset": 208
+                },
+                "from": {
+                    "file": "C:\\Users\\sanfe\\.android\\build-cache\\3b1af9130c4397ae975b7820d9e6a9bee7a55872\\output\\res\\values-gl\\values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 0,
+                        "startOffset": 283,
+                        "endColumn": 103,
+                        "endOffset": 386
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 213,
+                    "endColumn": 194,
+                    "endOffset": 403
+                },
+                "from": {
+                    "file": "C:\\Users\\sanfe\\.android\\build-cache\\3b1af9130c4397ae975b7820d9e6a9bee7a55872\\output\\res\\values-gl\\values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 0,
+                        "startOffset": 387,
+                        "endColumn": 194,
+                        "endOffset": 581
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 408,
+                    "endColumn": 130,
+                    "endOffset": 534
+                },
+                "from": {
+                    "file": "C:\\Users\\sanfe\\.android\\build-cache\\3b1af9130c4397ae975b7820d9e6a9bee7a55872\\output\\res\\values-gl\\values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 0,
+                        "startOffset": 582,
+                        "endColumn": 126,
+                        "endOffset": 708
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 539,
+                    "endColumn": 109,
+                    "endOffset": 644
+                },
+                "from": {
+                    "file": "C:\\Users\\sanfe\\.android\\build-cache\\3b1af9130c4397ae975b7820d9e6a9bee7a55872\\output\\res\\values-gl\\values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 0,
+                        "startOffset": 709,
+                        "endColumn": 105,
+                        "endOffset": 814
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 649,
+                    "endColumn": 217,
+                    "endOffset": 862
+                },
+                "from": {
+                    "file": "C:\\Users\\sanfe\\.android\\build-cache\\3b1af9130c4397ae975b7820d9e6a9bee7a55872\\output\\res\\values-gl\\values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 0,
+                        "startOffset": 815,
+                        "endColumn": 217,
+                        "endOffset": 1032
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 867,
+                    "endColumn": 133,
+                    "endOffset": 996
+                },
+                "from": {
+                    "file": "C:\\Users\\sanfe\\.android\\build-cache\\3b1af9130c4397ae975b7820d9e6a9bee7a55872\\output\\res\\values-gl\\values.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 0,
+                        "startOffset": 1033,
+                        "endColumn": 129,
+                        "endOffset": 1162
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 1001,
+                    "endColumn": 137,
+                    "endOffset": 1134
+                },
+                "from": {
+                    "file": "C:\\Users\\sanfe\\.android\\build-cache\\3b1af9130c4397ae975b7820d9e6a9bee7a55872\\output\\res\\values-gl\\values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 0,
+                        "startOffset": 1163,
+                        "endColumn": 133,
+                        "endOffset": 1296
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 1139,
+                    "endColumn": 192,
+                    "endOffset": 1327
+                },
+                "from": {
+                    "file": "C:\\Users\\sanfe\\.android\\build-cache\\f934007945e8a679d76d8f8dc38e11fa3a53e4ef\\output\\res\\values-gl\\values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 0,
+                        "startOffset": 285,
+                        "endColumn": 192,
+                        "endOffset": 477
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 1332,
+                    "endColumn": 229,
+                    "endOffset": 1557
+                },
+                "from": {
+                    "file": "C:\\Users\\sanfe\\.android\\build-cache\\3b1af9130c4397ae975b7820d9e6a9bee7a55872\\output\\res\\values-gl\\values.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 0,
+                        "startOffset": 1297,
+                        "endColumn": 229,
+                        "endOffset": 1526
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 1562,
+                    "endColumn": 110,
+                    "endOffset": 1668
+                },
+                "from": {
+                    "file": "C:\\Users\\sanfe\\.android\\build-cache\\3b1af9130c4397ae975b7820d9e6a9bee7a55872\\output\\res\\values-gl\\values.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 0,
+                        "startOffset": 1527,
+                        "endColumn": 106,
+                        "endOffset": 1633
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 1673,
+                    "endColumn": 199,
+                    "endOffset": 1868
+                },
+                "from": {
+                    "file": "C:\\Users\\sanfe\\.android\\build-cache\\3b1af9130c4397ae975b7820d9e6a9bee7a55872\\output\\res\\values-gl\\values.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 0,
+                        "startOffset": 1634,
+                        "endColumn": 199,
+                        "endOffset": 1833
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 1873,
+                    "endColumn": 136,
+                    "endOffset": 2005
+                },
+                "from": {
+                    "file": "C:\\Users\\sanfe\\.android\\build-cache\\3b1af9130c4397ae975b7820d9e6a9bee7a55872\\output\\res\\values-gl\\values.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 0,
+                        "startOffset": 1834,
+                        "endColumn": 132,
+                        "endOffset": 1966
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 2010,
+                    "endColumn": 223,
+                    "endOffset": 2229
+                },
+                "from": {
+                    "file": "C:\\Users\\sanfe\\.android\\build-cache\\3b1af9130c4397ae975b7820d9e6a9bee7a55872\\output\\res\\values-gl\\values.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 0,
+                        "startOffset": 1967,
+                        "endColumn": 223,
+                        "endOffset": 2190
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 2234,
+                    "endColumn": 181,
+                    "endOffset": 2411
+                },
+                "from": {
+                    "file": "C:\\Users\\sanfe\\.android\\build-cache\\3b1af9130c4397ae975b7820d9e6a9bee7a55872\\output\\res\\values-gl\\values.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 0,
+                        "startOffset": 2191,
+                        "endColumn": 177,
+                        "endOffset": 2368
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 2416,
+                    "endColumn": 96,
+                    "endOffset": 2508
+                },
+                "from": {
+                    "file": "C:\\Users\\sanfe\\.android\\build-cache\\3b1af9130c4397ae975b7820d9e6a9bee7a55872\\output\\res\\values-gl\\values.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 0,
+                        "startOffset": 2369,
+                        "endColumn": 92,
+                        "endOffset": 2461
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 2513,
+                    "endColumn": 98,
+                    "endOffset": 2607
+                },
+                "from": {
+                    "file": "C:\\Users\\sanfe\\.android\\build-cache\\3b1af9130c4397ae975b7820d9e6a9bee7a55872\\output\\res\\values-gl\\values.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 0,
+                        "startOffset": 2462,
+                        "endColumn": 94,
+                        "endOffset": 2556
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 2612,
+                    "endColumn": 113,
+                    "endOffset": 2721
+                },
+                "from": {
+                    "file": "C:\\Users\\sanfe\\.android\\build-cache\\3b1af9130c4397ae975b7820d9e6a9bee7a55872\\output\\res\\values-gl\\values.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 0,
+                        "startOffset": 2557,
+                        "endColumn": 109,
+                        "endOffset": 2666
+                    }
+                }
+            }
+        ]
+    },
+    {
         "outputFile": "C:\\home\\matteo\\AndroidStudioProjects\\Sensorlizer2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-gl\\values-gl.xml",
         "map": [
             {
@@ -392,410 +720,6 @@
                 },
                 "from": {
                     "file": "C:\\home\\matteo\\.android\\build-cache\\d3ab41ce8ca7bb11144b1368c6a33aa05546bde9\\output\\res\\values-gl\\values-gl.xml",
-                    "position": {
-                        "startLine": 22,
-                        "startColumn": 4,
-                        "startOffset": 2115,
-                        "endColumn": 100,
-                        "endOffset": 2211
-                    }
-                }
-            }
-        ]
-    },
-    {
-        "outputFile": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-gl\\values-gl.xml",
-        "map": [
-            {
-                "to": {
-                    "startLine": 2,
-                    "startColumn": 4,
-                    "startOffset": 55,
-                    "endColumn": 111,
-                    "endOffset": 162
-                },
-                "from": {
-                    "file": "C:\\Users\\sanfe\\.android\\build-cache\\a288b87ef1b2efb72b029d96f4d6c0577bd725cc\\output\\res\\values-gl\\values-gl.xml",
-                    "position": {
-                        "startLine": 2,
-                        "startColumn": 4,
-                        "startOffset": 55,
-                        "endColumn": 111,
-                        "endOffset": 162
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 3,
-                    "startColumn": 4,
-                    "startOffset": 167,
-                    "endColumn": 107,
-                    "endOffset": 270
-                },
-                "from": {
-                    "file": "C:\\Users\\sanfe\\.android\\build-cache\\a288b87ef1b2efb72b029d96f4d6c0577bd725cc\\output\\res\\values-gl\\values-gl.xml",
-                    "position": {
-                        "startLine": 3,
-                        "startColumn": 4,
-                        "startOffset": 167,
-                        "endColumn": 107,
-                        "endOffset": 270
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 4,
-                    "startColumn": 4,
-                    "startOffset": 275,
-                    "endColumn": 122,
-                    "endOffset": 393
-                },
-                "from": {
-                    "file": "C:\\Users\\sanfe\\.android\\build-cache\\a288b87ef1b2efb72b029d96f4d6c0577bd725cc\\output\\res\\values-gl\\values-gl.xml",
-                    "position": {
-                        "startLine": 4,
-                        "startColumn": 4,
-                        "startOffset": 275,
-                        "endColumn": 122,
-                        "endOffset": 393
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 5,
-                    "startColumn": 4,
-                    "startOffset": 398,
-                    "endColumn": 111,
-                    "endOffset": 505
-                },
-                "from": {
-                    "file": "C:\\Users\\sanfe\\.android\\build-cache\\a288b87ef1b2efb72b029d96f4d6c0577bd725cc\\output\\res\\values-gl\\values-gl.xml",
-                    "position": {
-                        "startLine": 5,
-                        "startColumn": 4,
-                        "startOffset": 398,
-                        "endColumn": 111,
-                        "endOffset": 505
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 6,
-                    "startColumn": 4,
-                    "startOffset": 510,
-                    "endColumn": 107,
-                    "endOffset": 613
-                },
-                "from": {
-                    "file": "C:\\Users\\sanfe\\.android\\build-cache\\a288b87ef1b2efb72b029d96f4d6c0577bd725cc\\output\\res\\values-gl\\values-gl.xml",
-                    "position": {
-                        "startLine": 6,
-                        "startColumn": 4,
-                        "startOffset": 510,
-                        "endColumn": 107,
-                        "endOffset": 613
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 7,
-                    "startColumn": 4,
-                    "startOffset": 618,
-                    "endColumn": 84,
-                    "endOffset": 698
-                },
-                "from": {
-                    "file": "C:\\Users\\sanfe\\.android\\build-cache\\a288b87ef1b2efb72b029d96f4d6c0577bd725cc\\output\\res\\values-gl\\values-gl.xml",
-                    "position": {
-                        "startLine": 7,
-                        "startColumn": 4,
-                        "startOffset": 618,
-                        "endColumn": 84,
-                        "endOffset": 698
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 8,
-                    "startColumn": 4,
-                    "startOffset": 703,
-                    "endColumn": 101,
-                    "endOffset": 800
-                },
-                "from": {
-                    "file": "C:\\Users\\sanfe\\.android\\build-cache\\a288b87ef1b2efb72b029d96f4d6c0577bd725cc\\output\\res\\values-gl\\values-gl.xml",
-                    "position": {
-                        "startLine": 8,
-                        "startColumn": 4,
-                        "startOffset": 703,
-                        "endColumn": 101,
-                        "endOffset": 800
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 9,
-                    "startColumn": 4,
-                    "startOffset": 805,
-                    "endColumn": 125,
-                    "endOffset": 926
-                },
-                "from": {
-                    "file": "C:\\Users\\sanfe\\.android\\build-cache\\a288b87ef1b2efb72b029d96f4d6c0577bd725cc\\output\\res\\values-gl\\values-gl.xml",
-                    "position": {
-                        "startLine": 9,
-                        "startColumn": 4,
-                        "startOffset": 805,
-                        "endColumn": 125,
-                        "endOffset": 926
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 10,
-                    "startColumn": 4,
-                    "startOffset": 931,
-                    "endColumn": 83,
-                    "endOffset": 1010
-                },
-                "from": {
-                    "file": "C:\\Users\\sanfe\\.android\\build-cache\\a288b87ef1b2efb72b029d96f4d6c0577bd725cc\\output\\res\\values-gl\\values-gl.xml",
-                    "position": {
-                        "startLine": 10,
-                        "startColumn": 4,
-                        "startOffset": 931,
-                        "endColumn": 83,
-                        "endOffset": 1010
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 11,
-                    "startColumn": 4,
-                    "startOffset": 1015,
-                    "endColumn": 80,
-                    "endOffset": 1091
-                },
-                "from": {
-                    "file": "C:\\Users\\sanfe\\.android\\build-cache\\a288b87ef1b2efb72b029d96f4d6c0577bd725cc\\output\\res\\values-gl\\values-gl.xml",
-                    "position": {
-                        "startLine": 11,
-                        "startColumn": 4,
-                        "startOffset": 1015,
-                        "endColumn": 80,
-                        "endOffset": 1091
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 12,
-                    "startColumn": 4,
-                    "startOffset": 1096,
-                    "endColumn": 81,
-                    "endOffset": 1173
-                },
-                "from": {
-                    "file": "C:\\Users\\sanfe\\.android\\build-cache\\a288b87ef1b2efb72b029d96f4d6c0577bd725cc\\output\\res\\values-gl\\values-gl.xml",
-                    "position": {
-                        "startLine": 12,
-                        "startColumn": 4,
-                        "startOffset": 1096,
-                        "endColumn": 81,
-                        "endOffset": 1173
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 13,
-                    "startColumn": 4,
-                    "startOffset": 1178,
-                    "endColumn": 106,
-                    "endOffset": 1280
-                },
-                "from": {
-                    "file": "C:\\Users\\sanfe\\.android\\build-cache\\a288b87ef1b2efb72b029d96f4d6c0577bd725cc\\output\\res\\values-gl\\values-gl.xml",
-                    "position": {
-                        "startLine": 13,
-                        "startColumn": 4,
-                        "startOffset": 1178,
-                        "endColumn": 106,
-                        "endOffset": 1280
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 14,
-                    "startColumn": 4,
-                    "startOffset": 1285,
-                    "endColumn": 108,
-                    "endOffset": 1389
-                },
-                "from": {
-                    "file": "C:\\Users\\sanfe\\.android\\build-cache\\a288b87ef1b2efb72b029d96f4d6c0577bd725cc\\output\\res\\values-gl\\values-gl.xml",
-                    "position": {
-                        "startLine": 14,
-                        "startColumn": 4,
-                        "startOffset": 1285,
-                        "endColumn": 108,
-                        "endOffset": 1389
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 15,
-                    "startColumn": 4,
-                    "startOffset": 1394,
-                    "endColumn": 98,
-                    "endOffset": 1488
-                },
-                "from": {
-                    "file": "C:\\Users\\sanfe\\.android\\build-cache\\a288b87ef1b2efb72b029d96f4d6c0577bd725cc\\output\\res\\values-gl\\values-gl.xml",
-                    "position": {
-                        "startLine": 15,
-                        "startColumn": 4,
-                        "startOffset": 1394,
-                        "endColumn": 98,
-                        "endOffset": 1488
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 16,
-                    "startColumn": 4,
-                    "startOffset": 1493,
-                    "endColumn": 107,
-                    "endOffset": 1596
-                },
-                "from": {
-                    "file": "C:\\Users\\sanfe\\.android\\build-cache\\a288b87ef1b2efb72b029d96f4d6c0577bd725cc\\output\\res\\values-gl\\values-gl.xml",
-                    "position": {
-                        "startLine": 16,
-                        "startColumn": 4,
-                        "startOffset": 1493,
-                        "endColumn": 107,
-                        "endOffset": 1596
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 17,
-                    "startColumn": 4,
-                    "startOffset": 1601,
-                    "endColumn": 102,
-                    "endOffset": 1699
-                },
-                "from": {
-                    "file": "C:\\Users\\sanfe\\.android\\build-cache\\a288b87ef1b2efb72b029d96f4d6c0577bd725cc\\output\\res\\values-gl\\values-gl.xml",
-                    "position": {
-                        "startLine": 17,
-                        "startColumn": 4,
-                        "startOffset": 1601,
-                        "endColumn": 102,
-                        "endOffset": 1699
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 18,
-                    "startColumn": 4,
-                    "startOffset": 1704,
-                    "endColumn": 106,
-                    "endOffset": 1806
-                },
-                "from": {
-                    "file": "C:\\Users\\sanfe\\.android\\build-cache\\a288b87ef1b2efb72b029d96f4d6c0577bd725cc\\output\\res\\values-gl\\values-gl.xml",
-                    "position": {
-                        "startLine": 18,
-                        "startColumn": 4,
-                        "startOffset": 1704,
-                        "endColumn": 106,
-                        "endOffset": 1806
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 19,
-                    "startColumn": 4,
-                    "startOffset": 1811,
-                    "endColumn": 121,
-                    "endOffset": 1928
-                },
-                "from": {
-                    "file": "C:\\Users\\sanfe\\.android\\build-cache\\a288b87ef1b2efb72b029d96f4d6c0577bd725cc\\output\\res\\values-gl\\values-gl.xml",
-                    "position": {
-                        "startLine": 19,
-                        "startColumn": 4,
-                        "startOffset": 1811,
-                        "endColumn": 121,
-                        "endOffset": 1928
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 20,
-                    "startColumn": 4,
-                    "startOffset": 1933,
-                    "endColumn": 99,
-                    "endOffset": 2028
-                },
-                "from": {
-                    "file": "C:\\Users\\sanfe\\.android\\build-cache\\a288b87ef1b2efb72b029d96f4d6c0577bd725cc\\output\\res\\values-gl\\values-gl.xml",
-                    "position": {
-                        "startLine": 20,
-                        "startColumn": 4,
-                        "startOffset": 1933,
-                        "endColumn": 99,
-                        "endOffset": 2028
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 21,
-                    "startColumn": 4,
-                    "startOffset": 2033,
-                    "endColumn": 81,
-                    "endOffset": 2110
-                },
-                "from": {
-                    "file": "C:\\Users\\sanfe\\.android\\build-cache\\a288b87ef1b2efb72b029d96f4d6c0577bd725cc\\output\\res\\values-gl\\values-gl.xml",
-                    "position": {
-                        "startLine": 21,
-                        "startColumn": 4,
-                        "startOffset": 2033,
-                        "endColumn": 81,
-                        "endOffset": 2110
-                    }
-                }
-            },
-            {
-                "to": {
-                    "startLine": 22,
-                    "startColumn": 4,
-                    "startOffset": 2115,
-                    "endColumn": 100,
-                    "endOffset": 2211
-                },
-                "from": {
-                    "file": "C:\\Users\\sanfe\\.android\\build-cache\\a288b87ef1b2efb72b029d96f4d6c0577bd725cc\\output\\res\\values-gl\\values-gl.xml",
                     "position": {
                         "startLine": 22,
                         "startColumn": 4,

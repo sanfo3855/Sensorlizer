@@ -32,6 +32,7 @@ public class Settings extends Fragment {
     private Switch switchSensorLogger;
     private Button updateButton;
     private EditText frequency;
+    private Button resetData;
     private int f;
     public Settings() {}
 
@@ -49,6 +50,7 @@ public class Settings extends Fragment {
         switchSensorLogger = (Switch) v.findViewById(R.id.switchSensorLogger);
         updateButton = (Button) v.findViewById((R.id.updateButton));
         frequency = (EditText) v.findViewById(R.id.frequency);
+        resetData = (Button) v.findViewById(R.id.resetData);
         final Activity a = getActivity();
         File fileConfig = new File(a.getFilesDir(), "config");
         try{
@@ -91,10 +93,12 @@ public class Settings extends Fragment {
                     Log.i(TAG, "onClick: enable service");
                     startService(f);
                     updateConfig();
+                    Toast.makeText(getActivity(), "Background Logging: Enabled", Toast.LENGTH_SHORT).show();
                 } else {
                     Log.i(TAG, "onClick: disable service");
                     stopService();
                     updateConfig();
+                    Toast.makeText(getActivity(), "Background Logging: Stopped", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -104,19 +108,41 @@ public class Settings extends Fragment {
             public void onClick(View v) {
                 try{
                     String text = frequency.getText().toString();
-                    if(switchSensorLogger.isChecked()) {
-                        stopService();
-                        startService(Integer.valueOf(text));
+                    if(!text.equals("")) {
+                        if (switchSensorLogger.isChecked()) {
+                            stopService();
+                            startService(Integer.valueOf(text));
+                        }
+                        updateConfig();
+                        Toast.makeText(getActivity(), "Frequency updated", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(getActivity(),"You must enter a value", Toast.LENGTH_SHORT).show();
                     }
-                    updateConfig();
                 } catch (Exception e) {
-                    Toast.makeText(getActivity(),"You must enter a value", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity(),"You must enter a value", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        resetData.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                File savedSensor = new File(getActivity().getFilesDir(), "savedSensor.csv");
+                File SensorData = new File(getActivity().getFilesDir(), "SensorData.csv");
+                File config = new File(getActivity().getFilesDir(), "config");
+                try{
+                    savedSensor.delete();
+                    SensorData.delete();
+                    config.delete();
+                    stopService();
+                    Toast.makeText(getActivity(), "Reset all Data & Service stopped", Toast.LENGTH_SHORT).show();
+                } catch (Exception e){
+
                 }
             }
         });
 
 
-        
         return v;
     }
 

@@ -10,6 +10,7 @@ import android.hardware.SensorManager;
 import android.os.AsyncTask;
 import android.os.IBinder;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -100,6 +101,7 @@ public class SensorLogger extends Service implements SensorEventListener {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         Log.i("SensorLogger","com.sanflix.sensorlizer.SensorLogger: onStartCommand received ");
+        Toast.makeText(getApplicationContext(),"Sensorlizer Background logging", Toast.LENGTH_SHORT).show();
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         mAccellerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         mAmbientTemperature = mSensorManager.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE);
@@ -168,7 +170,7 @@ public class SensorLogger extends Service implements SensorEventListener {
                 cs.addSensor(sensor.getStringType());
             } else if (sensor.getType() == Sensor.TYPE_PROXIMITY){
                 checkProximity = true;
-                mSensorManager.registerListener(this, mRelativeHumidity, SensorManager.SENSOR_DELAY_NORMAL);
+                mSensorManager.registerListener(this, mProximity, SensorManager.SENSOR_DELAY_NORMAL);
                 cs.addSensor(sensor.getStringType());
             } else if (sensor.getType() == Sensor.TYPE_ROTATION_VECTOR){
                 checkRotationVector = true;

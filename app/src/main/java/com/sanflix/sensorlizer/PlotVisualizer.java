@@ -114,48 +114,84 @@ public class PlotVisualizer extends Fragment {
         ((TextView) v.findViewById(R.id.AmbientTemperatureTv)).setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View vv) {
-                drawGraph(Sensor.STRING_TYPE_AMBIENT_TEMPERATURE, R.id.graphAmbientTemperature);
-                ((LinearLayout) v.findViewById(R.id.graphAmbientTemperatureCnt)).setVisibility(View.VISIBLE);
+                if(((LinearLayout) v.findViewById(R.id.graphAmbientTemperatureCnt)).getVisibility()==View.GONE) {
+                    drawGraph(Sensor.STRING_TYPE_AMBIENT_TEMPERATURE, R.id.graphAmbientTemperature);
+                    ((LinearLayout) v.findViewById(R.id.graphAmbientTemperatureCnt)).setVisibility(View.VISIBLE);
+                    ((TextView) v.findViewById(R.id.AmbientTemperatureTv)).setCompoundDrawablesWithIntrinsicBounds(R.drawable.arrow_down,0,0,0);
+                } else if(((LinearLayout) v.findViewById(R.id.graphAmbientTemperatureCnt)).getVisibility()==View.VISIBLE) {
+                    ((LinearLayout) v.findViewById(R.id.graphAmbientTemperatureCnt)).setVisibility(View.GONE);
+                    ((TextView) v.findViewById(R.id.AmbientTemperatureTv)).setCompoundDrawablesWithIntrinsicBounds(R.drawable.arrow_right,0,0,0);
+                }
             }
         });
 
         ((TextView) v.findViewById(R.id.lightTv)).setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View vv) {
-                drawGraph(Sensor.STRING_TYPE_LIGHT, R.id.graphLight);
-                ((LinearLayout) v.findViewById(R.id.graphLightCnt)).setVisibility(View.VISIBLE);
+                if(((LinearLayout) v.findViewById(R.id.graphLightCnt)).getVisibility() == View.GONE) {
+                    drawGraph(Sensor.STRING_TYPE_LIGHT, R.id.graphLight);
+                    ((LinearLayout) v.findViewById(R.id.graphLightCnt)).setVisibility(View.VISIBLE);
+                    ((TextView) v.findViewById(R.id.lightTv)).setCompoundDrawablesWithIntrinsicBounds(R.drawable.arrow_down,0,0,0);
+                } else if(((LinearLayout) v.findViewById(R.id.graphLightCnt)).getVisibility() == View.VISIBLE) {
+                    ((LinearLayout) v.findViewById(R.id.graphLightCnt)).setVisibility(View.GONE);
+                    ((TextView) v.findViewById(R.id.lightTv)).setCompoundDrawablesWithIntrinsicBounds(R.drawable.arrow_right,0,0,0);
+                }
             }
         });
 
         ((TextView) v.findViewById(R.id.pressureTv)).setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View vv) {
-                drawGraph(Sensor.STRING_TYPE_PRESSURE, R.id.graphPressure);
-                ((LinearLayout) v.findViewById(R.id.graphPressureCnt)).setVisibility(View.VISIBLE);
+                if(((LinearLayout) v.findViewById(R.id.graphPressureCnt)).getVisibility() == View.GONE) {
+                    drawGraph(Sensor.STRING_TYPE_PRESSURE, R.id.graphPressure);
+                    ((LinearLayout) v.findViewById(R.id.graphPressureCnt)).setVisibility(View.VISIBLE);
+                    ((TextView) v.findViewById(R.id.pressureTv)).setCompoundDrawablesWithIntrinsicBounds(R.drawable.arrow_down,0,0,0);
+                } else if(((LinearLayout) v.findViewById(R.id.graphPressureCnt)).getVisibility() == View.VISIBLE) {
+                    ((LinearLayout) v.findViewById(R.id.graphPressureCnt)).setVisibility(View.GONE);
+                    ((TextView) v.findViewById(R.id.pressureTv)).setCompoundDrawablesWithIntrinsicBounds(R.drawable.arrow_right,0,0,0);
+                }
             }
         });
 
         ((TextView) v.findViewById(R.id.relativeHumidityTv)).setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View vv) {
-                drawGraph(Sensor.STRING_TYPE_RELATIVE_HUMIDITY, R.id.graphRelativeHumidity);
-                ((LinearLayout) v.findViewById(R.id.graphRelativeHumidityCnt)).setVisibility(View.VISIBLE);
+                if(((LinearLayout) v.findViewById(R.id.graphRelativeHumidityCnt)).getVisibility() == View.GONE) {
+                    drawGraph(Sensor.STRING_TYPE_RELATIVE_HUMIDITY, R.id.graphRelativeHumidity);
+                    ((LinearLayout) v.findViewById(R.id.graphRelativeHumidityCnt)).setVisibility(View.VISIBLE);
+                    ((TextView) v.findViewById(R.id.relativeHumidityTv)).setCompoundDrawablesWithIntrinsicBounds(R.drawable.arrow_down,0,0,0);
+                } else if(((LinearLayout) v.findViewById(R.id.graphRelativeHumidityCnt)).getVisibility() == View.VISIBLE) {
+                    ((LinearLayout) v.findViewById(R.id.graphRelativeHumidityCnt)).setVisibility(View.GONE);
+                    ((TextView) v.findViewById(R.id.relativeHumidityTv)).setCompoundDrawablesWithIntrinsicBounds(R.drawable.arrow_right,0,0,0);
+                }
             }
         });
 
         ((TextView) v.findViewById(R.id.magneticFieldTv)).setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View vv) {
-                drawGraph(Sensor.STRING_TYPE_MAGNETIC_FIELD, R.id.graphMagneticField);
-                ((LinearLayout) v.findViewById(R.id.graphMagneticFieldCnt)).setVisibility(View.VISIBLE);
+                if(((LinearLayout) v.findViewById(R.id.graphMagneticFieldCnt)).getVisibility() == View.GONE) {
+                    drawGraph(Sensor.STRING_TYPE_MAGNETIC_FIELD, R.id.graphMagneticField);
+                    ((LinearLayout) v.findViewById(R.id.graphMagneticFieldCnt)).setVisibility(View.VISIBLE);
+                    ((TextView) v.findViewById(R.id.magneticFieldTv)).setCompoundDrawablesWithIntrinsicBounds(R.drawable.arrow_down,0,0,0);
+                } else if(((LinearLayout) v.findViewById(R.id.graphMagneticFieldCnt)).getVisibility() == View.VISIBLE) {
+                    ((LinearLayout) v.findViewById(R.id.graphMagneticFieldCnt)).setVisibility(View.GONE);
+                    ((TextView) v.findViewById(R.id.magneticFieldTv)).setCompoundDrawablesWithIntrinsicBounds(R.drawable.arrow_right,0,0,0);
+                }
             }
         });
 
         ((TextView) v.findViewById(R.id.proximityTv)).setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View vv) {
-                drawGraph(Sensor.STRING_TYPE_PROXIMITY, R.id.graphProximity);
-                ((LinearLayout) v.findViewById(R.id.graphProximityCnt)).setVisibility(View.VISIBLE);
+                if(((LinearLayout) v.findViewById(R.id.graphProximityCnt)).getVisibility() == View.GONE) {
+                    drawGraph(Sensor.STRING_TYPE_PROXIMITY, R.id.graphProximity);
+                    ((LinearLayout) v.findViewById(R.id.graphProximityCnt)).setVisibility(View.VISIBLE);
+                    ((TextView) v.findViewById(R.id.proximityTv)).setCompoundDrawablesWithIntrinsicBounds(R.drawable.arrow_down,0,0,0);
+                } else if(((LinearLayout) v.findViewById(R.id.graphProximityCnt)).getVisibility() == View.VISIBLE) {
+                    ((LinearLayout) v.findViewById(R.id.graphProximityCnt)).setVisibility(View.GONE);
+                    ((TextView) v.findViewById(R.id.proximityTv)).setCompoundDrawablesWithIntrinsicBounds(R.drawable.arrow_right,0,0,0);
+                }
             }
         });
 
@@ -205,10 +241,10 @@ public class PlotVisualizer extends Fragment {
                 graph.addSeries(accY);
                 graph.addSeries(accZ);
             } else {
-                graph.setVisibility(View.GONE);
+                Toast.makeText(getActivity(),"No data to plot for this sensor", Toast.LENGTH_LONG).show();
             }
         } catch (Exception e){
-            Toast.makeText(getActivity(),"No data to plot", Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity(),"No data registered, at all", Toast.LENGTH_LONG).show();
         }
 
 

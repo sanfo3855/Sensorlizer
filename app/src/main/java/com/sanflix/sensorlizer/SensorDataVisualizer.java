@@ -17,6 +17,10 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.TableLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapView;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -74,6 +78,9 @@ public class SensorDataVisualizer extends Fragment implements SensorEventListene
     private final float[] mOrientationAngles = new float[3];
 
     private String apice2 = "<sup><small>2</small></sup>";
+
+    MapView mMapView;
+    private GoogleMap googleMap;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -241,6 +248,7 @@ public class SensorDataVisualizer extends Fragment implements SensorEventListene
             @Override
             public void onClick(View v) {
                 updateSavedSensor(null);
+                Toast.makeText(getActivity(),"Updated sensor to log", Toast.LENGTH_SHORT).show();
             }
         };
 
@@ -313,8 +321,11 @@ public class SensorDataVisualizer extends Fragment implements SensorEventListene
                 float prox = event.values[0];
                 tvProximity.setText("Value: " + prox + " cm");
             } else if (sensor.getType() == Sensor.TYPE_ROTATION_VECTOR){
-                float rot = event.values[3];
-                tvRotationVectorX.setText("Value: " + rot);
+                double rotX = event.values[0];
+                double rotY = event.values[1];
+                double rotZ = event.values[2];
+                double scalCpt = event.values[3];
+                tvRotationVectorX.setText(Html.fromHtml("X: " + rotX + "<br>" + "Y: " + rotY + "<br>" + "Z: " + rotZ + "<br>" + "Scalar Cpt:" + "<br>" + scalCpt));
             }
     }
 
@@ -340,9 +351,9 @@ public class SensorDataVisualizer extends Fragment implements SensorEventListene
             } else if (sensor.getType() == Sensor.TYPE_PRESSURE) {
                 mSensorManager.registerListener(this, mPressure, SensorManager.SENSOR_DELAY_NORMAL);
             } else if (sensor.getType() == Sensor.TYPE_RELATIVE_HUMIDITY){
-                mSensorManager.registerListener(this, mProximity, SensorManager.SENSOR_DELAY_NORMAL);
-            } else if (sensor.getType() == Sensor.TYPE_PROXIMITY){
                 mSensorManager.registerListener(this, mRelativeHumidity, SensorManager.SENSOR_DELAY_NORMAL);
+            } else if (sensor.getType() == Sensor.TYPE_PROXIMITY){
+                mSensorManager.registerListener(this, mProximity, SensorManager.SENSOR_DELAY_NORMAL);
             } else if (sensor.getType() == Sensor.TYPE_ROTATION_VECTOR){
                 mSensorManager.registerListener(this, mRotationVector, SensorManager.SENSOR_DELAY_NORMAL);
             }

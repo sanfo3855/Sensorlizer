@@ -39,6 +39,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\sanfe\.android\build-cache\cdbc012f82a4d5ad7aabc2e9780c410614e9ef69\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="2430e711762a749feb00b3d64858ca4768251b9d">
+        <dex dex="C:\Users\sanfe\StudioProjects\Sensorlizer\app\build\intermediates\pre-dexed\debug\classes_40d160e9173c968e760bc1293a995fa2007cc603.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\sanfe\.android\build-cache\d54080627a556e9dd74c9fdafc0e93128be6cfe1\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -81,6 +90,15 @@
         revision="25.0.1"
         sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
         <dex dex="C:\Users\sanfe\StudioProjects\Sensorlizer\app\build\intermediates\pre-dexed\debug\classes_77feb82525827615847e6cf7bd2eb0b2d0e63f6d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sanfe\.android\build-cache\3b1af9130c4397ae975b7820d9e6a9bee7a55872\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="70ffe00aaf049893f59d1dad57bd82992faa38ef">
+        <dex dex="C:\Users\sanfe\StudioProjects\Sensorlizer\app\build\intermediates\pre-dexed\debug\classes_b9db447c32b7c834726b089f4cf363723eb1e4e4.jar" />
     </item>
     <item
         is-multidex="false"
@@ -129,12 +147,30 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\sanfe\.android\build-cache\87fd676e353e7a02f85de076d630c913e7f0d17c\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="fcae52a60bc07924d370b4d376116cd8f8581f54">
+        <dex dex="C:\Users\sanfe\StudioProjects\Sensorlizer\app\build\intermediates\pre-dexed\debug\classes_c53c2ca75cdc8fa51698a3be2b15130ce525ec1a.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\sanfe\.android\build-cache\1970d0cf78f096821af32986d3539c34a439f756\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.1"
         sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
         <dex dex="C:\Users\sanfe\StudioProjects\Sensorlizer\app\build\intermediates\pre-dexed\debug\classes_7dde3b9f3a6c70db1690d86bad5e27105fcffa58.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\sanfe\.android\build-cache\f934007945e8a679d76d8f8dc38e11fa3a53e4ef\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.1"
+        sha1="364364bf77b4a71afc5930fc3ae57b3f0eea637c">
+        <dex dex="C:\Users\sanfe\StudioProjects\Sensorlizer\app\build\intermediates\pre-dexed\debug\classes_5547f4bcbd6507e40f68a4edb30a15acdb7b2744.jar" />
     </item>
     <item
         is-multidex="false"
