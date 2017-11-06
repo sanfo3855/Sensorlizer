@@ -1,4 +1,3 @@
 # Sensorlizer
 
-An app to view real-time data from most common android sensors.
-It implements also a background logger of sensor data
+An app to view **real-time** and **background-logged** data from most common android sensors.
