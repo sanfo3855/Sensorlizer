@@ -15,33 +15,7 @@
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:isScrollContainer="true">
-            <!--
-            ************
-            * LOCATION *
-            ************ -->
-            <!--<TableRow>
-                <TextView
-                    android:id="@+id/tvLocation"
-                    android:text="Location"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="@dimen/groupSensorSize"
-                    android:layout_margin="@dimen/layoutMargin"
-                    android:drawableLeft="@drawable/arrow_right"/>
-            </TableRow>
-            <TableLayout
-                android:id="@+id/locationGroup"
-                android:visibility="visible">
-                <TextView
-                    android:id="@+id/tvLocationValue"
-                    android:textSize="@dimen/sensorDataSize"
-                    android:paddingStart="@dimen/paddingStartSensorName"
-                    android:paddingEnd="@dimen/paddingEndSensorName"
-                    android:text="@string/not_found"
-                    android:layout_margin="@dimen/layoutMargin"
-                    android:textColor="@color/colorPrimaryDark"/>
 
-            </TableLayout>-->
-            <!--
             *****************
             * MOTION SENSOR *
             ***************** -->
@@ -54,8 +28,7 @@
                     android:layout_margin="@dimen/layoutMargin"
                     android:drawableLeft="@drawable/arrow_right"/>
             </TableRow>
-            <TableLayout
-                android:id="@+id/motionSensorGroup"
+            <TableLayout android:id="@+id/motionSensorGroup"
                 android:visibility="gone">
                 <!-- 1 - ACCELLEROMETER -->
                 <TableRow>
@@ -72,6 +45,12 @@
                         android:text="@string/save"
                         android:textColor="@color/colorPrimary"/>
                 </TableRow>
+
+                <com.jjoe64.graphview.GraphView
+                    android:id="@+id/rtGraphAccellerometer"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dip"
+                    android:visibility="gone"/>
                 <TableRow>
                     <TextView
                         android:id="@+id/tvAccellerometerValueY"
@@ -93,12 +72,17 @@
                         android:paddingEnd="@dimen/paddingEndSensorName"
                         android:layout_margin="@dimen/layoutMargin"
                         />
-
                     <CheckBox
                         android:id="@+id/chkGravity"
                         android:text="@string/save"
                         android:textColor="@color/colorPrimary"/>
                 </TableRow>
+
+                <com.jjoe64.graphview.GraphView
+                    android:id="@+id/rtGraphGravity"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dip"
+                    android:visibility="gone"/>
 
                 <TableRow>
                     <TextView
@@ -126,6 +110,12 @@
                         android:text="@string/save"
                         android:textColor="@color/colorPrimary"/>
                 </TableRow>
+
+                <com.jjoe64.graphview.GraphView
+                    android:id="@+id/rtGraphGyroscope"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dip"
+                    android:visibility="gone"/>
                 <TableRow>
                     <TextView
                         android:id="@+id/tvGyroscopeValueY"
@@ -152,6 +142,12 @@
                         android:text="@string/save"
                         android:textColor="@color/colorPrimary"/>
                 </TableRow>
+
+                <com.jjoe64.graphview.GraphView
+                    android:id="@+id/rtGraphLinearAccelleration"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dip"
+                    android:visibility="gone"/>
                 <TableRow>
                     <TextView
                         android:id="@+id/tvLinearAccellerationValueY"
@@ -162,7 +158,6 @@
                         android:layout_margin="@dimen/layoutMargin"
                         android:textColor="@color/colorPrimaryDark"/>
                 </TableRow>
-                <TableRow></TableRow>
                 <!-- 5 - ROTATION VECTOR -->
                 <TableRow>
                     <TextView
@@ -178,6 +173,12 @@
                         android:text="@string/save"
                         android:textColor="@color/colorPrimary"/>
                 </TableRow>
+
+                <com.jjoe64.graphview.GraphView
+                    android:id="@+id/rtGraphRotationVector"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dip"
+                    android:visibility="gone"/>
                 <TableRow>
                     <TextView
                         android:id="@+id/tvRotationVectorValueX"
@@ -220,6 +221,12 @@
                         android:text="@string/save"
                         android:textColor="@color/colorPrimary"/>
                 </TableRow>
+
+                <com.jjoe64.graphview.GraphView
+                    android:id="@+id/rtGraphAmbientTemperature"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dip"
+                    android:visibility="gone"/>
                 <TableRow>
                     <TextView
                         android:id="@+id/tvAmbientTemperatureValue"
@@ -246,6 +253,13 @@
                         android:text="@string/save"
                         android:textColor="@color/colorPrimary"/>
                 </TableRow>
+
+                <com.jjoe64.graphview.GraphView
+                    android:id="@+id/rtGraphLigth"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dip"
+                    android:visibility="gone"/>
+
                 <TableRow>
                     <TextView
                         android:id="@+id/tvLigthValue"
@@ -271,6 +285,12 @@
                         android:text="@string/save"
                         android:textColor="@color/colorPrimary"/>
                 </TableRow>
+
+                <com.jjoe64.graphview.GraphView
+                    android:id="@+id/rtGraphPressure"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dip"
+                    android:visibility="gone"/>
                 <TableRow>
                     <TextView
                         android:id="@+id/tvPressureValue"
@@ -297,6 +317,12 @@
                         android:text="@string/save"
                         android:textColor="@color/colorPrimary"/>
                 </TableRow>
+
+                <com.jjoe64.graphview.GraphView
+                    android:id="@+id/rtGraphRelativeHumidity"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dip"
+                    android:visibility="gone"/>
                 <TableRow>
                     <TextView
                         android:id="@+id/tvRelativeHumidityValue"
@@ -338,6 +364,12 @@
                         android:text="@string/save"
                         android:textColor="@color/colorPrimary"/>
                 </TableRow>
+
+                <com.jjoe64.graphview.GraphView
+                    android:id="@+id/rtGraphMagneticField"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dip"
+                    android:visibility="gone"/>
                 <TableRow>
                     <TextView
                         android:id="@+id/tvMagneticFieldValueY"
@@ -363,6 +395,12 @@
                         android:text="@string/save"
                         android:textColor="@color/colorPrimary" />
                 </TableRow>
+                <com.jjoe64.graphview.GraphView
+                    android:id="@+id/rtGraphProximity"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dip"
+                    android:visibility="gone"/>
+
                 <TableRow>
                     <TextView
                         android:id="@+id/tvProximityValue"
@@ -389,6 +427,12 @@
                         android:text="@string/save"
                         android:textColor="@color/colorPrimary" />
                 </TableRow>
+
+                <com.jjoe64.graphview.GraphView
+                    android:id="@+id/rtGraphOrientation"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dip"
+                    android:visibility="gone"/>
                 <TableRow>
                     <TextView
                         android:id="@+id/tvOrientationPitch"

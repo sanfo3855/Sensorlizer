@@ -16,12 +16,12 @@
         "source": "C:\\Users\\sanfe\\.android\\build-cache\\2178e268ba13f5f2926310657a2908ba04c71b5e\\output\\res\\drawable\\abc_ic_go_search_api_material.xml"
     },
     {
-        "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_dark.xml",
-        "source": "C:\\Users\\sanfe\\.android\\build-cache\\3b1af9130c4397ae975b7820d9e6a9bee7a55872\\output\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
-    },
-    {
         "merged": "C:\\home\\matteo\\AndroidStudioProjects\\Sensorlizer2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
         "source": "C:\\home\\matteo\\.android\\build-cache\\d3ab41ce8ca7bb11144b1368c6a33aa05546bde9\\output\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_icon_dark.xml",
+        "source": "C:\\Users\\sanfe\\.android\\build-cache\\3b1af9130c4397ae975b7820d9e6a9bee7a55872\\output\\res\\drawable\\common_google_signin_btn_icon_dark.xml"
     },
     {
         "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
@@ -176,12 +176,12 @@
         "source": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\src\\main\\res\\drawable\\ic_settings_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_dark_normal.xml",
-        "source": "C:\\Users\\sanfe\\.android\\build-cache\\3b1af9130c4397ae975b7820d9e6a9bee7a55872\\output\\res\\drawable\\common_google_signin_btn_text_dark_normal.xml"
-    },
-    {
         "merged": "C:\\home\\matteo\\AndroidStudioProjects\\Sensorlizer2\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
         "source": "C:\\home\\matteo\\.android\\build-cache\\d3ab41ce8ca7bb11144b1368c6a33aa05546bde9\\output\\res\\drawable\\abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\common_google_signin_btn_text_dark_normal.xml",
+        "source": "C:\\Users\\sanfe\\.android\\build-cache\\3b1af9130c4397ae975b7820d9e6a9bee7a55872\\output\\res\\drawable\\common_google_signin_btn_text_dark_normal.xml"
     },
     {
         "merged": "C:\\Users\\sanfe\\StudioProjects\\Sensorlizer\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
