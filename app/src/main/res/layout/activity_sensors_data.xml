@@ -427,7 +427,9 @@
                         android:text="@string/save"
                         android:textColor="@color/colorPrimary" />
                 </TableRow>
-
+                <TextView
+                    android:text="ciao"
+                    android:textColor="@color/colorLightGrey"/>
                 <com.jjoe64.graphview.GraphView
                     android:id="@+id/rtGraphOrientation"
                     android:layout_width="match_parent"

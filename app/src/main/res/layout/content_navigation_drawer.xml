@@ -22,5 +22,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="0dp">
 
+        <android.support.design.widget.FloatingActionButton
+            android:src="@drawable/share"
+            app:fabSize="normal"
+            app:backgroundTint="@color/colorLightGrey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:id="@+id/fabBt"
+            app:layout_anchor="@+id/fabBt"
+            app:layout_anchorGravity="bottom|right|end"
+            android:layout_margin="16dp"
+            android:visibility="gone"/>
+
     </FrameLayout>
 </android.support.constraint.ConstraintLayout>

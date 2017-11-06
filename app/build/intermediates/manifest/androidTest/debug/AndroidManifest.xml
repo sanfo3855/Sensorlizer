@@ -3,7 +3,7 @@
     package="com.sanflix.sensorlizer.test" >
 
     <uses-sdk
-        android:minSdkVersion="23"
+        android:minSdkVersion="24"
         android:targetSdkVersion="25" />
 
     <instrumentation
@@ -13,7 +13,7 @@
         android:label="Tests for com.sanflix.sensorlizer"
         android:targetPackage="com.sanflix.sensorlizer" />
 
-    <application>
+    <application android:debuggable="true" >
         <uses-library android:name="android.test.runner" />
     </application>
 

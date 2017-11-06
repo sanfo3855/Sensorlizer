@@ -1,19 +1,31 @@
 package com.sanflix.sensorlizer;
 
+
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.content.FileProvider;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Toast;
 
-public class NavigationDrawer extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+import java.io.File;
+
+import static android.content.ContentValues.TAG;
+
+public class NavigationDrawer extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +34,6 @@ public class NavigationDrawer extends AppCompatActivity
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
 
         Fragment fragment = null;
         Class fragmentClass = null;
@@ -99,6 +110,31 @@ public class NavigationDrawer extends AppCompatActivity
         } else if (id == R.id.plots_drawer) {
             fragmentClass = PlotVisualizer.class;
             setTitle("Plots");
+
+            final File savedData = new File(getFilesDir(), "SensorData.csv");
+            final Uri contentUri = FileProvider.getUriForFile(this, "com.sanflix.sensorlizer", savedData);
+
+            ((FloatingActionButton) findViewById(R.id.fabBt)).setVisibility(View.VISIBLE);
+            ((FloatingActionButton) findViewById(R.id.fabBt)).setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Log.i(TAG, "onClick: opening share intent...");
+                    Intent share = new Intent(Intent.ACTION_SEND);
+                    Log.i(TAG, "onClick: "+contentUri.toString());
+                    share.setData(contentUri);
+                    share.setType("text/csv");
+                    share.putExtra(Intent.EXTRA_TEXT, "Exported background-logged data from Sensorlizer App");
+                    share.putExtra(Intent.EXTRA_SUBJECT, "SavedSensor.csv");
+                    share.putExtra(Intent.EXTRA_STREAM, contentUri);
+                    try {
+                        startActivity(Intent.createChooser(share, "Send mail..."));
+                    } catch (android.content.ActivityNotFoundException ex) {
+                        Toast.makeText(getApplication(), "There are no email clients installed.", Toast.LENGTH_SHORT).show();
+                    }
+                    Log.i(TAG, "onClick: opened share intent");
+
+                }
+            });
         } else if (id == R.id.settings_drawer || id == R.id.action_settings) {
             fragmentClass = Settings.class;
             setTitle("Settings");
