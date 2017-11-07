@@ -15,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.jjoe64.graphview.GraphView;
+import com.jjoe64.graphview.LegendRenderer;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 
@@ -29,12 +30,21 @@ import static android.content.ContentValues.TAG;
 
 
 public class PlotVisualizer extends Fragment {
+    private String dir;
+    private String file;
+
+    @Override
+    public void setArguments(Bundle bundle){
+        this.dir = bundle.getString("FileDir");
+        this.file = bundle.getString("FileName");
+    }
+
     public PlotVisualizer() {}
 
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-
+        View v = getView();
     }
 
     @Override
@@ -200,22 +210,52 @@ public class PlotVisualizer extends Fragment {
         return v;
     }
 
+    @Override
+    public void onStart(){
+        super.onStart();
+        View v = getView();
+        ((TextView) v.findViewById(R.id.accellerometerTv)).performClick();
+        ((TextView) v.findViewById(R.id.gravityTv)).performClick();
+        ((TextView) v.findViewById(R.id.gyroscopeTv)).performClick();
+        ((TextView) v.findViewById(R.id.linearAccellerationTv)).performClick();
+        ((TextView) v.findViewById(R.id.rotationVectorTv)).performClick();
+        ((TextView) v.findViewById(R.id.AmbientTemperatureTv)).performClick();
+        ((TextView) v.findViewById(R.id.lightTv)).performClick();
+        ((TextView) v.findViewById(R.id.pressureTv)).performClick();
+        ((TextView) v.findViewById(R.id.relativeHumidityTv)).performClick();
+        ((TextView) v.findViewById(R.id.magneticFieldTv)).performClick();
+        ((TextView) v.findViewById(R.id.proximityTv)).performClick();
+    }
+
     private void drawGraph(String sensorname,int idGraph){
         Log.i(TAG, "drawGraph: "+sensorname);
         Log.i(TAG, "drawGraph: " + idGraph);
         Activity a = getActivity();
         //Reading data from SavedSensor.csv
-        File sensorData = new File(a.getFilesDir(), "SensorData.csv");
+
+        File sensorData = new File(a.getFilesDir()+dir, file);
 
         try{
+            Log.i(TAG, "drawGraph: " + a.getFilesDir()+dir);
+            Log.i(TAG, "drawGraph: " + file);
             BufferedReader in;
             GraphView graph = (GraphView) getView().findViewById(idGraph);
             LineGraphSeries<DataPoint> accX = new LineGraphSeries<>();
-            accX.setColor(Color.GREEN);
+            accX.setColor(Color.CYAN);
+
             LineGraphSeries<DataPoint> accY = new LineGraphSeries<>();
-            accY.setColor(Color.YELLOW);
+            accY.setColor(Color.RED);
             LineGraphSeries<DataPoint> accZ = new LineGraphSeries<>();
-            accZ.setColor(Color.WHITE);
+            accZ.setColor(Color.GRAY);
+            if(!sensorname.equals(Sensor.STRING_TYPE_AMBIENT_TEMPERATURE)
+                    && !sensorname.equals(Sensor.STRING_TYPE_LIGHT)
+                    && !sensorname.equals(Sensor.STRING_TYPE_PRESSURE)
+                    && !sensorname.equals(Sensor.STRING_TYPE_PROXIMITY)
+                    && !sensorname.equals(Sensor.STRING_TYPE_RELATIVE_HUMIDITY)){
+                accX.setTitle("X");
+                accY.setTitle("Y");
+                accZ.setTitle("Z");
+            }
             in = new BufferedReader(new InputStreamReader(new BufferedInputStream(new FileInputStream(sensorData))));
             String line;
             int i=0;
@@ -238,13 +278,24 @@ public class PlotVisualizer extends Fragment {
             }
             if(i!=0) {
                 graph.addSeries(accX);
-                graph.addSeries(accY);
-                graph.addSeries(accZ);
+
+                if(!sensorname.equals(Sensor.STRING_TYPE_AMBIENT_TEMPERATURE)
+                        && !sensorname.equals(Sensor.STRING_TYPE_LIGHT)
+                        && !sensorname.equals(Sensor.STRING_TYPE_PRESSURE)
+                        && !sensorname.equals(Sensor.STRING_TYPE_PROXIMITY)
+                        && !sensorname.equals(Sensor.STRING_TYPE_RELATIVE_HUMIDITY)){
+                    graph.addSeries(accY);
+                    graph.addSeries(accZ);
+                    graph.getLegendRenderer().setVisible(true);
+                    graph.getLegendRenderer().setAlign(LegendRenderer.LegendAlign.TOP);
+                }
+
             } else {
-                Toast.makeText(getActivity(),"No data to plot for this sensor", Toast.LENGTH_LONG).show();
+                graph.setVisibility(View.GONE);
+                //Toast.makeText(getActivity(),"No data to plot for this sensor", Toast.LENGTH_SHORT).show();
             }
         } catch (Exception e){
-            Toast.makeText(getActivity(),"No data registered, at all", Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity(),"No data registered, at all", Toast.LENGTH_SHORT).show();
         }
 
 

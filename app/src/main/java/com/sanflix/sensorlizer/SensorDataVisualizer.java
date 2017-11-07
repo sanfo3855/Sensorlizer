@@ -689,6 +689,8 @@ public class SensorDataVisualizer extends Fragment implements SensorEventListene
                 mSensorManager.registerListener(this, mRotationVector, SensorManager.SENSOR_DELAY_UI);
             }
         }
+        View v = getView();
+        ((TextView) v.findViewById(R.id.tvMotionSensors)).performClick();
     }
 
     @Override

@@ -29,7 +29,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|right"
-            android:id="@+id/fabBt"
+            android:id="@+id/fabShare"
+            app:layout_anchor="@+id/fabBt"
+            app:layout_anchorGravity="bottom|right|end"
+            android:layout_margin="16dp"
+            android:visibility="gone"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:src="@drawable/import_file"
+            app:fabSize="normal"
+            app:backgroundTint="@color/colorLightGrey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:id="@+id/fabImport"
             app:layout_anchor="@+id/fabBt"
             app:layout_anchorGravity="bottom|right|end"
             android:layout_margin="16dp"
