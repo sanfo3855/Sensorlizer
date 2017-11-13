@@ -159,6 +159,8 @@ public class NavigationDrawer extends AppCompatActivity implements NavigationVie
         if (id == R.id.sensors_drawer) {
             fragmentClass = SensorDataVisualizer.class;
             setTitle("Sensors");
+            fabImport.setVisibility(View.GONE);
+            fabShare.setVisibility(View.GONE);
         } else if (id == R.id.plots_drawer) {
             fragmentClass = PlotVisualizer.class;
             setTitle("Logged-Data Plots");
@@ -194,6 +196,8 @@ public class NavigationDrawer extends AppCompatActivity implements NavigationVie
         } else if (id == R.id.settings_drawer || id == R.id.action_settings) {
             fragmentClass = Settings.class;
             setTitle("Settings");
+            fabImport.setVisibility(View.GONE);
+            fabShare.setVisibility(View.GONE);
         } else if(id == R.id.imported_drawer){
             fragmentClass = SelectImported.class;
             setTitle("Imported-Data Plots");
